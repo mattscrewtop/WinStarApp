@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Facility Map Zoom</title>
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" href="styles/smartZoom.css" type="text/css" />
+</head>
+
+<body>
+    <div id="imgContainer">
+            <img id="imageFullScreen" src="images/backgrounds/facilitymaps/1536x1856.jpg"/>
+    </div>
+    <div id="positionButtonDiv">
+        <p style="display: none;">Zoom :
+            <span>
+                        <img id="zoomInButton" class="zoomButton" src="images/zoomIn.png" title="Zoom In" alt="Zoom In" />
+                        <img id="zoomOutButton" class="zoomButton" src="images/zoomOut.png" title="Zoom Out" alt="Zoom Out" />
+                    </span>
+        </p>
+        <p>
+                	<a href="javascript:void(0);" onclick="window.history.back();" style="position: relative; bottom: -5px; left: -3px; z-index: 5000;" id="backbuttonTP"><img src="images/nav-close.png" id="backbuttonTPimg" /></a>
+	
+            <span class="positionButtonSpan" style="display: none;">
+                        <map name="positionMap" class="positionMapClass">
+                            <area id="topPositionMap" shape="rect" coords="20,0,40,20" title="Move Up" alt="Move Up"/>
+                            <area id="leftPositionMap" shape="rect" coords="0,20,20,40" title="Move Left" alt="Move Left"/>
+                            <area id="rightPositionMap" shape="rect" coords="40,20,60,40" title="Move Right" alt="Move Right"/>
+                            <area id="bottomPositionMap" shape="rect" coords="20,40,40,60" title="Move Down" alt="Move Down"/>
+                        </map>
+                        <img src="images/position.png" usemap="#positionMap" />
+                    </span>
+        </p>
+    </div>
+    <script src="scripts/jquery-2.1.3.min.js"></script>
+    <script src="scripts/e-smart-zoom-jquery.min.js"></script>
+    <script src="scripts/fastclick.js"></script>
+    <script>
+    function openhomeurl(urltoopen) {
+        //console.trace("BeforeOpen: " + urltoopen);
+        if (typeof Ti !== 'undefined') {
+            Ti.App.fireEvent('app:openAppURL', {
+                passback: urltoopen
+            });
+        } else {
+            openNewURLInTheSameWindow(urltoopen);
+        }
+    }
+
+    // this function can fire onclick handler for any DOM-Element
+    function fireClickEvent(element) {
+            var evt = new window.MouseEvent('click', {
+                view: window,
+                bubbles: true,
+                cancelable: true
+            });
+
+            element.dispatchEvent(evt);
+        }
+        // this function will setup a virtual anchor element
+        // and fire click handler to open new URL in the same room
+        // it works better than location.href=something or location.reload()
+    function openNewURLInTheSameWindow(targetURL) {
+        var a = document.createElement('a');
+        a.href = targetURL;
+        fireClickEvent(a);
+    }
+
+    function openNewTabOrNewWindow(targetURL) {
+        var a = document.createElement('a');
+        a.href = targetURL;
+
+        a.target = '_blank'; // now it will open new tab/window and bypass any popup blocker!
+
+        fireClickEvent(a);
+    }
+    jQuery(document).ready(function() {
+        jQuery('#imageFullScreen').smartZoom();
+
+        jQuery('#topPositionMap,#leftPositionMap,#rightPositionMap,#bottomPositionMap').bind("click", moveButtonClickHandler);
+        jQuery('#zoomInButton,#zoomOutButton').bind("click", zoomButtonClickHandler);
+
+        function zoomButtonClickHandler(e) {
+            var scaleToAdd = 0.8;
+            if (e.target.id == 'zoomOutButton')
+                scaleToAdd = -scaleToAdd;
+            jQuery('#imageFullScreen').smartZoom('zoom', scaleToAdd);
+        }
+
+        function moveButtonClickHandler(e) {
+            var pixelsToMoveOnX = 0;
+            var pixelsToMoveOnY = 0;
+
+            switch (e.target.id) {
+                case "leftPositionMap":
+                    pixelsToMoveOnX = 50;
+                    break;
+                case "rightPositionMap":
+                    pixelsToMoveOnX = -50;
+                    break;
+                case "topPositionMap":
+                    pixelsToMoveOnY = 50;
+                    break;
+                case "bottomPositionMap":
+                    pixelsToMoveOnY = -50;
+                    break;
+            }
+            jQuery('#imageFullScreen').smartZoom('pan', pixelsToMoveOnX, pixelsToMoveOnY);
+        }
+
+    });
+
+    function loadPage() {
+        FastClick.attach(document.body);
+    }
+    $(window).load(loadPage);
+    </script>
+</body>
+</html>

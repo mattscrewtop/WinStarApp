@@ -1,0 +1,103 @@
+    /* Defining each section background and styles
+    * --------------------------------------- */
+@media (orientation: landscape) {
+/*
+    #section2, #section5, #section8, #section11{
+        background-image: url(../images/backgrounds/front-1136x640.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #section1, #section4, #section7, #section10, #section13{
+        background-image: url(../images/backgrounds/PokerChips-1136x640.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #section3, #section6, #section9, #section12{
+        background-image: url(../images/backgrounds/360-1136x640.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }*/
+
+    .sectionpage{
+        background-image: url(../images/backgrounds/front-1136x640.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /*iPhone6*/ /*Directions*/
+    #pages-2 .info-holder-main {
+        height: 75vh;
+    } /*Scan*/
+    #pages-3 .info-holder-main {
+        height: 45vh;
+    } /*PhotoBooth*/
+    #pages-4 .info-holder-main {
+        height: 60vh;
+    } /*ContactUs*/
+    #pages-5 .info-holder-main {
+        height: 30vh;
+    } /*ShareApp*/
+    #pages-17 .info-holder-main {
+        height: 80vh;
+    }
+}
+@media (orientation: portrait) {
+/*
+    #section2, #section5, #section8, #section11{
+        background-image: url(../images/backgrounds/DiningRoom-1536x2048.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #section1, #section4, #section7, #section10, #section13{
+        background-image: url(../images/backgrounds/PokerChips-1536x2048.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #section3, #section6, #section9, #section12{
+        background-image: url(../images/backgrounds/globe-1536x2048.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }*/
+#snap-content {
+    font-size: 1.5em;
+}
+    .sectionpage{
+        background-image: url(../images/backgrounds/front-1536x2048.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+	#pagemenu {
+		font-size: 1.5em;
+	}
+	.content-section {
+		font-size: 1.6em;
+	}
+	#section7 .info-holder-main {
+		height: 60%;
+	}
+	#section5 .info-holder-main {
+		height: 65%;
+	}
+	#section4 .info-holder-main {
+		height: 50%;
+	}
+    .half-thumb img {
+        width: 60%;
+    }
+    /*iPhone6*/ /*Directions*/
+    #pages-18 .info-holder-main {
+        height: 85vh;
+    } /*Scan*/
+    #pages-1 .info-holder-main {
+        height: 35vh;
+    } /*PhotoBooth*/
+    #pages-2 .info-holder-main {
+        height: 35vh;
+    } /*ContactUs*/
+    #pages-19 .info-holder-main {
+        height: 35vh;
+    } /*ShareApp*/
+    #pages-17 .info-holder-main {
+        /*height: 85vh;*/
+    }
+}

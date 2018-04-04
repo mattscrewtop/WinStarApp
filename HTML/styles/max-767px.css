@@ -1,0 +1,102 @@
+    /* Defining each section background and styles
+    * --------------------------------------- */
+@media (orientation: landscape) {
+/*
+    #section2, #section5, #section8, #section11{
+        background-image: url(../images/backgrounds/front-1136x640.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #section1, #section4, #section7, #section10, #section13{
+        background-image: url(../images/backgrounds/PokerChips-1136x640.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #section3, #section6, #section9, #section12{
+        background-image: url(../images/backgrounds/360-1136x640.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }*/
+
+    .sectionpage{
+        background-image: url(../images/backgrounds/front-1136x640.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+	.content-section {
+		padding-top: 3.8em;
+		font-size: 0.8em;
+	}
+	#section4 .info-holder-main {
+		height: 94%;
+	}
+	#section7 .info-holder-main {
+		height: 100%;
+	}
+
+    /*iPhone5*/ /*Directions*/
+    #pages-2 .info-holder-main {
+        height: 80vh;
+    } /*Scan*/
+    #pages-3 .info-holder-main {
+        height: 75vh;
+    } /*PhotoBooth*/
+    #pages-4 .info-holder-main {
+        height: 80vh;
+    } /*ContactUs*/
+    #pages-5 .info-holder-main {
+        height: 80vh;
+    } /*ShareApp*/
+    #pages-17 .info-holder-main {
+        height: 80vh;
+    }
+    #map-canvas {
+        min-height: 15em;
+    }
+}
+
+@media (orientation: portrait) {
+/*
+    #section2, #section5, #section8, #section11{
+        background-image: url(../images/backgrounds/DiningRoom-1536x2048.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #section1, #section4, #section7, #section10, #section13{
+        background-image: url(../images/backgrounds/globe-1536x2048.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #section3, #section6, #section9, #section12{
+        background-image: url(../images/backgrounds/PokerChips-1536x2048.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+*/
+    .sectionpage{
+        background-image: url(../images/backgrounds/front-1536x2048.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /*iPhone6*/ /*Directions*/
+    #pages-18 .info-holder-main {
+        height: 75vh;
+    } /*Scan*/
+    #pages-1 .info-holder-main {
+        height: 45vh;
+    } /*PhotoBooth*/
+    #pages-2 .info-holder-main {
+        height: 60vh;
+    } /*ContactUs*/
+    #pages-19 .info-holder-main {
+        height: 30vh;
+    } /*ShareApp*/
+    #pages-17 .info-holder-main {
+        /*height: 80vh;*/
+    }
+    #map-canvas {
+        min-height: 23em;
+    }
+}
+

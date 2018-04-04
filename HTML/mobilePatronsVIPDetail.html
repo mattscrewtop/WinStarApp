@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Security-Policy" content="default-src	'none'; frame-src 'self' https://*.firebaseio.com https://www.youtube.com; script-src 'unsafe-inline' 'self' https://*.firebaseio.com; img-src 'self' data: http://instagramstatic-a.akamaihd.net http://badges.instagram.com http://www.winstarworldcasino.com https://www.winstarworldcasino.com https://*.chickasawwebsites.com; connect-src 'self' app: wss://*.firebaseio.com http://*.solutiaconsulting.com; style-src 'self' 'unsafe-inline'; font-src 'self'; object-src 'self'; media-src 'self';" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta name="description" content="WinStar World Casino" />
+	<meta name="theme-color" content="#db5945" />
+	<meta name="author" content="Matt Ferrell" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="apple-itunes-app" content="app-id=com.ScrewtopMedia.Winstar, affiliate-data=ScrewtopMedia, app-argument=https://itunes.apple.com/us/app/winstar-world-casino/id548935724" />
+
+	<title>WinStar World Casino - Mobile Patrons VIP Event Detail</title>
+
+	<link rel="icon" sizes="192x192" href="launcher-icon-4x.png" />
+	<link rel="apple-touch-icon" href="icon.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="launcher-icon-2x.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="launcher-icon-3x.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="launcher-icon-4x.png" />
+	<link rel="apple-touch-startup-image" href="splash.png" />
+	<link rel="manifest" href="manifest.json" />
+
+	<link rel="stylesheet" type="text/css" href="styles/skeleton.css" />
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="styles/alertify.min.css" />
+	<link rel="stylesheet" type="text/css" href="styles/examples.css" />
+	<link rel="stylesheet" type="text/css" href="styles/myWinstar.css" />
+</head>
+
+<body id="canvas" class="redesign">
+	<div id="spinnerContainer" style="display: none;">
+		<div id="spinnerIcon"></div>
+	</div>
+
+	<div class="snap-drawers" id="sidebar">
+		<div id="snap-drawer" class="snap-drawer snap-drawer-left scrollable">
+			<div id="snap-drawer-wrapper">
+				<div class="sidebar-controls">
+					<a href="javascript:void(0);" onclick="javascript:openurl('tel://1-800-622-6317');" class="sidebar-call"> </a>
+					<a href="javascript:void(0);" onclick="javascript:openurl('http://www.facebook.com/WinStarWorldCasino');" class="sidebar-face"> </a>
+					<a href="javascript:void(0);" onclick="javascript:openurl('http://twitter.com/winstarworld');" class="sidebar-twit"> </a>
+					<a href="javascript:void(0);" id="sidebar-close" class="sidebar-close"> </a>
+				</div>
+				<div class="sidebar-header">
+					<a href="javascript:void(0);" onclick="javascript: moveToPage(0);">&nbsp;</a>
+				</div>
+				<div class="sidebar-breadcrumb">
+					<div class="sidebar-decoration"></div>
+					<p>
+						Navigation
+					</p>
+					<div class="sidebar-decoration"></div>
+				</div>
+				<!-- Start SideBarNav -->
+				<div class="navigation-items" id="sidebarmenu"></div>
+				<!-- End SideBarNav -->
+
+				<div class="sidebar-decoration"></div>
+				<p class="sidebar-copyright center-text">
+					Copyright <span id="copyrightYear">2015</span>.
+					<br>
+					All rights reserved.
+				</p>
+			</div>
+		</div>
+	</div><!-- /panel -->
+	<div id="snap-content" class="snap-content" data-role="page" style="">
+		<!-- PAGE HEADER -->
+		<div id="my-header">
+			<ul>
+				<li class="leftli" id="deploy">
+					<a href="javascript:void(0);" id="deploy-span" class="deploy-sidebar" style="width:2em;height:2em;position:initial;top:0;left:0; z-index: 1500;"></a>
+				</li>
+				<li class="twocell">
+					<div>
+						<em class="content-title"></em>
+					</div>
+				</li>
+				<li class="rightli" onclick="javascript: moveToPage(5);">
+					<div>
+						<a href="javascript:void(0);" class="deploy-contactus">&nbsp;</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+
+
+		<!--PAGE BODY-->
+		<div id="pagepiling" class="sectionpage">
+
+			<div class="info-holder-main">
+				<h3 id="title-1" class="title">My WinStar VIP</h3>
+				<button type="button" name="cardclose-1" class="cardclose" onclick="javascript: mycardClose(0);"></button>
+				<div id="slide-1" class="slide-container slide scrollable">
+					<div id="slides-1" class="slides">
+						<div class="post">
+							<dl class="horizontalList center">
+								<dd>
+									<a class="button" href="JavaScript:goBack();">Back</a>
+								</dd>
+							</dl>
+
+							<hr style="border-top: 1px solid #000;">
+
+							<section id="vipEventsContainer"></section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<!-- PAGE FOOTER -->
+		<div id="infoMenu">
+			<div class="footer">
+				<ul id="footermenu" class="footer-nav"></ul>
+			</div>
+		</div>
+	</div>
+	<div class="modal-overlay js-modal-close" style="display: none;"></div>
+	<div id="la" class="modal-box">
+		<header>
+			<a href="javascript:void(0);" class="js-modal-close close">×</a>
+			<h3 id="title-99"></h3><em class="date" id="date-99"></em>
+		</header>
+		<div class="modal-body scrollable">
+			<ul id="items-99" class="items"></ul>
+		</div>
+		<footer><span id="action-footer"></span><a href="javascript:void(0);" class="btn btn-small js-modal-close">Close</a></footer>
+	</div>
+
+
+	<script type="text/javascript" src="scripts/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="scripts/slick.js"></script>
+	<script type="text/javascript" src="scripts/libs/lz-string.min.js"></script>
+	<script type="text/javascript" src="scripts/snap.js"></script>
+	<script type="text/javascript" src="scripts/firebase.js"></script>
+	<script type="text/javascript" src="scripts/alertify.min.js"></script>
+	<script type="text/javascript" src="scripts/fastclick.js"></script>
+	<script type="text/javascript" src="scripts/offline.min.js"></script>
+	<script type="text/javascript" src="scripts/localData.js"></script>
+	<script type="text/javascript" src="scripts/selectorCache.js"></script>
+	<script type="text/javascript" src="scripts/contentJSON.js"></script>
+	<script type="text/javascript" src="scripts/path.min.js"></script>
+	<script type="text/javascript" src="scripts/myWinstar.js"></script>
+	<script type="text/javascript" src="scripts/moment.min.js"></script>
+	<script type="text/javascript" src="scripts/mobilePatron.js"></script>
+
+
+	<script type="text/javascript">
+		var myslickEnabled = false;
+		$(document).ready(initPage);
+		$(window).load(loadPage);
+
+		function goBack()
+		{
+			window.history.back();
+		};
+
+		if ('ontouchstart' in window)
+		{
+			window.FastClick.attach(document.body);
+		}
+
+		var mobilePatron = new MobilePatron();
+
+		$(document).ready(function ()
+		{
+			if (localStorage.getItem("VIPDetailIndex"))
+			{
+				var vipDetailIndex = parseInt(localStorage.getItem("VIPDetailIndex"));
+
+				mobilePatron.GetVipEvents().then
+				(
+					function (jsonFromServer)
+					{
+						mobilePatron.HideActivity();
+
+						window.localStorage.removeItem("VIPDetailIndex");
+
+						var title = jsonFromServer[vipDetailIndex].event_title;
+						var thumbImage = jsonFromServer[vipDetailIndex].event_thumb_image;
+						var fromDate = moment(jsonFromServer[vipDetailIndex].event_from_date);
+						var toDate = moment(jsonFromServer[vipDetailIndex].event_to_date);
+						var content = jsonFromServer[vipDetailIndex].event_info;
+
+						var dateRange = (moment(jsonFromServer[vipDetailIndex].event_to_date).isAfter(jsonFromServer[vipDetailIndex].event_from_date))
+							? fromDate.format('MM/DD/YYYY') + ' - ' + toDate.format('MM/DD/YYYY')
+							: fromDate.format('MM/DD/YYYY');
+
+						$('#vipEventsContainer').append('<dl class="vipEventList">' +
+							'<dd><h3>' + title + '</h3></dd>' +
+							'<dd><img src="' + thumbImage + '"/></dd>' +
+							'<dd>' + dateRange + '</dd>' +
+							'<dd>' + content + '</dd>');
+					},
+					function (errorMessage)
+					{
+
+					}
+				);
+			} 
+			else
+			{
+				goBack();
+			}
+		});
+	</script>
+</body>
+</html>

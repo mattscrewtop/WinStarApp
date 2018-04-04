@@ -1,0 +1,109 @@
+    /* Defining each section background and styles
+    * --------------------------------------- */
+@media (orientation: landscape) {
+/*
+    #section2, #section5, #section8, #section11{
+        background-image: url(../images/backgrounds/PokerChips-2048x1536.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #section1, #section4, #section7, #section10, #section13{
+        background-image: url(../images/backgrounds/front-2048x1536.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #section3, #section6, #section9, #section12{
+        background-image: url(../images/backgrounds/360-2048x1536.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }*/
+    .footer-nav a:after {
+        left: 43%
+    }
+    .sectionpage{
+        background-image: url(../images/backgrounds/front-2048x1536.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+	.post {
+		width: 100%;
+	}
+	.content-section {
+		/*padding-top: 6em;*/
+		font-size: 1.3em;
+	}
+	#section4 .info-holder-main {
+		height: 70%;
+	}
+	#section7 .info-holder-main {
+		height: 65%;
+	}
+	#section5 .info-holder-main {
+		height: 67%;
+	}
+	#pagemenu {
+		font-size: 1.5em;
+	}
+    /*iPad*/ /*Directions*/
+    #pages-2 .info-holder-main {
+        height: 90vh;
+    } /*Scan*/
+    #pages-3 .info-holder-main {
+        height: 50vh;
+    } /*PhotoBooth*/
+    #pages-4 .info-holder-main {
+        height: 50vh;
+    } /*ContactUs*/
+    #pages-5 .info-holder-main {
+        height: 45vh;
+    } /*ShareApp*/
+    #pages-17 .info-holder-main {
+        height: 70vh;
+    }
+    #infoMenu {
+        font-size: 1em;
+    }
+}
+@media (orientation: portrait) {
+/*
+    #section2, #section5, #section8, #section11{
+        background-image: url(../images/backgrounds/PokerChips-1536x2048.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #section1, #section4, #section7, #section10, #section13{
+        background-image: url(../images/backgrounds/globe-1536x2048.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #section3, #section6, #section9, #section12{
+        background-image: url(../images/backgrounds/DiningRoom-1536x2048.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+*/
+#infoMenu {
+    font-size: 1em;
+}
+    .sectionpage{
+        background-image: url(../images/backgrounds/front-1536x2048.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    /*iPad*/ /*Directions*/
+    #pages-18 .info-holder-main {
+        height: 55vh;
+    } /*Scan*/
+    #pages-1 .info-holder-main {
+        height: 35vh;
+    } /*PhotoBooth*/
+    #pages-2 .info-holder-main {
+        height: 40vh;
+    } /*ContactUs*/
+    #pages-19 .info-holder-main {
+        height: 40vh;
+    } /*ShareApp*/
+    #pages-17 .info-holder-main {
+        /*height: 80vh;*/
+    }
+}

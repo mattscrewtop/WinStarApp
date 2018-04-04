@@ -1,0 +1,1029 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"iLo",
+				"ILoginModel"
+			],
+			[
+				"current",
+				"currentUser"
+			],
+			[
+				"curre",
+				"currentUser"
+			],
+			[
+				"error",
+				"errorType"
+			],
+			[
+				"Curre",
+				"CurrentRequests"
+			],
+			[
+				"pageTi",
+				"pageTimestamp_date"
+			],
+			[
+				"publish",
+				"publishDate"
+			],
+			[
+				"perfo",
+				"performer_table"
+			],
+			[
+				"upc",
+				"upcomingForm"
+			],
+			[
+				"ac",
+				"activeForm"
+			],
+			[
+				"sec",
+				"second_header"
+			],
+			[
+				"secon",
+				"secondary_text"
+			],
+			[
+				"dining",
+				"dining_spa_shop_info"
+			],
+			[
+				"found",
+				"foundation_featured_image"
+			],
+			[
+				"small",
+				"small_feature_image"
+			],
+			[
+				"large",
+				"large_feature_image"
+			],
+			[
+				"post_",
+				"post_thumbnail_image"
+			],
+			[
+				"wpt",
+				"wptouch_new_thumbnail_image"
+			],
+			[
+				"lshow",
+				"lshowcase_thumb_image"
+			],
+			[
+				"section_c",
+				"section_combined_content"
+			],
+			[
+				"7em",
+				"7em"
+			],
+			[
+				"from",
+				"from_date"
+			],
+			[
+				"users",
+				"users_data"
+			],
+			[
+				"side",
+				"sidemenuIcon"
+			],
+			[
+				"orin",
+				"original_image"
+			],
+			[
+				"cate",
+				"category_id"
+			],
+			[
+				"close",
+				"closeBtnInside"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "mobilePatronsHome.html",
+			"settings":
+			{
+				"buffer_size": 11238,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "mobilePatronsHostInformation.html",
+			"settings":
+			{
+				"buffer_size": 11029,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "mobilePatronsVIPDetail.html",
+			"settings":
+			{
+				"buffer_size": 8450,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "mobilePatronsOffers.html",
+			"settings":
+			{
+				"buffer_size": 16712,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "mobilePatronsVIPList.html",
+			"settings":
+			{
+				"buffer_size": 8721,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/mobilePatron.js",
+			"settings":
+			{
+				"buffer_size": 19498,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "styles/myWinstar.css",
+			"settings":
+			{
+				"buffer_size": 5163,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "styles/examples.css",
+			"settings":
+			{
+				"buffer_size": 49613,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "scripts/selectorCache.js",
+			"settings":
+			{
+				"buffer_size": 25362,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 8313,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 92.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 149.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": true,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Shared Host/ScrewtopV2/Resources/HTML"
+	],
+	"file_history":
+	[
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/login.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/scripts/slick.js",
+		"/C/Documents and Settings/mferrell/My Documents/Downloads/sweltering-inferno-2198-pages-export.json",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/scripts/mobilePatron.matt.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/mobilePatronsVIPDetail.matt.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/scripts/mobilePatron.new.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/scripts/moment.min.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/mobilePatronsHome.new.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/scripts/slick.min.js",
+		"/D/Shared Host/SolarMoneyExperts/HTML/SolarSavingsAmerica/index.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/scripts/uauth.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/scripts/myWinstar.js",
+		"/D/Shared Host/usbenefitsplus/Benefitlogix.com/basisops/downloads/createaccess.php",
+		"/D/Shared Host/SolarMoneyExperts/HTML/Landing Page/index.html",
+		"/C/Documents and Settings/mferrell/Desktop/WinStar-Manty-Pages/hostInformation-VIPEvents.html",
+		"/D/Shared Host/photroller/code/winstar/alldata.php",
+		"/D/Shared Host/photroller/code/winstar/db.php",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/form.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/index.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/login.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/test.js",
+		"/D/Shared Host/photroller/code/winstar/alldata-1429985506.php.bak",
+		"/D/Shared Host/photroller/code/winstar/alldata-1429985450.php.bak",
+		"/D/Shared Host/photroller/code/winstar/alldata-1429985578.php.bak",
+		"/D/Shared Host/photroller/code/winstar/alldata-1429985672.php.bak",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/localData.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/host-info.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/vip-events.html",
+		"/D/Shared Host/photroller/code/winstar/alldata-1429985211.php.bak",
+		"/D/Shared Host/photroller/code/winstar/alldata-1429985805.php.bak",
+		"/D/Shared Host/photroller/code/winstar/alldata-1429985151.php.bak",
+		"/D/Shared Host/photroller/code/winstar/alldata-1429985168.php.bak",
+		"/D/Shared Host/photroller/code/winstar/alldata-1429985598.php.bak",
+		"/D/Shared Host/photroller/code/winstar/firebase.php",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/styles/fonts/url.htm",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/rules.json",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/login.tom.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/snap.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/jsonresterrorcodes.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/alertify.min.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/contentJSON.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/my.alertify.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/styles/slick-theme.css",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/slick.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/todolist.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/launcher-icon-3x.png",
+		"/C/Documents and Settings/mferrell/Application Data/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML4/scripts/uauth.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/newfile",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/date.format.js",
+		"/D/Shared Host/ScrewtopV2/Resources/tempHTML3/scripts/form.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/styles/alertify.css",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/uauth.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/raven.min.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/jstorage.min.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/jquery.leanModal.min.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/selectorCache.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/scrollz-carousel-firebase.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/raven.min.map",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/offline.min.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/nl2br.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/myWinstar.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/lazyload.min.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/styles/icons.css",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/styles/themes/bootstrap.css",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/styles/themes/default.css",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/styles/themes/semantic.css",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/rules-dev.json",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/myWinstar.orig.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/login.matt.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/Register.matt.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML4/Registration.matt2.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/register.tom.git.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/Register.tom.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/register.workspace.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/Registration.matt2.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/resetPassword.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/resort-offers-orig.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/resort-offers.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/resortOffers.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/uauth.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/vipEvents.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/firebase-simple-login.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/scripts/selectorCache.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/callAJAX.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/Register.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/offers.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/mywinstar.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/login.test.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/login.test2.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/login.tom.git.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/login.server.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/account-home-orig.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/account-home.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/account-info-orig.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/account-info.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/account.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/accountHome.html",
+		"/C/Documents and Settings/mferrell/Application Data/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/localData.tom.git.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/selectorCache-1452790667.js.bak",
+		"/D/Shared Host/SolarMoneyExperts/HTML/Restaurant/demo-restaurant-onepage-two.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/soapclient.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/jsontest.html",
+		"/D/CFGQUIET.INI",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/jsontest.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/scripts/localData.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/index.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/pagePiling/jquery.pagepiling.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/alertify.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/facilitymap.html",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/scripts/loadDetail.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/scripts/scrollz-carousel-firebase.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML3/styles/myWinstar.css",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/scripts/localData copy.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/scripts/contentJSON.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/styles/examples.css",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/styles/normalize.css",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/styles/skeleton.css",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/scripts/loadDetail.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/pagePiling/jquery.pagepiling.js",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/account-home-orig.html",
+		"/D/Shared Host/usbenefitsplus/Benefitlogix.com/Mautic/app/logs/mautic_prod-2015-12-24.php",
+		"/D/Shared Host/usbenefitsplus/Benefitlogix.com/solarpanels/app/logs/mautic_prod-2015-12-24.php",
+		"/D/Shared Host/usbenefitsplus/Benefitlogix.com/affiliates/install/index.php",
+		"/D/Shared Host/Samsung/service/auth.php",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/styles/bootstrap.min.css",
+		"/D/Shared Host/ScrewtopV2/Resources/HTML/index-1441839663.html.bak"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 278.0,
+		"where_history":
+		[
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML, -*.json, -*.map*, -*.bak*, -*.min*",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML, -*.json, -*.map*, -*.bak*, -*.min*,*.js",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML3, -*.json, -*.map*, -*.bak*, -*.min*,*.js",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML3, -*.json, -*.map*, -*.bak*, -*.min*",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML3, -*.json, -*.map*, -*.bak*",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML3",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML3,-*.min.*,-*.map",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML,-*.min.*,-*.map",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML3,-*.min.*,-*.map",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML,-*.min.*,-*.map,*.js",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML3,-*.min.*,-*.map,*.js",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML3,-*.min.*,-*.map,+*.js",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML3,-*.min.*,-*.map",
+			"D:\\Shared Host\\SolarMoneyExperts\\HTML\\Landing Page\\",
+			"D:\\Shared Host\\SolarMoneyExperts",
+			"D:\\Shared Host\\SolarMoneyExperts,+*.html",
+			"D:\\Shared Host\\ScrewtopV2\\Resources,+*.php,-*.min.*,-*.map",
+			"D:\\Shared Host\\ScrewtopV2\\Resources,-*.min.*,-*.map",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML3,-*.min.*,-*.map",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML,-*.min.*,-*.map",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML,-*.min.*",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML",
+			"D:\\Shared Host\\ScrewtopMedia",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML,*.js,-*.min.js",
+			"<open files>",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML,*.js",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML,*.js,-*.min.js",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML",
+			"<current file>",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML",
+			"<open files>",
+			"<current file>",
+			"D:\\Shared Host\\Samsung",
+			"D:\\Shared Host\\SamsungLive",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML,*.js,-*.min.js,*.css,-*.min.css",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML,*.js,-*.min.js",
+			"<open files>,D:\\Shared Host\\ScrewtopV2\\Resources\\HTML,*.js,-*.min.js",
+			"<open files>",
+			"-*.map,-*.bak,-*.min.css,D:\\Shared Host\\Winstar,*.php",
+			"-*.map,-*.bak,-*.min.css,D:\\Shared Host\\ScrewtopV2\\Resources\\HTML",
+			"-*.min.js,-*.map,-*.bak,-*.min.css,D:\\Shared Host\\ScrewtopV2\\Resources\\HTML",
+			"-*.min.js,-*.map,-*.bak,-*.min.css,D:\\Shared Host\\markup",
+			"-*.min.js,-*.map,-*.bak,-*.min.css,D:\\Shared Host\\photroller",
+			"-*.min.js,-*.map,-*.bak,-*.min.css,D:\\Shared Host\\Winstar",
+			"-*.min.js,-*.map,-*.bak,-*.min.css,D:\\Shared Host\\ScrewtopV2",
+			"-*.min.js,-*.map,-*.bak,-*.min.css,D:\\Shared Host\\Samsung",
+			"<current file>",
+			"-*.min.js,-*.map,-*.bak,-*.min.css,D:\\Shared Host\\Samsung",
+			"*.php,-*.min.js,-*.map,-*.bak,-*.min.css,D:\\Shared Host\\usbenefitsplus\\Benefitlogix.com",
+			"*.css,*.html,*.js,-*.min.js,-*.map,-*.bak,-*.min.css,D:\\Shared Host\\ScrewtopV2\\Resources\\HTML\\scripts",
+			"*.css,*.html,*.js,-*.min.js,-*.map,-*.bak,-*.min.css,,D:\\Shared Host\\Samsung",
+			"*.css,*.html,*.js,-*.min.js,-*.map,-*.bak,-*.min.css,D:\\Shared Host\\ScrewtopV2\\Resources\\HTML\\",
+			"*.css,*.html,*.js,-*.min.js,-*.map,-*.bak,-*.min.css,D:\\Shared Host\\ScrewtopV2\\Resources\\",
+			"*.css,*.html,*.js,-*.min.js,-*.map,-*.bak,-*.min.css,D:\\Shared Host\\ScrewtopV2\\Resources\\HTML",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML,*.css,*.html,*.js,-*.min.js,-*.map,-*.bak,-*.min.css",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML,*.css,*.html,*.js,-*.min.js,-*.map,-*.bak",
+			"D:\\Shared Host\\Winstar,*.js,-*.min.js,<open files>",
+			"D:\\Shared Host\\Winstar,*.js,-*.min.js",
+			"D:\\Shared Host,*.js,-*.min.js",
+			"<current file>",
+			"D:\\Shared Host,*.php",
+			"D:\\Shared Host,-*.*,*.php",
+			"D:\\Shared Host,*.php",
+			"<open files>,D:\\Shared Host\\photroller\\code\\winstar,D:\\Shared Host\\Winstar",
+			"<open files>,D:\\Shared Host\\photroller\\code\\winstar,D:\\Shared Host\\Winstarc.nc",
+			"<open files>",
+			"<current file>",
+			"D:\\Shared Host\\photroller\\code\\winstar,D:\\Shared Host\\ScrewtopV2\\Resources\\HTML,<open files>,<open folders>",
+			"D:\\Shared Host\\photroller\\code\\winstar,D:\\Shared Host\\ScrewtopV2\\Resources\\HTML,<open files>",
+			"D:\\Shared Host\\photroller\\code\\winstar,D:\\Shared Host\\ScrewtopV2\\Resources\\HTML",
+			"D:\\Shared Host\\Winstar,D:\\Shared Host\\photroller\\code\\winstar",
+			"D:\\Shared Host\\Winstar",
+			"<current file>",
+			"D:\\Shared Host\\Winstar",
+			"D:\\Shared Host\\photroller\\code\\winstar",
+			"D:\\Shared Host\\ScrewtopV2\\Resources\\HTML"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"mobilePatronsOffers",
+			"urlOffersDisclaimer",
+			"GetOffersDisclaimer",
+			"VIPDetailIndex",
+			"PointsToNextLevel",
+			"points ",
+			"slick",
+			"initLogin",
+			"alertify",
+			";\"><",
+			"accounthome",
+			"block",
+			"showSuccess",
+			"handleAuthResponse",
+			"showSuccess",
+			"showError",
+			"].",
+			"handleAuthResponse",
+			"showError",
+			"hideActivity",
+			"showActivity",
+			"IUserModel",
+			"routeTo",
+			"form.js",
+			"first_step",
+			"field_values",
+			"progress",
+			"sweepstakesdrawings",
+			"showsweepStakes",
+			"showSuccess",
+			"authData",
+			"showSuccess",
+			"showError",
+			"alertify",
+			"$my.authRef",
+			"authRef",
+			"userRef",
+			".set",
+			"3e7327",
+			"showAlert",
+			"authalert",
+			"showError",
+			"state",
+			"moveToPage",
+			".slick(",
+			"swipetoSlide",
+			"slick.",
+			"moveToPage",
+			"alertify",
+			"alertifier",
+			"showError",
+			"prosto",
+			"fontAwesome",
+			"../",
+			"<form",
+			"&lt;form",
+			"credit_score",
+			"slick.svg",
+			"fontawesome",
+			"showSuccess",
+			"controllers.IWinL",
+			"controllers.IS",
+			"controllers.IPo",
+			"controllers.IWin",
+			"$my.authRef.",
+			"rootRef.child('users')",
+			"userToken",
+			"userRef",
+			"userToken",
+			"userRef",
+			"userObj",
+			"d",
+			"authRef",
+			"showAlert",
+			"data",
+			"userObj",
+			"authRef",
+			"provider",
+			"saveCompressed",
+			"comppressed",
+			"authRef",
+			"showAlert",
+			");\n",
+			"emailSave",
+			"passwordSave",
+			"userObj",
+			"authAnonymously",
+			"authWithCustomToken",
+			"reject",
+			"deferred",
+			"resolve",
+			"createUser",
+			"userRef",
+			"authRef",
+			"logout",
+			"authRef",
+			"ILoginModel",
+			"cardClose",
+			"mycardclose",
+			"dataModel",
+			"authRef.auth",
+			"AJAX",
+			"authwith",
+			"authtwithCustom",
+			"mywinstar",
+			"$my.responsive.slick",
+			"slick",
+			"FastClick",
+			"contentType",
+			"loadPage",
+			"contentType",
+			"firebasetoken",
+			"firebase",
+			"fast",
+			"fontawesome",
+			"Okab",
+			"2015",
+			"cors",
+			"src",
+			"Soap",
+			"mobileoffers.",
+			"makeAPIRequest",
+			"getRewards",
+			"offlin",
+			"hideActivity()",
+			"IRegistrationModelHandler",
+			"GetJSON",
+			"objAJAX"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\\\"",
+			" onclick=\"javascript: moveToPage(7);\" href=\"javascript:void(0);\"",
+			" ",
+			"sea.",
+			"\\\")",
+			"(\\\"",
+			"\"",
+			"\" '",
+			"\",'",
+			"\"'\\n",
+			"\",'",
+			"\"'\\n",
+			"\": \"",
+			"'\n            . ', \"",
+			"\nsectionid",
+			"",
+			":",
+			",",
+			",:",
+			"row",
+			"",
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 8,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "mobilePatronsHome.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11238,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32,
+								32
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Sunburst.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "mobilePatronsHostInformation.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11029,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								11029
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Sunburst.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "mobilePatronsVIPDetail.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8450,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7877,
+								7891
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Sunburst.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2755.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "mobilePatronsOffers.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16712,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Sunburst.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "mobilePatronsVIPList.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8721,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								8721
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Sunburst.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "scripts/mobilePatron.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19498,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18002,
+								18002
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Sunburst.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 8074.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "styles/myWinstar.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4791,
+								4791
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Sunburst.tmTheme",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5936.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "styles/examples.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 49613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								49613
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Sunburst.tmTheme",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4081.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "scripts/selectorCache.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25362,
+								25362
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Sunburst.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 10004.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8313,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1471,
+								1471
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Sunburst.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 413.0
+	},
+	"pinned_build_system": "",
+	"project": "WinStarV3.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Shared Host\\usbenefitsplus\\Benefitlogix.com\\SolarMoneyExperts.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 300.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

@@ -1,0 +1,206 @@
+﻿<html lang="en" class="JS"><head>
+    <title>WinStar World Casino</title>
+    <meta name="description" content="WinStar World Casino">
+    <meta name="theme-color" content="#db5945">
+    <link rel="icon" sizes="192x192" href="launcher-icon-4x.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="author" content="Matt Ferrell">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="styles/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/alertify.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/themes/default.rtl.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/slick.css">
+    <link rel="stylesheet" type="text/css" href="styles/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="styles/offline-theme-dark.css">
+    <link rel="stylesheet" type="text/css" href="styles/offline-language-english.css">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="launcher-icon-2x.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="launcher-icon-3x.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="launcher-icon-4x.png">
+    <link rel="apple-touch-startup-image" href="splash.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-itunes-app" content="app-id=com.ScrewtopMedia.Winstar, affiliate-data=ScrewtopMedia, app-argument=https://itunes.apple.com/us/app/winstar-world-casino/id548935724">
+    <link rel="stylesheet" type="text/css" href="styles/examples.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width:320px)" href="styles/max-320px.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width:321px) and (max-width: 480px)" href="styles/max-480px.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width: 767px)" href="styles/max-767px.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width:768px) and (max-width: 979px)" href="styles/max-979px.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (min-width:980px) and (max-width: 1200px)" href="styles/max-1200px.css">
+        <!-- start Mixpanel --><!-- end Mixpanel -->
+    <style>
+    form {
+        display: none;
+    }
+    </style>
+</head>
+
+<body id="canvas" class="">
+    <div id="preloader" style="display: none;">
+        <div id="status" style="display: none;"></div>
+    </div>
+        
+    <div class="snap-drawers" id="sidebar">
+        <div id="snap-drawer" class="snap-drawer snap-drawer-left scrollable">
+            <div id="snap-drawer-wrapper">
+                <div class="sidebar-controls">
+                    <a href="javascript:void(0);" onclick="javascript:openurl('tel://1-800-622-6317');" class="sidebar-call"> </a>
+                    <a href="javascript:void(0);" onclick="javascript:openurl('http://www.facebook.com/WinStarWorldCasino');" class="sidebar-face"> </a>
+                    <a href="javascript:void(0);" onclick="javascript:openurl('http://twitter.com/winstarworld');" class="sidebar-twit"> </a>
+                    <a href="javascript:void(0);" id="sidebar-close" class="sidebar-close"> </a>
+                </div>
+                <div class="sidebar-header">
+                    <a href="javascript:void(0);" onclick="javascript: moveToPage(0);">&nbsp;</a>
+                </div>
+                <div class="sidebar-breadcrumb">
+                    <div class="sidebar-decoration"></div>
+                    <p>
+                        Navigation
+                    </p>
+                    <div class="sidebar-decoration"></div>
+                </div>
+                <!-- Start SideBarNav -->
+                <div class="navigation-items" id="sidebarmenu"><span id="fullnavitem-aaaaa"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: moveToPage(0);" href="javascript:void(0);" class="sidemenu-home sidemenuitems">Home<em id="sidemenu-0" class="unselected-sub-nav"> </em></a></div></span><span id="fullnavitem-bbbbbb"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: moveToPage(1);" href="javascript:void(0);" class="sidemenu-spotlight sidemenuitems">Spotlight<em id="sidemenu-1" class="unselected-nav"> </em></a></div></span><span id="fullnavitem-cccccc"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: moveToPage(2);" href="javascript:void(0);" class="sidemenu-directions sidemenuitems">Directions<em id="sidemenu-2" class="unselected-nav"> </em></a></div></span><span id="fullnavitem-dddddd"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: moveToPage(3);" href="javascript:void(0);" class="sidemenu-scaninstructions sidemenuitems">Scan<em id="sidemenu-3" class="unselected-nav"> </em></a></div></span><span id="fullnavitem-eeeeee"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: moveToPage(4);" href="javascript:void(0);" class="sidemenu-photoboothinstructions sidemenuitems">Photobooth<em id="sidemenu-4" class="unselected-nav"> </em></a></div></span><span id="fullnavitem-ffffff"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: moveToPage(5);" href="javascript:void(0);" class="sidemenu-contactus sidemenuitems">Contact Us<em id="sidemenu-5" class="unselected-nav"> </em></a></div></span><span id="fullnavitem-jjjjj"><div class="sidebar-decoration"></div><div class="nav-item"><a href="javascript:void(0);" id="submenu-deploy-1" class="sidemenu-mobile_offers submenu-deploy sidemenuitems">Mobile Offers<em class=""> </em></a><div class="nav-item-submenu" id="nav-item-submenu-1" style="display: block;"><div class="sidebar-decoration"></div><span id="fullnavitem-jjjjja"><a onclick="javascript: moveToPage(6);" href="javascript:void(0);" class="sidemenu-account_information sidemenuitems">Account Information <em id="sidemenu-6" class="selected-sub-nav"> </em></a></span><span id="fullnavitem-jjjjjg"><a onclick="javascript: moveToPage(7);" href="javascript:void(0);" class="sidemenu-account_home sidemenuitems">Account Home <em id="sidemenu-7" class="unselected-sub-nav"> </em></a></span><span id="fullnavitem-kkkkkk"><a onclick="javascript: moveToPage(8);" href="javascript:void(0);" class="sidemenu-account_edit sidemenuitems">Account Edit <em id="sidemenu-8" class="unselected-sub-nav"> </em></a></span><span id="fullnavitem-llllll"><a onclick="javascript: moveToPage(9);" href="javascript:void(0);" class="sidemenu-login sidemenuitems">Login <em id="sidemenu-9" class="unselected-sub-nav"> </em></a></span></div></div></span><span id="fullnavitem-rrrrrr"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: moveToPage(10);" href="javascript:void(0);" class="sidemenu-shareapp sidemenuitems">Share App<em id="sidemenu-10" class="unselected-nav"> </em></a></div></span><span id="fullnavitem-sssssa"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: openurl('https://secure.winstarworldcasino.com/WinstarTools/JSP/enroll.jsp');" href="javascript:void(0);" class="sidemenu-playersclubsignup sidemenuitems">Players Club Sign Up<em id="sidemenu--6" class="link-nav"> </em></a></div></span><span id="fullnavitem-sssssb"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: openurl('http://winstarworldcasino.com/wp-content/uploads/2014/11/winstar_brochure.pdf');" href="javascript:void(0);" class="sidemenu-winstarbrochure sidemenuitems">WinStar Brochure<em id="sidemenu--3" class="link-nav"> </em></a></div></span><span id="fullnavitem-sssssc"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: openurl('https://register.winstarworldcasino.com/cgi-bin/lansaweb?PROCFUN+RN+RESNET+WSH+funcparms+UP(A2560):;RAINHTL;102015;1;2;0;;;;;;;;;;;;;;;?/');" href="javascript:void(0);" class="sidemenu-bookaroom sidemenuitems">Book A Room<em id="sidemenu--13" class="link-nav"> </em></a></div></span><span id="fullnavitem-ssssss"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: openurl('http://mobile.winstaronlinegaming.com/Games/aspNET/Lobby/WSMobile2015/index.aspx');" href="javascript:void(0);" class="sidemenu-onlinegamingfaqs sidemenuitems">Oline Gaming<em id="sidemenu--7" class="link-nav"> </em></a></div></span><span id="fullnavitem-tttttt"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: openurl('http://winstarcareers.com/');" href="javascript:void(0);" class="sidemenu-careers sidemenuitems">Careers<em id="sidemenu--10" class="link-nav"> </em></a></div></span><span id="fullnavitem-uuuuuu"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: openurl('facilitymap.html');" href="javascript:void(0);" class="sidemenu-facilitymap sidemenuitems">Facility Map<em id="sidemenu--11" class="link-nav"> </em></a></div></span><span id="fullnavitem-vvvvvv"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: openurl('http://www.winstarvillage.com/');" href="javascript:void(0);" class="sidemenu-winstarvillage sidemenuitems">WinStar Village<em id="sidemenu--16" class="link-nav"> </em></a></div></span><span id="fullnavitem-xxxxxx"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: openurl('https://www.facebook.com/WinStarWorldCasino');" href="javascript:void(0);" class="sidemenu-facebook sidemenuitems">Facebook<em id="sidemenu--8" class="link-nav"> </em></a></div></span><span id="fullnavitem-yyyyyy"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: openurl('https://www.twitter.com/winstarworld');" href="javascript:void(0);" class="sidemenu-twitter sidemenuitems">Twitter<em id="sidemenu--9" class="link-nav"> </em></a></div></span><span id="fullnavitem-zzzzz"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: openurl('https://www.youtube.com/user/Winstarcasino?feature=sub_widget_1');" href="javascript:void(0);" class="sidemenu-youtube sidemenuitems">YouTube<em id="sidemenu--12" class="link-nav"> </em></a></div></span><span id="fullnavitem-zzzzza"><div class="sidebar-decoration"></div><div class="nav-item"><a onclick="javascript: snapper.close();;" href="javascript:void(0);" class="sidemenu-close sidemenuitems">Close<em id="sidemenu--14" class="link-nav"> </em></a></div></span></div>
+                <!-- End SideBarNav -->
+                <!--
+                    <div class="sidebar-breadcrumb">
+                        <div class="sidebar-decoration"></div>
+                        <p>
+                            Let's get social!
+                        </p>
+                        <div class="sidebar-decoration"></div>
+                    </div>
+                    <div class="navigation-items">
+                        <div class="nav-item">
+                            <a href="javascript:void(0);" onclick="javascript:openurl('http://www.facebook.com/WinStarWorldCasino');" class="facebook-nav">Facebook<em class="link-nav"> </em></a>
+                        </div>
+                        <div class="sidebar-decoration"></div>
+                        <div class="nav-item">
+                            <a href="javascript:void(0);" onclick="javascript:openurl('http://twitter.com/winstarworld');" target="_blank" class="twitter-nav">Twitter<em class="link-nav"> </em></a>
+                        </div>
+                        
+                        <div class="sidebar-decoration"></div>
+                        <div class="nav-item">
+                            <a href="login.html" class="facebook-login">Login</a>
+                        </div>
+                        
+                        <div id='firechat-wrapper'>
+                          <a href='#' onclick='login("twitter");'>Login</a>
+                        </div>
+                        
+                    </div>
+              -->
+                <div class="sidebar-decoration"></div>
+                <p class="sidebar-copyright center-text">
+                    Copyright <span id="copyrightYear">2015</span>.
+                        <br>
+                        All rights reserved.
+                </p>
+            </div>
+        </div>
+        </div><!-- /panel -->
+    <div id="snap-content" class="snap-content" data-role="page" style="">
+        <!-- Header -->
+        <div id="my-header">
+            <ul>
+                <li class="leftli" id="deploy">
+                    <a href="javascript:void(0);" id="deploy-span" class="deploy-sidebar" style="width:2em;height:2em;position:initial;top:0;left:0; z-index: 1500;"></a>
+                </li>
+                <li class="twocell">
+                    <div>
+                        <em class="content-title"></em>
+                    </div>
+                </li>
+                <li class="rightli" onclick="javascript: doAuthLogin();">
+                    <div>
+                        <a href="javascript:void(0);" class="deployUpperRightCta">&nbsp;</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- Footer -->
+        <div id="infoMenu">
+            <div class="footer">
+                <ul id="footermenu" class="footer-nav">
+ 
+                <li id="footer-1"><a onclick="javascript: moveToPage(1);" class="spotlight" href="javascript:void(0);"> <span class="name">Spotlight</span> </a></li><li id="footer-2"><a onclick="javascript: moveToPage(2);" class="directions" href="javascript:void(0);"> <span class="name">Directions</span> </a></li><li id="footer-3"><a onclick="javascript: moveToPage(3);" class="scaninstructions" href="javascript:void(0);"> <span class="name">Scan</span> </a></li><li id="footer-4"><a onclick="javascript: moveToPage(4);" class="photoboothinstructions" href="javascript:void(0);"> <span class="name">Photobooth</span> </a></li><li id="footer-5"><a onclick="javascript: moveToPage(5);" class="contactus" href="javascript:void(0);"> <span class="name">Contact Us</span> </a></li></ul>
+            </div>
+        </div>
+        <div id="pagepiling" class="sectionpage">
+            <div id="responsive" class="slider slick-initialized slick-slider">
+            <div aria-live="polite" class="slick-list draggable" tabindex="0"><div class="slick-track" style="opacity: 1; width: 7425px; transform: translate3d(-4050px, 0px, 0px);"><div id="pages-0" class="pages slick-slide" data-slick-index="0" aria-hidden="true" style="width: 675px;"><div class="info-holder-main cfm"><h3 id="title-0" class="title">Home</h3><button type="button" name="cardclose-0" class="cardclose" onclick="javascript: cardClose(0);"></button><div id="slide-0" class="slide-container slide scrollable"><div id="slides-0" class="slides"><ul id="items-0" class="items"></ul></div></div></div></div><div id="pages-1" class="pages slick-slide" data-slick-index="1" aria-hidden="true" style="width: 675px;"><div class="info-holder-main cfm"><h3 id="title-1" class="title">Spotlight</h3><button type="button" name="cardclose-1" class="cardclose" onclick="javascript: cardClose(1);"></button><div id="slide-1" class="slide-container slide scrollable"><div id="slides-1" class="slides"><div class="post"><ul id="items-1" class="items"></ul></div></div></div></div></div><div id="pages-2" class="pages slick-slide" data-slick-index="2" aria-hidden="true" style="width: 675px;"><div class="info-holder-main cfm"><h3 id="title-2" class="title">Directions</h3><button type="button" name="cardclose-2" class="cardclose" onclick="javascript: cardClose(2);"></button><div id="slide-2" class="slide-container slide scrollable"><div id="slides-2" class="slides"><div class="post"><ul id="items-2" class="items"></ul></div></div></div></div></div><div id="pages-3" class="pages slick-slide" data-slick-index="3" aria-hidden="true" style="width: 675px;"><div class="info-holder-main cfm"><h3 id="title-3" class="title">Scan</h3><button type="button" name="cardclose-3" class="cardclose" onclick="javascript: cardClose(3);"></button><div id="slide-3" class="slide-container slide scrollable"><div id="slides-3" class="slides"><div class="post"><ul id="items-3" class="items"></ul></div></div></div></div></div><div id="pages-4" class="pages slick-slide" data-slick-index="4" aria-hidden="true" style="width: 675px;"><div class="info-holder-main cfm"><h3 id="title-4" class="title">Photobooth</h3><button type="button" name="cardclose-4" class="cardclose" onclick="javascript: cardClose(4);"></button><div id="slide-4" class="slide-container slide scrollable"><div id="slides-4" class="slides"><div class="post"><ul id="items-4" class="items"></ul></div></div></div></div></div><div id="pages-5" class="pages slick-slide" data-slick-index="5" aria-hidden="true" style="width: 675px;"><div class="info-holder-main cfm"><h3 id="title-5" class="title">Contact Us</h3><button type="button" name="cardclose-5" class="cardclose" onclick="javascript: cardClose(5);"></button><div id="slide-5" class="slide-container slide scrollable"><div id="slides-5" class="slides"><div class="post"><ul id="items-5" class="items"></ul></div></div></div></div></div><div id="pages-6" class="pages slick-slide slick-current slick-active" data-slick-index="6" aria-hidden="false" style="width: 675px;"><div class="info-holder-main cfm"><h3 id="title-6" class="title">Offers</h3><button type="button" name="cardclose-6" class="cardclose" onclick="javascript: cardClose(6);"></button><div id="slide-6" class="slide-container slide scrollable"><div id="slides-6" class="slides"><div class="post"><ul id="items-6" class="items"><li id="listitemid-4358" data-pageid="4358">
+    <style>
+        #container {
+            font-size: 9px;
+        }
+        #container h4 {
+            font-size: 14px;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+        #container .half-thumb {
+            width: 25%;
+        }
+        ul.patron {
+            margin: 5%;
+        }
+        ul.patron li {
+            height: 75px;
+            margin: auto 0;
+        }
+    </style>
+    <div id="container">
+        <a class="button" style="text-align: center; position; relative; left: 20%;">Account Information</a>
+        <ul>
+                <li><p>&nbsp;</p></li>
+                <li><h4>Welcome, &lt;PATRON NAME&gt;!</h4></li>
+                <li><h4>Current Level: Elite</h4></li>
+                <li><sup style="left:25%;">Expires: Jan 31, 2016</sup></li>
+                <li><h4>Tier Points: 23,357</h4></li>
+                <li><p>&nbsp;</p></li>
+                <li><h4>Sweepstakes Entries:&nbsp;</h4>
+                    <ul style="margin: 0 5%;">
+                    <li>&lt;XX Entries&gt; Sweepstakes Name 1</li>
+                    <li>&lt;XX Entries&gt; Sweepstakes Name 2</li>
+                    <li>&lt;XX Entries&gt; Sweepstakes Name 3</li>
+                    </ul>
+                </li>
+        </ul>
+        <hr style="border-top: 1px solid #000;">
+        <p>Please choose from the offers and information available below.</p>
+        <p>&nbsp;</p>
+        <p>Lorem ipsum dolor sit amet, in vis appellantur interpretaris, nulla everti vel in. Populo graeci virtute vim no. Eu sumo bonorum vim. An his fugit accumsan expetenda, et assum altera definitiones mea, dolorem admodum gubergren eam ex. Id vero mazim persequeris nec. No quo aeque tacimates, populo malorum impedit est in.</p>
+        <p>&nbsp;</p>
+        <ul class="patron">
+                <li><div class="half-thumb">
+                    <img class="scrollimage loaded" data-original="/images/patron_information.png" style="float: left;" src="/images/patron_information.png"></div>
+                    <h4>PATRON INFORMATION</h4>
+                </li>
+                <li style="clear: both;"><div class="half-thumb">
+                    <img src="/images/host_information.png" style="float: left;"></div>
+                    <h4>HOST INFORMATION</h4>
+                </li>
+                <li style="clear: both;"><div class="half-thumb"><img src="/images/winstar_offers.png" style="float: left;"></div>
+                    <h4>WINSTAR OFFERS</h4>
+                </li>
+        </ul>
+    </div>
+                                                </li></ul></div></div></div></div></div><div id="pages-7" class="pages slick-slide" data-slick-index="7" aria-hidden="true" style="width: 675px;"><div class="info-holder-main cfm"><h3 id="title-7" class="title">Account Home</h3><button type="button" name="cardclose-7" class="cardclose" onclick="javascript: cardClose(7);"></button><div id="slide-7" class="slide-container slide scrollable"><div id="slides-7" class="slides"><div class="post"><ul id="items-7" class="items"></ul></div></div></div></div></div><div id="pages-8" class="pages slick-slide" data-slick-index="8" aria-hidden="true" style="width: 675px;"><div class="info-holder-main cfm"><h3 id="title-8" class="title">Account Edit</h3><button type="button" name="cardclose-8" class="cardclose" onclick="javascript: cardClose(8);"></button><div id="slide-8" class="slide-container slide scrollable"><div id="slides-8" class="slides"><div class="post"><ul id="items-8" class="items"></ul></div></div></div></div></div><div id="pages-9" class="pages slick-slide" data-slick-index="9" aria-hidden="true" style="width: 675px;"><div class="info-holder-main cfm"><h3 id="title-9" class="title">Login</h3><button type="button" name="cardclose-9" class="cardclose" onclick="javascript: cardClose(9);"></button><div id="slide-9" class="slide-container slide scrollable"><div id="slides-9" class="slides"><div class="post"><ul id="items-9" class="items"></ul></div></div></div></div></div><div id="pages-10" class="pages slick-slide" data-slick-index="10" aria-hidden="true" style="width: 675px;"><div class="info-holder-main cfm"><h3 id="title-10" class="title">Share App</h3><button type="button" name="cardclose-10" class="cardclose" onclick="javascript: cardClose(10);"></button><div id="slide-10" class="slide-container slide scrollable"><div id="slides-10" class="slides"><div class="post"><ul id="items-10" class="items"></ul></div></div></div></div></div></div></div><button type="button" data-role="none" class="slick-prev" aria-label="previous">Previous</button><button type="button" data-role="none" class="slick-next" aria-label="next">Next</button></div>
+        </div>
+    </div>
+    <div class="modal-overlay js-modal-close" style="display: none;"></div>
+    <div id="la" class="modal-box">
+        <header><a href="javascript:void(0);" class="js-modal-close close">×</a>
+            <h3 id="title-99"></h3><em class="date" id="date-99"></em></header>
+        <div class="modal-body scrollable">
+            <ul id="items-99" class="items"></ul>
+        </div>
+        <footer><span id="action-footer"></span><a href="javascript:void(0);" class="btn btn-small js-modal-close">Close</a></footer>
+    </div>
+    
+
+<div class="offline-ui offline-ui-up"><div class="offline-ui-content"></div><a href="" class="offline-ui-retry"></a></div></body></html>

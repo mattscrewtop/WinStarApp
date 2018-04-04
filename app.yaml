@@ -1,0 +1,122 @@
+# [START runtime]
+runtime: python27
+threadsafe: yes
+# [END runtime]
+
+default_expiration: "7d"
+
+handlers:
+#- url: /assets
+#  static_dir: assets
+#  application_readable: true
+
+#- url: /favicon\.ico
+#  static_files: favicon.ico
+#  upload: favicon\.ico
+#  secure: always
+
+- url: /(.*manifest\.json)
+  mime_type: application/manifest+json
+  static_files: HTML/\1
+  upload: HTML/(.*manifest\.json)
+  expiration: "0m"
+  secure: always
+
+#- url: /(.*service-worker\.js)
+#  mime_type: application/javascript
+#  static_files: HTML/\1
+#  upload: HTML/(.*service-worker\.js)
+#  expiration: "0m"
+#  secure: always
+
+#- url: /manifest\.appcache)
+#  mime_type: text/cache-manifest
+#  static_files: manifest.appcache
+#  upload: manifest\.appcache
+#  expiration: "0m"
+#  secure: always
+
+- url: /(.*\.json)
+  mime_type: application/json
+  static_files: HTML/\1
+  upload: HTML/(.*\.json)
+  secure: always
+
+- url: /(.*\.mp4)
+  mime_type: video/mp4
+  static_files: HTML/\1
+  upload: HTML/(.*\.mp4)
+  secure: always
+
+- url: /(.*\.(gif|png|jpg|css|js|otf|eot|svg|ttf|woff|woff2)(|\.map))$
+  static_files: HTML/\1
+  upload: HTML/(.*)(|\.map)
+  secure: always
+
+# Routing for bundles to serve directly
+#- url: /((?:inline|main|polyfills|styles|vendor)\.[a-z0-9]+\.bundle\.js)
+#  secure: always
+#  redirect_http_response_code: 301
+#  static_files: HTML/\1
+#  upload: HTML/.*
+
+# Routing for a prod styles.bundle.css to serve directly
+#- url: /(styles\.[a-z0-9]+\.bundle\.css)
+#  secure: always
+#  redirect_http_response_code: 301
+#  static_files: HTML/\1
+#  upload: HTML/.*
+
+# Routing for typedoc, assets and favicon.ico to serve directly
+- url: /((?:assets|docs)/.*|favicon\.ico)
+  secure: always
+  redirect_http_response_code: 301
+  static_files: HTML/\1
+  upload: HTML/.*
+
+# Any other requests are routed to index.html for angular to handle so we don't need hash URLs
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  static_files: HTML/index.html
+  upload: HTML/index\.html
+  http_headers:
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Frame-Options: DENY
+
+# index files
+#- url: (.*)/
+#  static_files: HTML\1/index.html
+#  upload: HTML
+#  expiration: "5m"
+#  secure: always
+
+#- url: (.*)
+#  static_files: HTML\1
+#  upload: HTML
+
+  #redirect_http_response_code: 301
+
+#- url: /(.*\.(gif|png|jpg|css|js|otf|eot|svg|ttf|woff|woff2)(|\.map))$
+#  static_files: HTML/\1
+#  upload: HTML/(.*)(|\.map)
+
+#- url: /(.*)
+#  static_files: HTML/index.html
+#  upload: HTML/index.html
+
+# Temporary setting to keep gcloud from uploading not required files for deployment
+skip_files:
+- ^node_modules$
+- ^app\.yaml
+- ^README\..*
+- \.gitignore
+- ^\.git$
+- ^grunt\.js
+- ^src$
+- ^e2e$
+- \.editorconfig
+- ^karma\.config\.js
+- ^package\.json
+- ^protractor\.conf\.js
+- ^tslint\.json

@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; frame-src 'self' https://*.firebaseio.com https://www.youtube.com; script-src 'unsafe-inline' 'self' https://*.firebaseio.com; img-src 'self' data: http://www.winstarworldcasino.com https://www.winstarworldcasino.com https://*.chickasawwebsites.com; connect-src 'self' app: wss://*.firebaseio.com http://*.solutiaconsulting.com; style-src 'self' 'unsafe-inline'; font-src 'self'; object-src 'self'; media-src 'self';" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="description" content="WinStar World Casino" />
+    <meta name="theme-color" content="#db5945" />
+    <meta name="author" content="Matt Ferrell" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-itunes-app" content="app-id=com.ScrewtopMedia.Winstar, affiliate-data=ScrewtopMedia, app-argument=https://itunes.apple.com/us/app/winstar-world-casino/id548935724" />
+
+    <title>WinStar World Casino</title>
+
+    <link rel="icon" sizes="192x192" href="launcher-icon-4x.png" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="launcher-icon-2x.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="launcher-icon-3x.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="launcher-icon-4x.png" />
+    <link rel="apple-touch-startup-image" href="splash.png" />
+    <link rel="manifest" href="manifest.json" />
+
+    <link rel="stylesheet" type="text/css" href="styles/skeleton.css" />
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/alertify.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/examples.css" />
+    <link rel="stylesheet" type="text/css" href="styles/myWinstar.css" />
+
+    <!-- start Mixpanel --><!-- end Mixpanel -->
+    <style>
+        form
+        {
+            display: block !important;
+        }
+    </style>
+</head>
+
+<body id="canvas" class="redesign">
+    <div id="spinnerContainer" style="display: none;">
+        <div id="spinnerIcon"></div>
+    </div>
+
+    <div class="snap-drawers" id="sidebar">
+        <div id="snap-drawer" class="snap-drawer snap-drawer-left scrollable">
+            <div id="snap-drawer-wrapper">
+                <div class="sidebar-controls">
+                    <a href="javascript:void(0);" onclick="javascript:openurl('tel://1-800-622-6317');" class="sidebar-call"> </a>
+                    <a href="javascript:void(0);" onclick="javascript:openurl('http://www.facebook.com/WinStarWorldCasino');" class="sidebar-face"> </a>
+                    <a href="javascript:void(0);" onclick="javascript:openurl('http://twitter.com/winstarworld');" class="sidebar-twit"> </a>
+                    <a href="javascript:void(0);" id="sidebar-close" class="sidebar-close"> </a>
+                </div>
+                <div class="sidebar-header">
+                    <a href="javascript:void(0);" onclick="javascript: moveToPage(0);">&nbsp;</a>
+                </div>
+                <div class="sidebar-breadcrumb">
+                    <div class="sidebar-decoration"></div>
+                    <p>
+                        Navigation
+                    </p>
+                    <div class="sidebar-decoration"></div>
+                </div>
+                <!-- Start SideBarNav -->
+                <div class="navigation-items" id="sidebarmenu"></div>
+                <!-- End SideBarNav -->
+
+                <div class="sidebar-decoration"></div>
+                <p class="sidebar-copyright center-text">
+                    Copyright <span id="copyrightYear">2015</span>.
+                    <br>
+                    All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div><!-- /panel -->
+    <div id="snap-content" class="snap-content" data-role="page" style="">
+        <!-- PAGE HEADER -->
+        <div id="my-header">
+            <ul>
+                <li class="leftli" id="deploy">
+                    <a href="javascript:void(0);" id="deploy-span" class="deploy-sidebar" style="width:2em;height:2em;position:initial;top:0;left:0; z-index: 1500;"></a>
+                </li>
+                <li class="twocell">
+                    <div>
+                        <em class="content-title"></em>
+                    </div>
+                </li>
+                <li class="rightli" onclick="javascript: doAuthLogin();">
+                    <div>
+                        <a href="javascript:void(0);" class="deployUpperRightCta">&nbsp;</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <!--PAGE BODY-->
+        <div id="pagepiling" class="sectionpage">
+
+            <div class="info-holder-main">
+                <h3 id="title-1" class="title">My WinStar</h3>
+                <button type="button" name="cardclose-1" class="cardclose" onclick="javascript: mycardClose(0);"></button>
+                <div id="slide-1" class="slide-container slide scrollable">
+                    <div id="slides-1" class="slides">
+
+                        <div class="post">
+                            <ul id="items-1" class="items">
+                                <li id="listitemid-mywinstar" data-pageid="mywinstar">
+                                    <form role="form" id="frmLogin">
+                                        <dl class="formElementList">
+                                            <dd>
+                                                <h5 class="message">Please Enter Your Login Information</h5>
+                                            </dd>
+                                            <dd class="formElement">
+                                                <label>Username *</label>
+                                                <input type="text"
+                                                       required
+                                                       placeholder="username"
+                                                       id="UserName"
+                                                       name="UserName"
+                                                       value="" />
+                                            </dd>
+                                            <dd class="formElement">
+                                                <label>Password *</label>
+                                                <input type="password"
+                                                       placeholder="password"
+                                                       required
+                                                       id="Password"
+                                                       name="Password"
+                                                       value="" />
+                                            </dd>
+                                            <dd>
+                                                <small>* Required Fields</small>
+                                            </dd>
+                                            <dd>
+                                                <button class="button" type="submit">Login</button>
+                                            </dd>
+                                            <dd>
+                                                <dl class="horizontalList">
+                                                    <dd class="footer">
+                                                        <a href="register.html" style="display: inline;">Register</a>
+                                                        or
+                                                        <a href="resetPassword.html" style="display: inline;">Reset Password</a>
+                                                    </dd>
+                                                </dl>
+                                            </dd>
+                                        </dl>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- PAGE FOOTER -->
+        <div id="infoMenu">
+            <div class="footer">
+                <ul id="footermenu" class="footer-nav"></ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-overlay js-modal-close" style="display: none;"></div>
+    <div id="la" class="modal-box">
+        <header>
+            <a href="javascript:void(0);" class="js-modal-close close">×</a>
+            <h3 id="title-99"></h3><em class="date" id="date-99"></em>
+        </header>
+        <div class="modal-body scrollable">
+            <ul id="items-99" class="items"></ul>
+        </div>
+        <footer><span id="action-footer"></span><a href="javascript:void(0);" class="btn btn-small js-modal-close">Close</a></footer>
+    </div>
+
+
+    <script type="text/javascript" src="scripts/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="scripts/slick.js"></script>
+    <script type="text/javascript" src="scripts/libs/lz-string.min.js"></script>
+    <script type="text/javascript" src="scripts/snap.js"></script>
+    <script type="text/javascript" src="scripts/firebase.js"></script>
+    <script type="text/javascript" src="scripts/alertify.min.js"></script>
+    <script type="text/javascript" src="scripts/fastclick.js"></script>
+    <script type="text/javascript" src="scripts/offline.min.js"></script>
+    <script type="text/javascript" src="scripts/localData.js"></script>
+    <script type="text/javascript" src="scripts/selectorCache.js"></script>
+    <script type="text/javascript" src="scripts/contentJSON.js"></script>
+    <script type="text/javascript" src="scripts/path.min.js"></script>
+    <script type="text/javascript" src="scripts/myWinstar.js"></script>
+    <script type="text/javascript" src="scripts/moment.min.js"></script>
+    <script type="text/javascript" src="scripts/mobilePatron.js"></script>
+
+
+    <script type="text/javascript">
+        var myslickEnabled = false;
+        $(document).ready(initPage);
+        $(window).load(loadPage);
+
+        if ('ontouchstart' in window)
+        {
+            window.FastClick.attach(document.body);
+        }
+
+
+        $(document).ready(function ()
+        {
+            var mobilePatron = new MobilePatron();
+
+            $("form#frmLogin").submit(function (e)
+            {
+                e.preventDefault(); //prevent default form submit
+
+                var data =
+                {
+                    "UserName": $("#UserName").val(),
+                    "Password": $("#Password").val()
+                };
+
+                //SHOW SPINNER
+                mobilePatron.ShowActivity();
+
+                mobilePatron.DoLogin(data).then
+                (
+                    function ()
+                    {
+                        //REDIRECT USER
+                        window.location.href = "mobilePatronsHome.html";
+                    },
+                    function (errorFromServer)
+                    {
+                        mobilePatron.HideActivity();
+
+                        //console.log('registration error:', errorFromServer);
+                        alertify.alert('', errorFromServer.responseJSON.ErrorDetail);
+                    }
+                );
+            });
+        });
+    </script>
+</body>
+
+</html>

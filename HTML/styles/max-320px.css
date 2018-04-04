@@ -1,0 +1,89 @@
+/* Defining each section background and styles
+/* ----------- iPhone 4 and 4S ----------- */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+/* Landscape */
+@media only screen
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) 
+  and (orientation: landscape) {
+
+    #infoMenu {
+      font-size: 0.5em;
+      height: 5em;
+    }
+    .img-box img, .hilight {
+        width: 84vw;
+    }
+    .sectionpage{
+        background-image: url(../images/backgrounds/front-480x320.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    /*Directions*/
+    #pages-2 .info-holder-main {
+        height: 75vh;
+    } /*Scan*/
+    #pages-3 .info-holder-main {
+        height: 85vh;
+    } /*PhotoBooth*/
+    #pages-4 .info-holder-main {
+        height: 90vh;
+    } /*ContactUs*/
+    #pages-5 .info-holder-main {
+        height: 90vh;
+    } /*ShareApp*/
+    #pages-17 .info-holder-main {
+        height: 85vh;
+    }
+    #map-canvas {
+        min-height: 17em;
+    }
+}
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    .sectionpage{
+        background-image: url(../images/backgrounds/front-320x480.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+	#infoMenu{
+		font-size: 0.6em;
+	}
+	.content-section {
+		font-size: 0.8em;
+	}
+
+    #my-header em {
+        font-size: 1.3rem;
+    }
+    /*Directions*/
+    #pages-18 .info-holder-main {
+        height: 75vh;
+    } /*Scan*/
+    #pages-1 .info-holder-main {
+        height: 55vh;
+    } /*PhotoBooth*/
+    #pages-2 .info-holder-main {
+        height: 75vh;
+    } /*ContactUs*/
+    #pages-19 .info-holder-main {
+        height: 60vh;
+    } /*ShareApp*/
+    #pages-17 .info-holder-main {
+        /*height: 85vh;*/
+    }
+    #map-canvas {
+        min-height: 17em;
+    }
+}

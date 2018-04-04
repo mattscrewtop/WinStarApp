@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>WinStar World Casino - Mobile Patron Login</title>
+	<meta name="description" content="WinStar World Casino">
+	<meta name="theme-color" content="#db5945">
+	<link rel="icon" sizes="192x192" href="launcher-icon-4x.png">
+	<link rel="manifest" href="manifest.json">
+	<meta name="author" content="Matt Ferrell">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+	<link rel="stylesheet" type="text/css" href="styles/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="styles/alertify.min.css" />
+	<link rel="stylesheet" type="text/css" href="styles/themes/default.rtl.min.css" />
+	<link rel="stylesheet" type="text/css" href="styles/slick.css" />
+	<link rel="stylesheet" type="text/css" href="styles/slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="styles/offline-theme-dark.css" />
+	<link rel="stylesheet" type="text/css" href="styles/offline-language-english.css" />
+	<link rel="apple-touch-icon" href="icon.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="launcher-icon-2x.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="launcher-icon-3x.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="launcher-icon-4x.png">
+	<link rel="apple-touch-startup-image" href="splash.png">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="apple-itunes-app" content="app-id=com.ScrewtopMedia.Winstar, affiliate-data=ScrewtopMedia, app-argument=https://itunes.apple.com/us/app/winstar-world-casino/id548935724" />
+	<link rel="stylesheet" type="text/css" href="styles/examples.css" />
+	<link rel="stylesheet" type="text/css" media="only screen and (max-width:320px)" href="styles/max-320px.css">
+	<link rel="stylesheet" type="text/css" media="only screen and (min-width:321px) and (max-width: 480px)" href="styles/max-480px.css">
+	<link rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width: 767px)" href="styles/max-767px.css">
+	<link rel="stylesheet" type="text/css" media="only screen and (min-width:768px) and (max-width: 979px)" href="styles/max-979px.css">
+	<link rel="stylesheet" type="text/css" media="only screen and (min-width:980px) and (max-width: 1200px)" href="styles/max-1200px.css">
+
+	<style>
+		.sectionpage {
+			padding: 1rem;
+			max-height: calc(110vh - 4.5em);
+		}
+
+		h2 {
+			margin: 14px 0;
+		}
+
+		form {
+			background-color: white;
+			border-radius: 0.325rem;
+			padding: 20px 24px;
+			max-width: 100vw;
+		}
+
+		.horizontalList {
+			text-align: center;
+		}
+
+		input {
+			width: 100%;
+		}
+
+		.horizontalList dd {
+			display: inline-block;
+			margin-right: 20px;
+		}
+
+		.formElementList {
+			margin: 0 auto !important;
+		}
+
+			.formElementList dd {
+				margin-bottom: 10px;
+			}
+
+				.formElementList dd.footer {
+					text-align: center;
+					border-top: solid 1px #F0F0F0;
+					border-bottom: solid 1px #F0F0F0;
+					padding: 5px 0;
+					width: 70%;
+				}
+
+				.formElementList dd.formElement {
+					margin-bottom: 20px;
+				}
+
+		.button {
+			background-color: #F0F0F0;
+		}
+
+
+		/* mobile-large-landscape */
+		@media all and (min-width: 481px) and (orientation: landscape) {
+			.formElementList {
+				width: 300px;
+			}
+		}
+	</style>
+</head>
+
+<body id="canvas">
+	<div id="snap-content" class="snap-content" data-role="page">
+		<!-- Header -->
+		<div id="my-header">
+			<ul>
+				<li class="twocell">
+					<div>
+						<em class="content-title"></em>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="pagepiling" class="sectionpage">
+			<h2>Mobile Patron</h2>
+    <form id=\ "frmAccountHome\" role=\ "form\"><a id=\ "accounthome\" class=\ "button\" href=\ "#/profile\">Account Information</a>
+        <ul>
+            <li>
+                <p>&nbsp;</p>
+            </li>
+            <li>
+                <h5>Welcome, <span id=\"labelFirstname\"></span> <span id=\"labelLastname\"></span>!</h5></li>
+            <li>
+                <h5>Current Level: <span id=\"labelFirstname\"></span><img src=\"https://winstar.chickasawwebsites.com/wp-content/themes/chickasaw/images/elite-badge.png\" alt=\"Level: Elite\" style=\"width: 15%; float: right; margin-right: 15%;\"></h5></li>
+            <li><sup>Expires: Jan 31, 2016</sup></li>
+            <li>
+                <h5>Tier Points: 23,357</h5></li>
+            <li>
+                <p>&nbsp;</p>
+            </li>
+            <li>
+                <h5>Sweepstakes Entries:&nbsp;</h5>
+                <ul style=\ "margin: 0 5%;\">
+                    <li>&lt;XX Entries&gt; Sweepstakes Name 1</li>
+                    <li>&lt;XX Entries&gt; Sweepstakes Name 2</li>
+                    <li>&lt;XX Entries&gt; Sweepstakes Name 3</li>
+                </ul>
+            </li>
+        </ul>
+        <hr style=\ "border-top: 1px solid #000;\">
+        <ul class=\ "patron\">
+            <li>Please choose from the offers and information available below.</li>
+            <li style=\ "clear: both;\">
+                <div class=\ "half-thumb\">
+                    <a href=\ "#/hostinformation\"><img src=\ "/images/host_information.png\" style=\ "float: left;\"></a>
+                </div><span><a class=\"button\" href=\"#/hostinformation\">HOST INFORMATION</a></span></li>
+            <li style=\ "clear: both;\">
+                <div class=\ "half-thumb\">
+                    <a href=\ "#/vipevents\"><img src=\ "/images/host_information.png\" style=\ "float: left;\"></a>
+                </div><span><a class=\"button\" href=\"#/vipevents\">VIP Events</a></span></li>
+            <li style=\ "clear: both;\">
+                <div class=\ "half-thumb\">
+                    <a href=\ "#/resortoffers\"><img src=\ "/images/winstar_offers.png\" style=\ "float: left;\"></a>
+                </div><span><a class=\"button\" href=\"#/resortoffers\">MY OFFERS</a></span></li>
+        </ul>
+    </form>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="scripts/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="scripts/fastclick.js"></script>
+
+	<script type="text/javascript">
+		//$(document).ready(initPage);
+		//$(window).load(loadPage);
+
+		if ('ontouchstart' in window)
+		{
+			window.FastClick.attach(document.body);
+		}
+
+		$(document).ready(function ()
+		{
+			$("form#frmLogin").submit(function (e)
+			{
+				e.preventDefault(); //prevent default form submit
+
+				var data =
+				{
+					"UserName": $("#UserName").val(),
+					"Password": $("#Password").val()
+				}
+
+				$.ajax({
+					type: "POST",
+					url: 'http://dev.mobile-patron.solutiaconsulting.com:80/api/login/authenticate',
+					data: JSON.stringify(data),
+					contentType: "application/json; charset=UTF-8",
+					success: function (resultsFromServer)
+					{
+						console.log('success', resultsFromServer);
+					},
+					error: function (errorFromServer)
+					{
+						console.log('error', errorFromServer);
+					}
+				});
+			});
+		});
+	</script>
+</body>
+</html>

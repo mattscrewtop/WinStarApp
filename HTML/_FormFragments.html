@@ -1,0 +1,223 @@
+﻿<form data-datamodel="IRegistrationModel" data-endpoint="/account/register" data-returnmodel="IRegistrationModel" role="form" id="IRegistrationModel">
+	<dl class="formElementList">
+		<dd>
+			<h5>Please Enter Your Registration Information</h5>
+		</dd>
+		<dd class="formElement">
+			<label>Username *</label>
+			<input type="text"
+				   required
+				   placeholder="user name"
+				   id="UserName"
+				   name="UserName"
+				   value="" />
+		</dd>
+		<dd class="formElement">
+			<label>Password *</label>
+			<input type="password"
+				   placeholder="password"
+				   required
+				   id="Password"
+				   name="Password"
+				   value="" />
+		</dd>
+		<dd class="formElement">
+			<label>Patron Number *</label>
+			<input type="text"
+				   placeholder="patron number"
+				   required
+				   id="PatronNumber"
+				   name="PatronNumber"
+				   value="" />
+		</dd>
+		<dd class="formElement">
+			<label>Pin *</label>
+			<input type="text"
+				   placeholder="pin"
+				   required
+				   id="Pin"
+				   name="Pin"
+				   value="" />
+		</dd>
+		<dd>
+			<small>* Required Fields</small>
+		</dd>
+		<dd>
+			<dl class="horizontalList">
+				<dd>
+					<a href="#/ILoginModel" style="display: inline;">Cancel</a>
+				</dd>
+				<dd>
+					<button class="button" type="submit">Register</button>
+
+				</dd>
+			</dl>
+		</dd>
+		<dd>
+			<dl class="horizontalList">
+				<dd class="footer">
+					<a href="#/ILoginModel" style="display: inline;">Login</a>
+					or
+					<a href="#/IUpdatePatronPassword" style="display: inline;">Reset Password</a>
+				</dd>
+			</dl>
+		</dd>
+	</dl>
+</form>
+
+<form data-datamodel="IUpdatePatronPassword" data-endpoint="/password/save" data-returnmodel="IUpdatePatronPassword" role="form" id="IUpdatePatronPassword">
+	<dl class="formElementList">
+		<dd>
+			<h5>Reset Your Password</h5>
+		</dd>
+		<dd class="formElement">
+			<label>Username *</label>
+			<input type="text"
+			       required
+			       placeholder="user name"
+			       id="UserName"
+			       name="UserName"
+			       value="" />
+		</dd>
+		<dd class="formElement">
+			<label>Password *</label>
+			<input type="password"
+			       placeholder="password"
+			       required
+			       id="Password"
+			       name="Password"
+			       value="" />
+		</dd>
+		<dd class="formElement">
+			<label>Patron Number *</label>
+			<input type="text"
+			       placeholder="patron number"
+			       required
+			       id="PatronNumber"
+			       name="PatronNumber"
+			       value="" />
+		</dd>
+		<dd class="formElement">
+			<label>Pin *</label>
+			<input type="text"
+			       placeholder="pin"
+			       required
+			       id="Pin"
+			       name="Pin"
+			       value="" />
+		</dd>
+		<dd class="formElement">
+			<label>New Password *</label>
+			<input type="password"
+			       placeholder="new password"
+			       required
+			       id="NewPassword"
+			       name="NewPassword" />
+		</dd>
+		<dd>
+			<small>* Required Fields</small>
+		</dd>
+		<dd>
+			<dl class="horizontalList">
+				<dd>
+					<a href="#/ILoginModel" style="display: inline;">Cancel</a>
+				</dd>
+				<dd>
+					<button class="button" type="submit">Reset Password</button>
+				</dd>
+			</dl>
+		</dd>
+		<dd>
+			<dl class="horizontalList">
+				<dd class="footer">
+					<a href="#/IRegistrationModel" style="display: inline;">Register</a>
+					or
+					<a href="#/ILoginModel" style="display: inline;">Login</a>
+				</dd>
+			</dl>
+		</dd>
+	</dl>
+</form>
+
+
+<form data-datamodel="IPowerReward" data-endpoint="/power-rewards/list" data-returnmodel="IPowerReward" id="IPowerReward" role="form">
+	<a id="vipevents" class="button accounthome" href="#/IUserModel">Account Home</a>
+	<ul>
+		<li>
+			<h5>Power Rewards</h5>
+			<p></p>
+		</li>
+	</ul>
+	<hr style="border-top: 1px solid #000;">
+	<ul class="patron" id="powerrewards"></ul>
+</form>
+
+<form data-datamodel="IOffer" data-endpoint="/offers/list" data-returnmodel="IOffer" id="IOffer" role="form">
+	<a class="button accounthome" id="resortoffers" href="#/IUserModel">Account Home</a>
+	<ul>
+		<li>
+			<h5>My Offers</h5>
+			<p></p>
+		</li>
+	</ul>
+	<hr style="border-top: 1px solid #000;">
+	<ul class="patron" id="myoffers"></ul>
+</form>
+
+<form data-datamodel="ISweepstake" data-endpoint="/sweepstakes/list" data-returnmodel="ISweepstake" id="ISweepstake" role="form">
+	<a id="sweepstakes" class="button accounthome" href="#/IUserModel">Account Home</a>
+	<ul>
+		<li>
+			<h5>Sweepstakes</h5>
+			<p></p>
+		</li>
+	</ul>
+	<hr style="border-top: 1px solid #000;">
+	<ul class="patron" id="sweepstakes">
+		<li>
+			<table>
+				<tbody>
+					<tr>
+						<td><span id="Activation"></span></td>
+						<td><span id="ActiveEntries"></span></td>
+						<td><span id="BonusEntries"></span></td>
+						<td><span id="SweepstakesCode"></span></td>
+						<td><span id="StartDate"></span></td>
+						<td><span id="StartTime"></span></td>
+						<td><span id="EndDate"></span></td>
+						<td><span id="EndTime"></span></td>
+						<td><span id="FreeEntries"></span></td>
+						<td><span id="TotalEntries"></span></td>
+						<td><span id="Description"></span></td>
+						<td><span id="ErrorCode"></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<hr>
+		</li>
+	</ul>
+</form>
+
+<form data-datamodel="ISweepstakeDrawing" data-endpoint="/sweepstakes-drawing/list" data-returnmodel="ISweepstakeDrawing" id="ISweepstakeDrawing" role="form">
+	<a class="button accounthome" href="#/IUserModel">Account Home</a>
+	<ul>
+		<li>
+			<h5>Sweepstakes Drawing</h5>
+			<p></p>
+		</li>
+	</ul>
+	<hr style="border-top: 1px solid #000;">
+	<ul class="patron" id="sweepstakesdrawing"></ul>
+</form>
+
+<form data-datamodel="IWinLossStatement" data-endpoint="/statements/win-loss/" data-returnmodel="IWinLossStatement" id="IWinLossStatement" role="form">
+	<a class="button accounthome" href="#/IUserModel">Account Home</a>
+	<ul>
+		<li>
+			<h5>Win Loss Statement</h5>
+			<p></p>
+		</li>
+	</ul>
+	<hr style="border-top: 1px solid #000;">
+	<ul class="patron" id="winlossstatement"></ul>
+</form>
