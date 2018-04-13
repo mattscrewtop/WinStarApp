@@ -1,0 +1,462 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cas",
+				"casual-dining"
+			],
+			[
+				"Din",
+				"Dining_Side_Nav_Icon"
+			],
+			[
+				"shops",
+				"shopsIcon"
+			],
+			[
+				"acco",
+				"accommodationsIcon"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "gsutil -m cp -L cp.log -z html -a public-read -r HTML gs://winstar-world-casino-app.appspot.com\n\ngsutil -m cp -L cpdown.log -r gs://winstar-world-casino-app.appspot.com Download",
+			"settings":
+			{
+				"buffer_size": 177,
+				"line_ending": "Windows",
+				"name": "gsutil -m cp -L cp.log -z html -a public-read -r H"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "package",
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"SFTP",
+				"SFTP: Browse With FileZilla"
+			],
+			[
+				"zilla",
+				"SublimeZilla: Import FileZilla Server"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"'",
+				"SublimeLinter: Don't Make Warnings Passive"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 191.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"git checkout -b service-worker",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/projectstoregit/WinStarApp"
+	],
+	"file_history":
+	[
+		"/C/projectstoregit/WinStarApp/app.yaml",
+		"/C/projectstoregit/WinStarApp/HTML/index.html",
+		"/C/Users/matt_/AppData/Roaming/gcloud/logs/2018.04.05/05.04.15.860000.log",
+		"/C/Users/matt_/AppData/Roaming/gcloud/logs/2018.04.05/05.12.29.596000.log",
+		"/C/Users/matt_/AppData/Roaming/gcloud/logs/2018.04.05/05.29.54.732000.log",
+		"/C/Users/matt_/AppData/Roaming/gcloud/logs/2018.04.05/05.51.40.100000.log",
+		"/C/Users/matt_/Desktop/scripts/bootstrap.min.js",
+		"/C/Users/matt_/Desktop/scripts/contentJSON.min.js",
+		"/C/Users/matt_/Desktop/scripts/jquery-2.1.3.min.js",
+		"/C/Users/matt_/Desktop/scripts/slick.min.js",
+		"/C/Users/matt_/Desktop/scripts/fastclick.min.js",
+		"/C/Users/matt_/Desktop/scripts/selectorCache.min.js",
+		"/C/Users/matt_/Desktop/scripts/snap.min.js",
+		"/C/Users/matt_/Desktop/scripts/soapclient.min.js",
+		"/C/Users/matt_/Desktop/scripts/skeleton.min.css",
+		"/C/Users/matt_/Desktop/scripts/alertify.min.css",
+		"/C/Users/matt_/Desktop/scripts/bootstrap.min.css",
+		"/C/Users/matt_/Desktop/scripts/examples.min.css",
+		"/C/Users/matt_/Desktop/scripts/offline-theme-dark.min.css",
+		"/C/Users/matt_/Desktop/scripts/index.html",
+		"/C/Users/matt_/Desktop/scripts/alertify.min.js",
+		"/C/projectstoregit/WinStarApp/cp.log",
+		"/C/projectstoregit/WinStarApp/HTML/manifest.appcache",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/alertify.js",
+		"/C/projectstoregit/WinStarApp/HTML/styles/alertify.min.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/alertify.css",
+		"/C/projectstoregit/WinStarApp/HTML/accountHome.html",
+		"/C/projectstoregit/WinStarApp/HTML/hostInformation.html",
+		"/C/projectstoregit/WinStarApp/HTML/were-making-improvements.html",
+		"/C/projectstoregit/WinStarApp/HTML/offers.html",
+		"/C/projectstoregit/WinStarApp/HTML/resortOffers.html",
+		"/C/projectstoregit/WinStarApp/HTML/vipEvents.html",
+		"/C/projectstoregit/WinStarApp/HTML/styles/max-767px.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/max-979px.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/max-1200px.css",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/scrollz-carousel-firebase.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/contentJSON.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/loadDetail.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/selectorCache.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/localData.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/fastclick.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/firebase.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/snap.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/nl2br.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/date.format.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/slick.js",
+		"/C/projectstoregit/WinStarApp/HTML/styles/forms/forms.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/myWinstar.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/max-480px.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/examples.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/offline-theme-dark.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/offline-language-english.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/slick-theme.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/slick.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/bootstrap.min.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/normalize.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/skeleton.css",
+		"/C/Users/matt_/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/matt_/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/matt_/AppData/Roaming/Sublime Text 3/Installed Packages/JsonTree.sublime-package",
+		"/C/Users/matt_/AppData/Roaming/Sublime Text 3/Installed Packages/0_package_control_loader.sublime-package",
+		"/C/Users/matt_/AppData/Roaming/Sublime Text 3/Installed Packages/Package Control 2.sublime-package",
+		"/C/Users/matt_/AppData/Roaming/Sublime Text 3/Installed Packages/Package Control.sublime-package",
+		"/C/projectstoregit/WinStarApp/HTML/head.html",
+		"/C/projectstoregit/WinStarApp/HTML/manifest.json",
+		"/C/projectstoregit/ScrewtopMediaDevApp/dist/index.html",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/runtime-caching.js",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/pages/home/services/home.service.ts",
+		"/C/projectstoregit/DfwSportsBeatApp/dist/0.chunk.js",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/environments/environment.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/environments/environment.prod.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/service-worker.js",
+		"/C/projectstoregit/ScrewtopMediaDevApp/.gitignore",
+		"/C/projectstoregit/ScrewtopMediaDevApp/angular-cli.json",
+		"/C/projectstoregit/ScrewtopMediaDevApp/app.yaml",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/index.html",
+		"/C/projectstoregit/ScrewtopMediaDevApp/package.json",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/assets/manifest.json",
+		"/C/projectstoregit/ScrewtopMediaDevApp/sw-precache-config.js",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/scripts/runtime-caching.js",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/scripts/sw-toolbox.js",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/assets/service-worker.js",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/assets/sw.js",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/assets/scripts/runtime-caching.js",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/main.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/app.module.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/tsconfig.json",
+		"/C/projectstoregit/ScrewtopMediaDevApp/tsconfig-aot.json",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/assets/styles/slideout.scss",
+		"/C/projectstoregit/ScrewtopMediaDevApp/tsconfig.json",
+		"/C/projectstoregit/ScrewtopMediaDevApp/aFile.txt",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/components/base.component.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/components/social-media/social-media.module.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/components/social-media/item/social-media-item.component.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/components/social-media/list/social-media-list.component.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/components/social-media/styles/social-media.component.scss",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/components/about/detail/about-detail.component.scss",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/app.component.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/services/utilities/match-media.service.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/services/data/data.service.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/services/navigation/navigation.service.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/pages/home/models/home-mobile.model.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/pages/home/models/home-desktop.model.ts",
+		"/C/projectstoregit/ScrewtopMediaApp-orig/src/main.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/node_modules/@types/q/README.md",
+		"/C/projectstoregit/ScrewtopMediaDevApp/aot/src/app/pages/home/mobile/home-mobile.component.ngfactory.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/app-routing.module.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/services/navigation/breadcrumb.service.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/services/index.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/index.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/navigation.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/app.component.html",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/index.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/manifest.appcache",
+		"/C/projectstoregit/ScrewtopMediaDevApp/node_modules/@angular/cli/tasks/init.js",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/sw.js",
+		"/C/projectstoregit/ScrewtopMediaApp-orig/app.yaml",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/assets/js/service-worker.js",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/assets/js/sw.js",
+		"/C/projectstoregit/ScrewtopMediaApp-orig/angular-cli.json",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/manifest.json",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/pages/about-us/about-us.module.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/pages/about-us/about-us.routing.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/pages/about-us/about-us.component.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/pages/home/home.component.ts",
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/components/media-production/production-show-list/media-production-show-list.component.ts",
+		"/C/projectstoregit/add-to-home-screen/empty-manifest.json",
+		"/C/projectstoregit/quickstart-js/messaging/index.html"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 255.0,
+		"where_history":
+		[
+			"C:\\projectstoregit\\WinStarApp,-*/.git/*,-*/icons/*,-*/images/*",
+			"C:\\projectstoregit\\WinStarApp,-*/.git/*,-*/icons/*,-*/images/*,*.html,*.js,*.css",
+			"<open files>",
+			"C:\\projectstoregit\\WinStarApp,-*/.git/*,-*/icons/*,-*/images/*,*.html,*.js,*.css",
+			"<open files>",
+			"C:\\projectstoregit\\WinStarApp,-*/.git/*,-*/icons/*,-*/images/*,*.html,*.js,*.css"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"640x11",
+			"lazyload.js",
+			"max-1200px.css",
+			"max-979px.css",
+			"max-767px.css",
+			"max-480px.css",
+			"contentJSON.js",
+			"loadDetail.js",
+			"selectorCache.js",
+			"localData.js",
+			"fastclick.js",
+			"firebase.js",
+			"snap.js",
+			"date.format.js",
+			"nl2br.js",
+			"slick.js",
+			"Cantarell-Regular",
+			"myWinstar.css",
+			"examples.css",
+			"offline-language-english.css",
+			"offline-theme-dark.css",
+			"slick-theme.css",
+			"slick.css",
+			"skeleton.css",
+			"normalize.css"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"max-1200px.min.css",
+			"max-979px.min.css",
+			"max-767px.min.css",
+			"max-480px.min.css",
+			"contentJSON.min.js",
+			"loadDetail.min.js",
+			"selectorCache.min.js",
+			"localData.min.js",
+			"fastclick.min.js",
+			"firebase.min.js",
+			"snap.min.js",
+			"date.format.min.js",
+			"nl2br.min.js",
+			"slick.min.js",
+			"myWinstar.min.css",
+			"examples.min.css",
+			"offline-language-english.min.css",
+			"offline-theme-dark.min.css",
+			"slick-theme.min.css",
+			"slick.min.css",
+			"skeleton.min.css",
+			"normalize.min.css"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 177,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								177,
+								177
+							]
+						],
+						"settings":
+						{
+							"auto_name": "gsutil -m cp -L cp.log -z html -a public-read -r H",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 153.0
+	},
+	"output.sftp":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "WinStarApp.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\projectstoregit\\solarmoneyexperts\\SolarSavingsAmerica\\myWorkSpace.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 275.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

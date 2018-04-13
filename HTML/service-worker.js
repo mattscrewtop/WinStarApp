@@ -5,7 +5,7 @@
 
 
 // tick this to make the cache invalidate and update
-const CACHE_VERSION = 3102;
+const CACHE_VERSION = 2441;
 const CURRENT_CACHES =
 	{
 		'app-shell': 'app-shell-cache-v' + CACHE_VERSION,
@@ -18,7 +18,7 @@ var filesToCache =
 	'/'
 ];
 
-var cacehableRequestsList = ['screwtopmedia', 'googleapis', 'gstatic', 'jwpcdn', 'cloudcms', 'cdf'];
+var cacehableRequestsList = ['screwtopmedia', 'winstarworldcasino', 'googleapis', 'gstatic'];
 
 
 //WHILE INSTALLING SERVICE WORKER, CACHE APP SHELL...

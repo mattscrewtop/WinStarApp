@@ -3,7 +3,7 @@ runtime: python27
 threadsafe: yes
 # [END runtime]
 
-default_expiration: "7d"
+default_expiration: "30d"
 
 handlers:
 #- url: /assets
