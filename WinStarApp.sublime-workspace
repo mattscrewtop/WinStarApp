@@ -31,6 +31,66 @@
 				"line_ending": "Windows",
 				"name": "gsutil -m cp -L cp.log -z html -a public-read -r H"
 			}
+		},
+		{
+			"file": "HTML/scripts/selectorCache.min.js",
+			"settings":
+			{
+				"buffer_size": 12071,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "HTML/scripts/selectorCache.js",
+			"settings":
+			{
+				"buffer_size": 27794,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "HTML/scripts/mobilePatron.js",
+			"settings":
+			{
+				"buffer_size": 22006,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "WelcomeEmail_Send\n\n65649\n\nWelcomeEmail_Send\nGolf_Related_Emails\nHotel_Special_Offer_Related_Emails\nPassport_Card_Related_Emails\n\nFirst_Name\nLast_Name\nEmail\nBirth_Date\n\nWelcome 65367 180129PRM1 - Welcome Email V1199973\n\tList New Subscribers\n\tDE \n\n\n\n\n\n\n\n\n\n\nWinStar Subscribe\n\tList New Subscribers\n\tDE \n\nNewSubscribeTrigger\n\tList New Subscribers\n\tDE \n\nTest WinStar Welcome Email Trigger\n\tList All Subscribers\n\tDE \n\nWinStar Welcome Email Trigger\n\tList All Subscribers\n\tDE \n\nTriggered Email Send 1\n\tList \n\tDE \n\n\n\n\nWelcome Send DE\n\tList \n\tDE Welcome Email TriggeredSendDataExtension\n\n\nWelcome Triggered on List\n\tList New Subscribers\n\tDE Welcome Email TriggeredSendDataExtension\n\nTrigger Welcome Email DE New Sub List\n\tList New Subscribers\n\tDE Welcome Email TriggeredSendDataExtension\n\nWelcome Email Send New Trigger\n\tList All Subscribers\n\tDE Welcome Email TriggeredSendDataExtension\n\n\n\nSubscriber_Key\nText\n200\n\nEmail\nEmailAddress\n254\n\nFirst_Name\nText\n200\n\nWinStar Patron\nLast_Name\nText\n200\n\nMiddle_Initial\nText\n100\n\nAddress_1\nText\n200\n\nAddress_2\nText\n200\n\nCity\nText\n200\n\nState\nText\n100\n\nZip\nText\n100\n\nCountry\nText\n200\n\nBirth_Date\nDate\n\nPassport\nText\n200\n\nCasino_Game_Related_Emails\nBoolean\n\ntrue\nEntertainment_Related_Emails\nBoolean\n\ntrue\nGolf_Related_Emails\nBoolean\n\ntrue\nHotel_Special_Offer_Related_Emails\nBoolean\n\ntrue\nOnline_Gaming_Related_Emails\nBoolean\n\ntrue\nPassport_Card_Related_Emails\nBoolean\n\ntrue\nLastModified\nDate\n\nCurrent Date\nWelcomeEmail_Send\nBoolean\n\ntrue",
+			"settings":
+			{
+				"buffer_size": 1465,
+				"line_ending": "Windows",
+				"name": "WelcomeEmail_Send"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;\">\n        <title>DE WinStar World Casino Email Subscription</title>\n        <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">\n        <link rel=\"stylesheet\" href=\"//fonts.googleapis.com/css?family=PT+Sans\">\n        <style>\n        \tbody{background-color:#000;font-family:Helvetica,sans-serif;margin:0}h2{font-family:'PT Sans',sans-serif;font-size:24px}p{font-family:Helvetica,sans-serif;font-size:14px}.main{margin:0 auto;max-width:1080px}.main .header{padding:.3rem 0}.main .header .navigation{border-bottom:1px dashed #f7f7f7}.main .header .navigation .nav-item{align-items:center;display:flex}.main .header .navigation .nav-item a{display:flex}.main .header ul{display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0}.main .introduction{color:#f7f7f7}.main .form{background-color:#dad3cf;background-image:-webkit-linear-gradient(top,#e7e3e0,#c2b8b2);color:#000;margin:2rem;padding:2rem}.main .form .subscribe-intro{margin:0}.main .form .subscribe-intro h2{font-family:'PT Sans',sans-serif;font-size:24px;border-bottom:thin solid #f7f7f7;color:#342c27;font-weight:700;line-height:1.33;margin:0}.main .form .subscribe-intro p{color:#342c27;font-size:16px;line-height:1.39}.main .form form{border-radius:5px;margin-top:2rem}.main .form form .group-row{display:flex;flex-wrap:wrap;justify-content:space-between}.main .form form .group-row .group{width:48%}.main .form form .group-row .group-radio{display:inline-block}.main .form form .group-row .group-radio input{width:auto}.main .form form .group-row .group-radio span{font-size:13px;font-weight:400;line-height:26px}.main .form form .group-row .age{display:flex;flex-wrap:wrap}.main .form form .group-row .age input{margin-top:5px;margin-right:10px;width:auto}.main .form form .group-row .age label{width:auto}.main .form form label{color:#000;font-size:13px;font-weight:700;line-height:26px;width:100%}.main .form form label .field-required{color:#d84e5b}.main .form form input,.main .form form textarea{border:1px solid #a59992;border-radius:3px;background-clip:padding-box;background-color:#e3e3e3;color:#8f8985;font-size:13px;font-weight:300;margin-bottom:10px;line-height:1.625;padding:10px 8px 9px;width:100%}.main .form form .submit{width:100%;text-align:center}.main .form form .submit .btn{border:1px solid #911616;color:#fff;cursor:pointer;font-size:10px;font-weight:700;margin:0;padding:10px 18px 8px;text-shadow:0 -1px 0 rgba(0,0,0,.4);text-transform:uppercase;overflow:visible;border-radius:3px;background-clip:padding-box;background-color:#710000;text-align:center;margin-top:18px;width:100%}.main .message{color:#f7f7f7}.main .message h2{font-family:'PT Sans',sans-serif;font-size:24px}footer{align-items:center;background:url(http://image.reply.winstaremail.com/lib/fe8c12727260017a71/m/2/Background-Landscape.png?nocache=5) repeat-x;display:flex;justify-content:space-between;max-width:1080px;margin:4rem auto 0;padding:10px 1rem}footer #image-win{width:88px;height:70px}footer #image-adventure{width:150px}\n\t\t</style>\n    </head>\n    <body>\n        <main class=\"main\">\n            <header class=\"header\">\n                <nav class=\"navigation\">\n                    <ul>\n                        <li><img src=\"http://image.s6.exacttarget.com/lib/fe9412727266077e71/m/1/WS-Lgo-top.jpg\" width=\"90\" height=\"91\" border=\"0\"></li>\n                        <li class=\"nav-item\">\n                            <a href=\"tel:1-800-622-6317\" style=\"font-size: 13px; text-align: right; color: #ffffff;\"><img src=\"https://www.winstarworldcasino.com/wp-content/themes/chickasaw/images/phone-icon.png\" alt=\"Call Us\">1-800-622-6317</a>\n                        </li>\n                    </ul>\n                </nav>\n            </header>\n            <section class=\"form\">\n                <div class=\"subscribe-intro\">\n                    <h2>RECEIVE THE LATEST NEWS AND EXCLUSIVE OFFERS</h2>\n                    <p>Sign up for our emails to get casino updates and to be the first to know about our special offers!</p>\n                </div>\n                <form action=\"http://cl.s6.exct.net/DEManager.aspx\" name=\"subscribeForm\" method=\"post\" onsubmit=\"return checkForm();\">\n                    <input type=hidden name=\"SubscriberKey\" value=\"WS_\">\n                \t<!-- <input type=\"hidden\" name=\"Email Type\" value=\"HTML\" /> --> <!-- HTML,TEXT -->\n                    <input type=\"hidden\" name=\"_clientID\" value=\"6274574\" />\n                    <input type=\"hidden\" name=\"_deExternalKey\" value=\"WelcomeEmailList\" /> <!-- Welcome Email TriggeredSendDataExtension -->\n                    <input type=\"hidden\" name=\"_action\" value=\"add\" /> <!-- add, add/update -->\n                    <input type=\"hidden\" name=\"_returnXML\" value=\"0\" />\n                    <input type=\"hidden\" name=\"_successURL\" value=\"http://pages.reply.winstaremail.com/thankyoupage/\" />\n                    <input type=\"hidden\" name=\"_errorURL\" value=\"http://pages.reply.winstaremail.com/errorpage/\" />\n                    <input type=\"hidden\" name=\"EmailAddress\" value=\"\" />\n                    <input type=\"hidden\" name=\"WelcomeEmail_Send\" value=true />\n                    <div class=\"group-row\">\n                        <div class=\"group\">\n                            <label>First Name <span class=\"field-required\">*</span></label>\n                            <input value=\"Christopher\" type=\"text\" name=\"First_Name\" autocomplete=\"given-name\" required>\n                        </div>\n                        <div class=\"group\">\n                            <label>Last Name <span class=\"field-required\">*</span></label>\n                            <input value=\"Ferrell\" type=\"text\" name=\"Last_Name\" autocomplete=\"family-name\" required>\n                        </div>\n                    </div>\n                    <div class=\"group-row\">\n                        <div class=\"group\">\n                            <label>Email <span class=\"field-required\">*</span></label>\n                            <input value=\"christopherferrell0812@gmail.com\" type=\"text\" name=\"Email\" autocomplete=\"email\" required>\n                        </div>\n                        <div class=\"group\">\n                            <label class=\"birth\">Date of Birth <span class=\"field-required\">*</span></label>\n                            <input value=\"08/12/1971\" id=\"datepicker\" type=\"text\" name=\"Birth_Date\" required readonly=\"readonly\">\n                        </div>\n                    </div>\n                    \n                    <div class=\"group-row\">\n                        <label>Verification of Age<span class=\"field-required\">*</span></label>\n                        <div class=\"age\">\n                            <input id=\"age\" name=\"age\" type=\"checkbox\" value=\"I certify that I am 18 years of age or older and eligible to receive offers from WinStar World Casino.\" required>\n                            <label>I certify that I am 18 years of age or older and eligible to receive offers from WinStar World Casino.</label>\n                        </div>\n                    </div>\n                    <div class=\"submit\">\n                        <button id=\"submit\" class=\"btn\">Subscribe</button>\n                    </div>\n                </form>\n            </section>\n        </main>\n        <footer>\n            <img id=\"image-win\" src=\"http://image.reply.winstaremail.com/lib/fe8c12727260017a71/m/2/Default-Landscape-win.png\" alt=\"image-winstar\">\n        </footer>\n        <script type=\"text/javascript\">\n\t\t\tfunction initInfo() {\n\t\t\t  document.subscribeForm.elements['SubscriberKey'].value = document.subscribeForm.elements['SubscriberKey'].value + document.subscribeForm.elements[\"Email\"].value;\n\t\t\t  document.subscribeForm.elements['EmailAddress'].value = document.subscribeForm.elements[\"Email\"].value;\n\t\t\t}\n\n\t\t\tfunction checkForm() {\n\t\t\t    if (!isValidEmail(document.subscribeForm.elements['Email'].value)) {\n\t\t\t        alert(\"Please enter a valid Email Address. (name@host.com)\");\n\t\t\t        document.subscribeForm.elements['Email'].focus();\n\t\t\t        return false;\n\t\t\t    } else if (!document.getElementById(\"age\").checked) {\n\t\t\t\t\talert(\"You must certify that you are at least 18 years of age.\");\n\t\t\t\t\treturn false;\n\t\t\t    } else {\n\t\t\t        initInfo();\n\t\t\t        return true;\n\t\t\t    }\n\t\t\t}\n\n\t\t\t// isEmail (STRING s [, BOOLEAN emptyOK])\n\t\t\t// whitespace characters\n\t\t\tlet whitespace = \" \\t\\n\\r\";\n\n\t\t\t//\n\t\t\t// Email address must be of form a@b.c ... in other words:\n\t\t\t// * there must be at least one character before the @\n\t\t\t// * there must be at least one character before and after the .\n\t\t\t// * the characters @ and . are both required\n\t\t\tfunction isValidEmail(s)\n\t\t\t{\n\t\t\t    if (isEmpty(s)) return false;\n\n\t\t\t    // is s whitespace?\n\t\t\t    if (isWhitespace(s)) return false;\n\n\t\t\t    // there must be >= 1 character before @, so we\n\t\t\t    // start looking at character position 1\n\t\t\t    // (i.e. second character)\n\t\t\t    var i = 1;\n\t\t\t    var sLength = s.length;\n\n\t\t\t    // look for @\n\t\t\t    while ((i < sLength) && (s.charAt(i) != \"@\"))\n\t\t\t    { i++\n\t\t\t    }\n\n\t\t\t    if ((i >= sLength) || (s.charAt(i) != \"@\")) return false;\n\t\t\t    else i += 2;\n\n\t\t\t    // look for .\n\t\t\t    while ((i < sLength) && (s.charAt(i) != \".\"))\n\t\t\t    { i++\n\t\t\t    }\n\n\t\t\t    // there must be at least one character after the .\n\t\t\t    if ((i >= sLength - 1) || (s.charAt(i) != \".\")) return false;\n\t\t\t    else return true;\n\t\t\t}\n\n\t\t\t// Check whether string s is empty.\n\t\t\tfunction isEmpty(s)\n\t\t\t{\n\t\t\t    return ((s == null) || (s.length == 0))\n\t\t\t}\n\n\t\t\t// Returns true if string s is empty or\n\t\t\t// whitespace characters only.\n\t\t\tfunction isWhitespace(s)\n\t\t\t{\n\t\t\t    var i;\n\n\t\t\t    // Is s empty?\n\t\t\t    if (isEmpty(s)) return true;\n\n\t\t\t    // Search through string's characters one by one\n\t\t\t    // until we find a non-whitespace character.\n\t\t\t    // When we do, return false; if we don't, return true.\n\t\t\t    for (i = 0; i < s.length; i++)\n\t\t\t    {\n\t\t\t        // Check that current character isn't whitespace.\n\t\t\t        var c = s.charAt(i);\n\n\t\t\t        if (whitespace.indexOf(c) == -1) return false;\n\t\t\t    }\n\t\t\t    // All characters are whitespace.\n\t\t\t    return true;\n\t\t\t}\n\t\t\t//init();\n        </script>\n        <script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script>\n        <script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>\n        <script>\n\t        $( function() {\n\t            $(\"#datepicker\").datepicker({\n\t            changeMonth: true,\n\t            changeYear: true,\n\t\t\t    yearRange: \"c-100:c+100\",\n\t\t\t    maxDate: \"-18Y\",\n\t            minDate: \"-100Y\"\n\t            });\n\t        });\n        </script>\n    </body>\n</html>",
+			"settings":
+			{
+				"buffer_size": 10727,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;\">\n        <title>DUal WinStar World Casino Email Subscription</title>\n        <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">\n        <link rel=\"stylesheet\" href=\"//fonts.googleapis.com/css?family=PT+Sans\">\n        <style>\n        \tbody{background-color:#000;font-family:Helvetica,sans-serif;margin:0}h2{font-family:'PT Sans',sans-serif;font-size:24px}p{font-family:Helvetica,sans-serif;font-size:14px}.main{margin:0 auto;max-width:1080px}.main .header{padding:.3rem 0}.main .header .navigation{border-bottom:1px dashed #f7f7f7}.main .header .navigation .nav-item{align-items:center;display:flex}.main .header .navigation .nav-item a{display:flex}.main .header ul{display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0}.main .introduction{color:#f7f7f7}.main .form{background-color:#dad3cf;background-image:-webkit-linear-gradient(top,#e7e3e0,#c2b8b2);color:#000;margin:2rem;padding:2rem}.main .form .subscribe-intro{margin:0}.main .form .subscribe-intro h2{font-family:'PT Sans',sans-serif;font-size:24px;border-bottom:thin solid #f7f7f7;color:#342c27;font-weight:700;line-height:1.33;margin:0}.main .form .subscribe-intro p{color:#342c27;font-size:16px;line-height:1.39}.main .form form{border-radius:5px;margin-top:2rem}.main .form form .group-row{display:flex;flex-wrap:wrap;justify-content:space-between}.main .form form .group-row .group{width:48%}.main .form form .group-row .group-radio{display:inline-block}.main .form form .group-row .group-radio input{width:auto}.main .form form .group-row .group-radio span{font-size:13px;font-weight:400;line-height:26px}.main .form form .group-row .age{display:flex;flex-wrap:wrap}.main .form form .group-row .age input{margin-top:5px;margin-right:10px;width:auto}.main .form form .group-row .age label{width:auto}.main .form form label{color:#000;font-size:13px;font-weight:700;line-height:26px;width:100%}.main .form form label .field-required{color:#d84e5b}.main .form form input,.main .form form textarea{border:1px solid #a59992;border-radius:3px;background-clip:padding-box;background-color:#e3e3e3;color:#8f8985;font-size:13px;font-weight:300;margin-bottom:10px;line-height:1.625;padding:10px 8px 9px;width:100%}.main .form form .submit{width:100%;text-align:center}.main .form form .submit .btn{border:1px solid #911616;color:#fff;cursor:pointer;font-size:10px;font-weight:700;margin:0;padding:10px 18px 8px;text-shadow:0 -1px 0 rgba(0,0,0,.4);text-transform:uppercase;overflow:visible;border-radius:3px;background-clip:padding-box;background-color:#710000;text-align:center;margin-top:18px;width:100%}.main .message{color:#f7f7f7}.main .message h2{font-family:'PT Sans',sans-serif;font-size:24px}footer{align-items:center;background:url(http://image.reply.winstaremail.com/lib/fe8c12727260017a71/m/2/Background-Landscape.png?nocache=5) repeat-x;display:flex;justify-content:space-between;max-width:1080px;margin:4rem auto 0;padding:10px 1rem}footer #image-win{width:88px;height:70px}footer #image-adventure{width:150px}\n\t\t</style>\n    </head>\n    <body>\n        <main class=\"main\">\n            <header class=\"header\">\n                <nav class=\"navigation\">\n                    <ul>\n                        <li><img src=\"http://image.s6.exacttarget.com/lib/fe9412727266077e71/m/1/WS-Lgo-top.jpg\" width=\"90\" height=\"91\" border=\"0\"></li>\n                        <li class=\"nav-item\">\n                            <a href=\"tel:1-800-622-6317\" style=\"font-size: 13px; text-align: right; color: #ffffff;\"><img src=\"https://www.winstarworldcasino.com/wp-content/themes/chickasaw/images/phone-icon.png\" alt=\"Call Us\">1-800-622-6317</a>\n                        </li>\n                    </ul>\n                </nav>\n            </header>\n            <section class=\"form\">\n                <div class=\"subscribe-intro\">\n                    <h2>RECEIVE THE LATEST NEWS AND EXCLUSIVE OFFERS</h2>\n                    <p>Sign up for our emails to get casino updates and to be the first to know about our special offers!</p>\n                </div>\n                <form id=\"form1\" action=\"http://cl.s6.exct.net/DEManager.aspx\" name=\"subscribeForm\" method=\"post\">\n                    <input type=hidden name=\"SubscriberKey\" value=\"WS_\">\n                    <input type=\"hidden\" name=\"Subscriber Key\" value=\"\">\n                    <input type=\"hidden\" name=\"Subscriber_Key\" value=\"\">\n                    <input type=\"hidden\" name=\"ETSubscriberKey\" value=\"\">\n                    <input type=\"hidden\" name=\"Email Address\" value=\"\">\n                    <input type=\"hidden\" name=\"Email\" value=\"\">\n               \t\t<input type=\"hidden\" name=\"Email Type\" value=\"HTML\" /> <!-- HTML,TEXT -->\n                    <input type=\"hidden\" name=\"_clientID\" value=\"6274574\" />\n                    <input type=\"hidden\" name=\"_deExternalKey\" value=\"basic_triggered_send\" /> <!-- Welcome Email TriggeredSendDataExtension -->\n                    <input type=\"hidden\" name=\"_action\" value=\"add\" /> <!-- add, add/update -->\n                    <input type=\"hidden\" name=\"_returnXML\" value=\"1\" />\n                    <input type=\"hidden\" name=\"_successURL\" value=\"http://pages.reply.winstaremail.com/welcome_email_dual/\" />\n                    <input type=\"hidden\" name=\"_errorURL\" value=\"http://pages.reply.winstaremail.com/errorpage/\" />\n                    <div class=\"group-row\">\n                        <div class=\"group\">\n                            <label>First Name <span class=\"field-required\">*</span></label>\n                            <input id=\"First_Name\" value=\"Christopher\" type=\"text\" name=\"First_Name\" autocomplete=\"given-name\" required>\n                        </div>\n                        <div class=\"group\">\n                            <label>Last Name <span class=\"field-required\">*</span></label>\n                            <input value=\"Ferrell\" type=\"text\" name=\"Last_Name\" autocomplete=\"family-name\" required>\n                        </div>\n                    </div>\n                    <div class=\"group-row\">\n                        <div class=\"group\">\n                            <label>Email <span class=\"field-required\">*</span></label>\n                            <input value=\"christopherferrell0812@gmail.com\" type=\"text\" name=\"EmailAddress\" autocomplete=\"email\" required>\n                        </div>\n                        <div class=\"group\">\n                            <label class=\"birth\">Date of Birth <span class=\"field-required\">*</span></label>\n                            <input value=\"08/12/1971\" id=\"datepicker\" type=\"text\" name=\"Birthday\" required readonly=\"readonly\">\n                        </div>\n                    </div>\n                    \n                    <div class=\"group-row\">\n                        <label>Verification of Age<span class=\"field-required\">*</span></label>\n                        <div class=\"age\">\n                            <input id=\"age\" name=\"age\" type=\"checkbox\" value=\"I certify that I am 18 years of age or older and eligible to receive offers from WinStar World Casino.\" required>\n                            <label>I certify that I am 18 years of age or older and eligible to receive offers from WinStar World Casino.</label>\n                        </div>\n                    </div>\n                    <div class=\"submit\">\n                        <button id=\"submit\" class=\"btn\">Subscribe</button>\n                    </div>\n\t\t\t\t\t<div id=\"response\">\n\t\t\t\t\t\t<pre></pre>\n\t\t\t\t\t</div>\n                </form>\n                <form id=\"form2\" action=\"http://cl.s6.exct.net/subscribe.aspx\" name=\"deForm\" method=\"post\">\n                \t<input type=\"hidden\" name=\"lid\" value=\"65367\" /> <!-- New Subscribers -->\n                \t<!-- <input type=\"hidden\" name=\"Email Type\" value=\"HTML\" /> --> <!-- HTML,TEXT -->\n                    <input type=\"hidden\" name=\"usub\" value=\"http://pages.reply.winstaremail.com/email-preference-center/\" />\n                    <input type=hidden name=\"thx\" value=\"http://pages.reply.winstaremail.com/thankyoupage/\">\n                    <input type=hidden name=\"err\" value=\"http://pages.reply.winstaremail.com/errorpage/\">\n                    <input type=hidden name=\"SubAction\" value=\"sub_add_update\"> <!-- sub, unsub, sub_add_update -->\n                    <input type=hidden name=\"MID\" value=\"6274574\">\n                    <input type=\"hidden\" name=\"ETSubscriberKey\" value=\"\">\n                    <input type=\"hidden\" name=\"First_Name\" value=\"\">\n                    <input type=\"hidden\" name=\"Last_Name\" value=\"\">\n                    <input type=\"hidden\" name=\"Email Address\" value=\"\">\n                    <input type=\"hidden\" name=\"Birthday\" value=\"\">\n                </form>\n            </section>\n        </main>\n        <footer>\n            <img id=\"image-win\" src=\"http://image.reply.winstaremail.com/lib/fe8c12727260017a71/m/2/Default-Landscape-win.png\" alt=\"image-winstar\">\n        </footer>\n        <script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script>\n        <script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>\n        <script type=\"text/javascript\">\n\t\t\tfunction initInfo() {\n\t\t\t  document.subscribeForm.elements['SubscriberKey'].value = document.subscribeForm.elements['SubscriberKey'].value + document.subscribeForm.elements[\"EmailAddress\"].value;\n\t\t\t  document.subscribeForm.elements['ETSubscriberKey'].value = document.subscribeForm.elements['SubscriberKey'].value;\n\t\t\t  document.subscribeForm.elements['Subscriber Key'].value = document.subscribeForm.elements['SubscriberKey'].value;\n\t\t\t  document.subscribeForm.elements['Subscriber_Key'].value = document.subscribeForm.elements['SubscriberKey'].value;\n\t\t\t  document.subscribeForm.elements['Email Address'].value = document.subscribeForm.elements['EmailAddress'].value;\n\t\t\t  document.subscribeForm.elements['Email'].value = document.subscribeForm.elements['EmailAddress'].value;\n\t\t\t  document.deForm.elements['ETSubscriberKey'].value = document.subscribeForm.elements['SubscriberKey'].value;\n\t\t\t  document.deForm.elements['First_Name'].value = document.subscribeForm.elements['First_Name'].value;\n\t\t\t  document.deForm.elements['Last_Name'].value = document.subscribeForm.elements['Last_Name'].value;\n\t\t\t  document.deForm.elements['Email Address'].value = document.subscribeForm.elements['EmailAddress'].value;\n\t\t\t  document.deForm.elements['Birthday'].value = document.subscribeForm.elements['Birthday'].value;\n\t\t\t}\n\n\t\t\tfunction checkForm() {\n\t\t\t    if (!isValidEmail(document.subscribeForm.elements['EmailAddress'].value)) {\n\t\t\t        alert(\"Please enter a valid Email Address. (name@host.com)\");\n\t\t\t        document.subscribeForm.elements['EmailAddress'].focus();\n\t\t\t        return false;\n\t\t\t    } else if (!document.getElementById(\"age\").checked) {\n\t\t\t\t\talert(\"You must certify that you are at least 18 years of age.\");\n\t\t\t\t\treturn false;\n\t\t\t    } else {\n\t\t\t        initInfo();\n\t\t\t        //return true;\n\t\t\t    }\n\t\t\t}\n\n\t\t\t$('#form1').submit(doubleSubmit);\n\n\t\t\tfunction doubleSubmit(e1) {\n\t\t\t\te1.preventDefault();\n\t\t\t\te1.stopPropagation();\n\t\t\t\tcheckForm();\n\t\t\t\tvar post_form1 = $.post($(this).action, $(this).serialize());\n\n\t\t\t\tpost_form1.done(function(result) {\n\t\t\t\t\t// would be nice to show some feedback about the first result here\n\t\t\t\t\tconsole.log(\"Form1 Submitted Now submitting form2\");\n\t\t\t\t\t$('#form2').submit();\n\t\t\t\t});\n\t\t\t};\n\t\t\t// isEmail (STRING s [, BOOLEAN emptyOK])\n\t\t\t// whitespace characters\n\t\t\tlet whitespace = \" \\t\\n\\r\";\n\n\t\t\t//\n\t\t\t// Email address must be of form a@b.c ... in other words:\n\t\t\t// * there must be at least one character before the @\n\t\t\t// * there must be at least one character before and after the .\n\t\t\t// * the characters @ and . are both required\n\t\t\tfunction isValidEmail(s)\n\t\t\t{\n\t\t\t    if (isEmpty(s)) return false;\n\n\t\t\t    // is s whitespace?\n\t\t\t    if (isWhitespace(s)) return false;\n\n\t\t\t    // there must be >= 1 character before @, so we\n\t\t\t    // start looking at character position 1\n\t\t\t    // (i.e. second character)\n\t\t\t    var i = 1;\n\t\t\t    var sLength = s.length;\n\n\t\t\t    // look for @\n\t\t\t    while ((i < sLength) && (s.charAt(i) != \"@\"))\n\t\t\t    { i++\n\t\t\t    }\n\n\t\t\t    if ((i >= sLength) || (s.charAt(i) != \"@\")) return false;\n\t\t\t    else i += 2;\n\n\t\t\t    // look for .\n\t\t\t    while ((i < sLength) && (s.charAt(i) != \".\"))\n\t\t\t    { i++\n\t\t\t    }\n\n\t\t\t    // there must be at least one character after the .\n\t\t\t    if ((i >= sLength - 1) || (s.charAt(i) != \".\")) return false;\n\t\t\t    else return true;\n\t\t\t}\n\n\t\t\t// Check whether string s is empty.\n\t\t\tfunction isEmpty(s)\n\t\t\t{\n\t\t\t    return ((s == null) || (s.length == 0))\n\t\t\t}\n\n\t\t\t// Returns true if string s is empty or\n\t\t\t// whitespace characters only.\n\t\t\tfunction isWhitespace(s)\n\t\t\t{\n\t\t\t    var i;\n\n\t\t\t    // Is s empty?\n\t\t\t    if (isEmpty(s)) return true;\n\n\t\t\t    // Search through string's characters one by one\n\t\t\t    // until we find a non-whitespace character.\n\t\t\t    // When we do, return false; if we don't, return true.\n\t\t\t    for (i = 0; i < s.length; i++)\n\t\t\t    {\n\t\t\t        // Check that current character isn't whitespace.\n\t\t\t        var c = s.charAt(i);\n\n\t\t\t        if (whitespace.indexOf(c) == -1) return false;\n\t\t\t    }\n\t\t\t    // All characters are whitespace.\n\t\t\t    return true;\n\t\t\t}\n\t\t\t//init();\n        </script>\n        <script>\n\t        $( function() {\n\t            $(\"#datepicker\").datepicker({\n\t            changeMonth: true,\n\t            changeYear: true,\n\t\t\t    yearRange: \"c-100:c+100\",\n\t\t\t    maxDate: \"-18Y\",\n\t            minDate: \"-100Y\"\n\t            });\n\t        });\n        </script>\n    </body>\n</html>",
+			"settings":
+			{
+				"buffer_size": 13629,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html;\">\n        <title>DUal WinStar World Casino Email Subscription</title>\n        <link rel=\"stylesheet\" href=\"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\">\n        <link rel=\"stylesheet\" href=\"//fonts.googleapis.com/css?family=PT+Sans\">\n        <style>\n        \tbody{background-color:#000;font-family:Helvetica,sans-serif;margin:0}h2{font-family:'PT Sans',sans-serif;font-size:24px}p{font-family:Helvetica,sans-serif;font-size:14px}.main{margin:0 auto;max-width:1080px}.main .header{padding:.3rem 0}.main .header .navigation{border-bottom:1px dashed #f7f7f7}.main .header .navigation .nav-item{align-items:center;display:flex}.main .header .navigation .nav-item a{display:flex}.main .header ul{display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0}.main .introduction{color:#f7f7f7}.main .form{background-color:#dad3cf;background-image:-webkit-linear-gradient(top,#e7e3e0,#c2b8b2);color:#000;margin:2rem;padding:2rem}.main .form .subscribe-intro{margin:0}.main .form .subscribe-intro h2{font-family:'PT Sans',sans-serif;font-size:24px;border-bottom:thin solid #f7f7f7;color:#342c27;font-weight:700;line-height:1.33;margin:0}.main .form .subscribe-intro p{color:#342c27;font-size:16px;line-height:1.39}.main .form form{border-radius:5px;margin-top:2rem}.main .form form .group-row{display:flex;flex-wrap:wrap;justify-content:space-between}.main .form form .group-row .group{width:48%}.main .form form .group-row .group-radio{display:inline-block}.main .form form .group-row .group-radio input{width:auto}.main .form form .group-row .group-radio span{font-size:13px;font-weight:400;line-height:26px}.main .form form .group-row .age{display:flex;flex-wrap:wrap}.main .form form .group-row .age input{margin-top:5px;margin-right:10px;width:auto}.main .form form .group-row .age label{width:auto}.main .form form label{color:#000;font-size:13px;font-weight:700;line-height:26px;width:100%}.main .form form label .field-required{color:#d84e5b}.main .form form input,.main .form form textarea{border:1px solid #a59992;border-radius:3px;background-clip:padding-box;background-color:#e3e3e3;color:#8f8985;font-size:13px;font-weight:300;margin-bottom:10px;line-height:1.625;padding:10px 8px 9px;width:100%}.main .form form .submit{width:100%;text-align:center}.main .form form .submit .btn{border:1px solid #911616;color:#fff;cursor:pointer;font-size:10px;font-weight:700;margin:0;padding:10px 18px 8px;text-shadow:0 -1px 0 rgba(0,0,0,.4);text-transform:uppercase;overflow:visible;border-radius:3px;background-clip:padding-box;background-color:#710000;text-align:center;margin-top:18px;width:100%}.main .message{color:#f7f7f7}.main .message h2{font-family:'PT Sans',sans-serif;font-size:24px}footer{align-items:center;background:url(http://image.reply.winstaremail.com/lib/fe8c12727260017a71/m/2/Background-Landscape.png?nocache=5) repeat-x;display:flex;justify-content:space-between;max-width:1080px;margin:4rem auto 0;padding:10px 1rem}footer #image-win{width:88px;height:70px}footer #image-adventure{width:150px}\n\t\t</style>\n    </head>\n    <body>\n        <main class=\"main\">\n            <header class=\"header\">\n                <nav class=\"navigation\">\n                    <ul>\n                        <li><img src=\"http://image.s6.exacttarget.com/lib/fe9412727266077e71/m/1/WS-Lgo-top.jpg\" width=\"90\" height=\"91\" border=\"0\"></li>\n                        <li class=\"nav-item\">\n                            <a href=\"tel:1-800-622-6317\" style=\"font-size: 13px; text-align: right; color: #ffffff;\"><img src=\"https://www.winstarworldcasino.com/wp-content/themes/chickasaw/images/phone-icon.png\" alt=\"Call Us\">1-800-622-6317</a>\n                        </li>\n                    </ul>\n                </nav>\n            </header>\n            <section class=\"form\">\n                <div class=\"subscribe-intro\">\n                    <h2>RECEIVE THE LATEST NEWS AND EXCLUSIVE OFFERS</h2>\n                    <p>Sign up for our emails to get casino updates and to be the first to know about our special offers!</p>\n                </div>\n                <form id=\"form1\" action=\"http://cl.s6.exct.net/subscribe.aspx\" name=\"subscribeForm\" method=\"post\">\n                \t<input type=\"hidden\" name=\"lid\" value=\"65367\" /> <!-- New Subscribers -->\n                \t<!-- <input type=\"hidden\" name=\"Email Type\" value=\"HTML\" /> --> <!-- HTML,TEXT -->\n                    <input type=\"hidden\" name=\"usub\" value=\"http://pages.reply.winstaremail.com/email-preference-center/\" />\n                    <input type=hidden name=\"thx\" value=\"http://pages.reply.winstaremail.com/thankyoupage/\">\n                    <input type=hidden name=\"err\" value=\"http://pages.reply.winstaremail.com/errorpage/\">\n                    <input type=hidden name=\"SubAction\" value=\"sub_add_update\"> <!-- sub, unsub, sub_add_update -->\n                    <input type=hidden name=\"MID\" value=\"6274574\">\n                    <input type=hidden name=\"ETSubscriberKey\" value=\"WS_\">\n                    <div class=\"group-row\">\n                        <div class=\"group\">\n                            <label>First Name <span class=\"field-required\">*</span></label>\n                            <input id=\"First_Name\" value=\"Christopher\" type=\"text\" name=\"First_Name\" autocomplete=\"given-name\" required>\n                        </div>\n                        <div class=\"group\">\n                            <label>Last Name <span class=\"field-required\">*</span></label>\n                            <input value=\"Ferrell\" type=\"text\" name=\"Last_Name\" autocomplete=\"family-name\" required>\n                        </div>\n                    </div>\n                    <div class=\"group-row\">\n                        <div class=\"group\">\n                            <label>Email <span class=\"field-required\">*</span></label>\n                            <input value=\"christopherferrell0812@gmail.com\" type=\"text\" name=\"Email Address\" autocomplete=\"email\" required>\n                        </div>\n                        <div class=\"group\">\n                            <label class=\"birth\">Date of Birth <span class=\"field-required\">*</span></label>\n                            <input value=\"08/12/1971\" id=\"datepicker\" type=\"text\" name=\"Birthday\" required readonly=\"readonly\">\n                        </div>\n                    </div>\n                    \n                    <div class=\"group-row\">\n                        <label>Verification of Age<span class=\"field-required\">*</span></label>\n                        <div class=\"age\">\n                            <input id=\"age\" name=\"age\" type=\"checkbox\" value=\"I certify that I am 18 years of age or older and eligible to receive offers from WinStar World Casino.\" required>\n                            <label>I certify that I am 18 years of age or older and eligible to receive offers from WinStar World Casino.</label>\n                        </div>\n                    </div>\n                    <div class=\"submit\">\n                        <button id=\"submit\" class=\"btn\">Subscribe</button>\n                    </div>\n\t\t\t\t\t<div id=\"response\">\n\t\t\t\t\t\t<pre></pre>\n\t\t\t\t\t</div>\n                </form>\n                <form id=\"form2\" action=\"http://cl.s6.exct.net/DEManager.aspx\" name=\"deForm\" method=\"post\">\n                    <input type=\"hidden\" name=\"SubscriberKey\" value=\"\">\n                    <input type=\"hidden\" name=\"Subscriber Key\" value=\"\">\n                    <input type=\"hidden\" name=\"Subscriber_Key\" value=\"\">\n                    <input type=\"hidden\" name=\"ETSubscriberKey\" value=\"\">\n                    <input type=\"hidden\" name=\"First_Name\" value=\"\">\n                    <input type=\"hidden\" name=\"Last_Name\" value=\"\">\n                    <input type=\"hidden\" name=\"EmailAddress\" value=\"\">\n                    <input type=\"hidden\" name=\"Email Address\" value=\"\">\n                    <input type=\"hidden\" name=\"Email\" value=\"\">\n                    <input type=\"hidden\" name=\"Birthday\" value=\"\">\n               \t\t<input type=\"hidden\" name=\"Email Type\" value=\"HTML\" /> <!-- HTML,TEXT -->\n                    <input type=\"hidden\" name=\"_clientID\" value=\"6274574\" />\n                    <input type=\"hidden\" name=\"_deExternalKey\" value=\"basic_triggered_send\" /> <!-- Welcome Email TriggeredSendDataExtension -->\n                    <input type=\"hidden\" name=\"_action\" value=\"add\" /> <!-- add, add/update -->\n                    <input type=\"hidden\" name=\"_returnXML\" value=\"0\" />\n                    <input type=\"hidden\" name=\"_successURL\" value=\"http://pages.reply.winstaremail.com/thankyoupage/\" />\n                    <input type=\"hidden\" name=\"_errorURL\" value=\"http://pages.reply.winstaremail.com/errorpage/\" />\n                </form>\n            </section>\n        </main>\n        <footer>\n            <img id=\"image-win\" src=\"http://image.reply.winstaremail.com/lib/fe8c12727260017a71/m/2/Default-Landscape-win.png\" alt=\"image-winstar\">\n        </footer>\n        <script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script>\n        <script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>\n        <script type=\"text/javascript\">\n\t\t\tfunction initInfo() {\n\t\t\t  document.subscribeForm.elements['ETSubscriberKey'].value = document.subscribeForm.elements['ETSubscriberKey'].value + document.subscribeForm.elements[\"Email Address\"].value;\n\t\t\t  document.deForm.elements['SubscriberKey'].value = document.subscribeForm.elements['ETSubscriberKey'].value;\n\t\t\t  document.deForm.elements['Subscriber Key'].value = document.subscribeForm.elements['ETSubscriberKey'].value;\n\t\t\t  document.deForm.elements['Subscriber_Key'].value = document.subscribeForm.elements['ETSubscriberKey'].value;\n\t\t\t  document.deForm.elements['ETSubscriberKey'].value = document.subscribeForm.elements['ETSubscriberKey'].value;\n\t\t\t  document.deForm.elements['First_Name'].value = document.subscribeForm.elements['First_Name'].value;\n\t\t\t  document.deForm.elements['Last_Name'].value = document.subscribeForm.elements['Last_Name'].value;\n\t\t\t  document.deForm.elements['EmailAddress'].value = document.subscribeForm.elements['Email Address'].value;\n\t\t\t  document.deForm.elements['Email Address'].value = document.subscribeForm.elements['Email Address'].value;\n\t\t\t  document.deForm.elements['Email'].value = document.subscribeForm.elements['Email Address'].value;\n\t\t\t  document.deForm.elements['Birthday'].value = document.subscribeForm.elements['Birthday'].value;\n\t\t\t}\n\n\t\t\tfunction checkForm() {\n\t\t\t    if (!isValidEmail(document.subscribeForm.elements['Email Address'].value)) {\n\t\t\t        alert(\"Please enter a valid Email Address. (name@host.com)\");\n\t\t\t        document.subscribeForm.elements['Email Address'].focus();\n\t\t\t        return false;\n\t\t\t    } else if (!document.getElementById(\"age\").checked) {\n\t\t\t\t\talert(\"You must certify that you are at least 18 years of age.\");\n\t\t\t\t\treturn false;\n\t\t\t    } else {\n\t\t\t        initInfo();\n\t\t\t        //return true;\n\t\t\t    }\n\t\t\t}\n\n\t\t\t$('#form1').submit(doubleSubmit);\n\n\t\t\tfunction doubleSubmit(e1) {\n\t\t\t\te1.preventDefault();\n\t\t\t\te1.stopPropagation();\n\t\t\t\tcheckForm();\n\t\t\t\tvar post_form1 = $.post($(this).action, $(this).serialize());\n\n\t\t\t\tpost_form1.done(function(result) {\n\t\t\t\t\t// would be nice to show some feedback about the first result here\n\t\t\t\t\tconsole.log(\"Form1 Submitted Now submitting form2\");\n\t\t\t\t\t$('#form2').submit();\n\t\t\t\t});\n\t\t\t};\n\t\t\t// isEmail (STRING s [, BOOLEAN emptyOK])\n\t\t\t// whitespace characters\n\t\t\tlet whitespace = \" \\t\\n\\r\";\n\n\t\t\t//\n\t\t\t// Email address must be of form a@b.c ... in other words:\n\t\t\t// * there must be at least one character before the @\n\t\t\t// * there must be at least one character before and after the .\n\t\t\t// * the characters @ and . are both required\n\t\t\tfunction isValidEmail(s)\n\t\t\t{\n\t\t\t    if (isEmpty(s)) return false;\n\n\t\t\t    // is s whitespace?\n\t\t\t    if (isWhitespace(s)) return false;\n\n\t\t\t    // there must be >= 1 character before @, so we\n\t\t\t    // start looking at character position 1\n\t\t\t    // (i.e. second character)\n\t\t\t    var i = 1;\n\t\t\t    var sLength = s.length;\n\n\t\t\t    // look for @\n\t\t\t    while ((i < sLength) && (s.charAt(i) != \"@\"))\n\t\t\t    { i++\n\t\t\t    }\n\n\t\t\t    if ((i >= sLength) || (s.charAt(i) != \"@\")) return false;\n\t\t\t    else i += 2;\n\n\t\t\t    // look for .\n\t\t\t    while ((i < sLength) && (s.charAt(i) != \".\"))\n\t\t\t    { i++\n\t\t\t    }\n\n\t\t\t    // there must be at least one character after the .\n\t\t\t    if ((i >= sLength - 1) || (s.charAt(i) != \".\")) return false;\n\t\t\t    else return true;\n\t\t\t}\n\n\t\t\t// Check whether string s is empty.\n\t\t\tfunction isEmpty(s)\n\t\t\t{\n\t\t\t    return ((s == null) || (s.length == 0))\n\t\t\t}\n\n\t\t\t// Returns true if string s is empty or\n\t\t\t// whitespace characters only.\n\t\t\tfunction isWhitespace(s)\n\t\t\t{\n\t\t\t    var i;\n\n\t\t\t    // Is s empty?\n\t\t\t    if (isEmpty(s)) return true;\n\n\t\t\t    // Search through string's characters one by one\n\t\t\t    // until we find a non-whitespace character.\n\t\t\t    // When we do, return false; if we don't, return true.\n\t\t\t    for (i = 0; i < s.length; i++)\n\t\t\t    {\n\t\t\t        // Check that current character isn't whitespace.\n\t\t\t        var c = s.charAt(i);\n\n\t\t\t        if (whitespace.indexOf(c) == -1) return false;\n\t\t\t    }\n\t\t\t    // All characters are whitespace.\n\t\t\t    return true;\n\t\t\t}\n\t\t\t//init();\n        </script>\n        <script>\n\t        $( function() {\n\t            $(\"#datepicker\").datepicker({\n\t            changeMonth: true,\n\t            changeYear: true,\n\t\t\t    yearRange: \"c-100:c+100\",\n\t\t\t    maxDate: \"-18Y\",\n\t            minDate: \"-100Y\"\n\t            });\n\t        });\n        </script>\n    </body>\n</html>",
+			"settings":
+			{
+				"buffer_size": 13603,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -116,10 +176,25 @@
 	},
 	"expanded_folders":
 	[
-		"/C/projectstoregit/WinStarApp"
+		"/C/projectstoregit/WinStarApp",
+		"/C/projectstoregit/WinStarApp/HTML",
+		"/C/projectstoregit/WinStarApp/HTML/scripts"
 	],
 	"file_history":
 	[
+		"/C/projectstoregit/WinStarApp/HTML/scripts/firebase.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/firebase.min.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/soapclient.min.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/soapclient.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/fastclick.min.js",
+		"/C/Users/matt_/Downloads/WebCollectCodeSamples/Subscribe_Multiple_Lists.txt",
+		"/C/projectstoregit/temp/welcome_email.min.css",
+		"/C/projectstoregit/temp/welcome_email.css",
+		"/C/projectstoregit/temp/triggeremail.txt",
+		"/C/Users/matt_/Downloads/WebCollectCodeSamples/Parsing_Error_Codes_PHP.txt",
+		"/C/Users/matt_/Downloads/WebCollectCodeSamples/Subscribe-Unsubscribe_Single_List.txt",
+		"/C/Users/matt_/Downloads/WebCollectCodeSamples/Subscribe-Unsubscribe_Multiple_Lists.txt",
+		"/C/projectstoregit/temp/triggeremail.csv",
 		"/C/projectstoregit/WinStarApp/app.yaml",
 		"/C/projectstoregit/WinStarApp/HTML/index.html",
 		"/C/Users/matt_/AppData/Roaming/gcloud/logs/2018.04.05/05.04.15.860000.log",
@@ -161,7 +236,6 @@
 		"/C/projectstoregit/WinStarApp/HTML/scripts/selectorCache.js",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/localData.js",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/fastclick.js",
-		"/C/projectstoregit/WinStarApp/HTML/scripts/firebase.js",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/snap.js",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/nl2br.js",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/date.format.js",
@@ -235,19 +309,7 @@
 		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/index.ts",
 		"/C/projectstoregit/ScrewtopMediaDevApp/src/manifest.appcache",
 		"/C/projectstoregit/ScrewtopMediaDevApp/node_modules/@angular/cli/tasks/init.js",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/sw.js",
-		"/C/projectstoregit/ScrewtopMediaApp-orig/app.yaml",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/assets/js/service-worker.js",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/assets/js/sw.js",
-		"/C/projectstoregit/ScrewtopMediaApp-orig/angular-cli.json",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/manifest.json",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/pages/about-us/about-us.module.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/pages/about-us/about-us.routing.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/pages/about-us/about-us.component.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/pages/home/home.component.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/components/media-production/production-show-list/media-production-show-list.component.ts",
-		"/C/projectstoregit/add-to-home-screen/empty-manifest.json",
-		"/C/projectstoregit/quickstart-js/messaging/index.html"
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/sw.js"
 	],
 	"find":
 	{
@@ -271,6 +333,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"WelcomeEmail_Send",
+			"EmailAddress",
+			"http:",
+			"subscriber",
+			"Subscriber_Key",
+			",",
+			"submitSuscribe",
+			"init",
+			"age",
+			"'",
+			"submit",
+			"isValidEmail",
+			"emails",
 			"640x11",
 			"lazyload.js",
 			"max-1200px.css",
@@ -335,7 +410,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -363,7 +438,200 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "HTML/scripts/selectorCache.min.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12071,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								317,
+								317
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "HTML/scripts/selectorCache.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 27794,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3657,
+								3657
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1697.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "HTML/scripts/mobilePatron.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22006,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20584,
+								20602
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 11128.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1465,
+								1465
+							]
+						],
+						"settings":
+						{
+							"auto_name": "WelcomeEmail_Send",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 554.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10727,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4356,
+								4283
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13629,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8816,
+								8816
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1515.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13603,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13603,
+								13603
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2589.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -371,11 +639,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 34.0
 	},
 	"input":
 	{
-		"height": 31.0
+		"height": 34.0
 	},
 	"layout":
 	{
@@ -412,7 +680,7 @@
 	"project": "WinStarApp.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -454,7 +722,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 275.0,
+	"side_bar_width": 298.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

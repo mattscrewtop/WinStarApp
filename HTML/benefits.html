@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://*.accessdevelopment.com; frame-src 'self' https://*.accessdevelopment.com; script-src 'unsafe-inline' 'self' https://*.accessdevelopment.com; object-src 'self' https://*.accessdevelopment.com;" /> -->
+    <script type="text/javascript" src="/scripts/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="/scripts/sha1.js"></script>
+    </head>
+    <script type="text/javascript">
+    	OCI = 9127;
+    	PCID = 7110;
+    	access_token = "25d8680f0238e109d556a5fadcc681e17998806779a63f4aa8e36c431f7adbbe";
+    	posturl = "https://amt.accessdevelopment.com/api/v1/imports";
+    	location.queryString = {};
+    	location.search.substr(1).split("&").forEach(function (pair) {
+    	    if (pair === "") return;
+    	    var parts = pair.split("=");
+    	    this[parts[0]] = parts[1] &&
+    	        decodeURIComponent(parts[1].replace(/\+/g, " "));
+    	});
+
+    	post_item = '{"import":{"members":[{"record_type":"MEM_SYN", "organization_customer_identifier":"'+OCI+'", "program_customer_identifier":"'+PCID+'", "first_name":"'+this.firstname+'", "last_name":"'+this.lastname+'", "postal_code":"'+this.zip+'", "state":"'+this.state+'", "country":"'+this.country+'", "street_line1":"'+this.address+'", "city":"'+this.city+'", "email_address":"'+this.email+'", "member_customer_identifier":"'+this.memberid+'", "member_status":"OPEN", "record_identifier":"'+this.memberid+'"} ]}}';
+        function logResults(json){
+          console.info('logResults: ',json);
+        }
+
+        $.ajax({
+            url: posturl+'?access_token='+access_token,
+            data: post_item,
+            dataType: "jsonp",
+            headers: {
+                'Access-Token': access_token
+            },
+            jsonpCallback: "logResults"
+        });
+/*
+        $.ajax({
+            /*
+            beforeSend: function (request)
+            {
+                request.setRequestHeader("Access-Control-Allow-Origin","https://www.shopping-benefits.com");
+                request.setRequestHeader("Access-Token", access_token);
+                request.setRequestHeader("access_token", access_token);
+                request.setRequestHeader("Accept","application/json");
+                request.setRequestHeader("Content-Type","application/json");
+                request.setRequestHeader("Accept", "application/json");
+                request.setRequestHeader("Content-Type", "application/json");
+            },
+            *
+            type: "POST",
+            headers: {
+                'Access-Control-Allow-Credentials': true,
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods':'POST',
+                'Access-Control-Allow-Headers':'application/json',
+                'Access-Token': access_token
+            },
+            url: posturl+'?access_token='+access_token,
+            contentType: "application/x-www-form-urlencoded",
+            data: post_item,
+            dataType: 'json',
+            crossDomain: true,
+            responseType:'application/json',
+            success: function (resultsFromServer)
+            {
+                //writeLogItem("token",myUrl,resultsFromServer);
+                console.info('success', resultsFromServer);
+                //JSON.stringify(resultsFromServer);
+    			cleanString = OCI+"-"+PCID+"-"+this.memberid;
+    			res = cleanString.toUpperCase();
+
+    			cvt=sha1(res);
+    			activateurl = 'https://www.memberweb.com/activate/activate.asp?a=1&SC_FID=RealTimeActivation&cvt='+cvt+'&email='+this.email+'&sc_events=event2&GroupID='+PCID+'&MemberID='+this.memberid+'&zip='+this.zip+'&location='+this.zip+'&country='+this.country+'&postal_code='+this.zip+'&FName='+this.firstname+'&LName='+this.lastname+'&Address='+this.address+'&City='+this.city;
+    			//header('Location: '.url);
+                console.info('activateurl',activateurl);
+            },
+            error: function (errorFromServer)
+            {
+                //writeLogItem("token",myUrl,JSON.stringify(errorFromServer));
+                //deferred.reject(errorFromServer);
+                console.info('error', errorFromServer);
+    			//JSON.stringify(errorFromServer)
+    			//processXML(2, $datetime, '', '', $jsonresponse["data"][0]["status"]);
+            }
+        });
+*/
+    </script>
+    <body>
+    </body>
+</html>
