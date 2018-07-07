@@ -1,10 +1,5 @@
 <?php
-	//$access_token = "ed9edaac605318eeb6c2ee521bc442090944bad9ae6a962969b93b766d58a170"; //demo
-	$access_token = "25d8680f0238e109d556a5fadcc681e17998806779a63f4aa8e36c431f7adbbe"; //live
-
 	$OCI = 9127;
-	$PCID = 7110;
-	$baseHref = "https://savingsstorecentral.enjoymydeals.com/home";
 	//$posturl = "https://amt-demo.accessdevelopment.com/api/v1/imports"; //demo
 	$posturl = "https://amt.accessdevelopment.com/api/v1/imports"; //live
 
@@ -20,6 +15,8 @@
 	$postal_code = $_REQUEST["zip"];
 	$country = $_REQUEST["country"];
 	$email_address = $_REQUEST["email"];
+	$access_token = $_REQUEST["access_token"];
+	$PCID = $_REQUEST["PCID"];
 
 	$post_item = '{"import":{"members":[{"record_type":"MEM_SYN", "organization_customer_identifier":"'.$OCI.'", "program_customer_identifier":"'.$PCID.'", "first_name":"'.$first_name.'", "last_name":"'.$last_name.'", "postal_code":"'.$postal_code.'", "state":"'.$state.'", "country":"'.$country.'", "street_line1":"'.$street_line1.'", "city":"'.$city.'", "email_address":"'.$email_address.'", "member_customer_identifier":"'.$memberid.'", "member_status":"OPEN", "record_identifier":"'.$memberid.'"} ]}}';
 
