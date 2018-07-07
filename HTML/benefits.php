@@ -5,8 +5,8 @@
 	$OCI = 9127;
 	$PCID = 7110;
 	$baseHref = "https://savingsstorecentral.enjoymydeals.com/home";
-	//$posturl = "http://amt-demo.accessdevelopment.com/api/v1/imports"; //demo
-	$posturl = "http://amt.accessdevelopment.com/api/v1/imports"; //live
+	//$posturl = "https://amt-demo.accessdevelopment.com/api/v1/imports"; //demo
+	$posturl = "https://amt.accessdevelopment.com/api/v1/imports"; //live
 
 	//date_default_timezone_set('UTC');
 	$datetime = date("Y-m-d H:m:s");
