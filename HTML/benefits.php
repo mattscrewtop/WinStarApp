@@ -1,8 +1,4 @@
 <?php
-	//session_start();
-	include('globals.php');
-	include('functions.php');
-
 	//$access_token = "ed9edaac605318eeb6c2ee521bc442090944bad9ae6a962969b93b766d58a170"; //demo
 	$access_token = "25d8680f0238e109d556a5fadcc681e17998806779a63f4aa8e36c431f7adbbe"; //live
 
@@ -81,4 +77,12 @@
 		}
 	}
 	curl_close($ch1);
+
+	function processXML($code, $datetime, $lead_admin_link, $partners, &$error)
+	{
+		header("Content-type: text/xml");
+		$outputXML = '<?xml version="1.0" encoding="ISO-8859-1" ?><response><responsecode>'.$code.'</responsecode><errormsg>'.$error.'</errormsg><datetime>'.$datetime.'</datetime></response>';
+		print $outputXML;
+		return false;
+	}
 ?>

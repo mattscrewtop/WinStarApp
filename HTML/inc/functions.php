@@ -47,7 +47,7 @@ function myProxy($get, $param, $urlToGoTo, &$error)
 	$getParms = 'csurl='.$urlToGoTo.'&'.$get;
 	$posturl = 'https://www.solarmoneyexperts.com/proxy.php';
 	$curl = curl_init($posturl);
-		PC::debug($get,'myProxy.get');
+		//PC::debug($get,'myProxy.get');
 	curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 	curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);      // Listen for a response.
@@ -57,11 +57,11 @@ function myProxy($get, $param, $urlToGoTo, &$error)
 	curl_setopt($curl, CURLOPT_HTTPHEADER, Array("X-Proxy-URL: https://www.solarmoneyexperts.com/LG2/postmiddle.php"));
 	curl_setopt($curl, CURLOPT_HTTPHEADER, Array("Content-Type: application/x-www-form-urlencoded"));
 	$response = curl_exec($curl);
-		PC::debug($response,'myProxy.response');
+		//PC::debug($response,'myProxy.response');
 	if ($response === false)
 	{
 		$error[] = 'Curl Error: ' . curl_errno($curl).'-'.curl_error($curl);
-		PC::debug($error,'myProxy.error');
+		//PC::debug($error,'myProxy.error');
 	}
 	else
 	{
@@ -80,12 +80,12 @@ function getLeadidCookie()
 			$leadidCookie = $_COOKIE["leadid_token-990889DB-7E7F-7D5F-2353-D0FB66D3F047-9672904C-405D-0BB5-9CC7-8EE99507A4A6"];
 		else
 			$leadidCookie = "";
-		PC::debug($leadidCookie,$i);
+		//PC::debug($leadidCookie,$i);
 	return $leadidCookie;
 }
 function print_xml_data_file($localfile)
 {
-	PC::debug($localfile,'includefile');
+	//PC::debug($localfile,'includefile');
     include($localfile);
 }
 function get_xml_data($loadfile)
@@ -94,7 +94,7 @@ function get_xml_data($loadfile)
     print_xml_data_file($loadfile);
     $xml_file = ob_get_contents();
     ob_end_clean();
-    PC::debug($xml_file,'xmlfile');
+    //PC::debug($xml_file,'xmlfile');
     return $xml_file;
 }
 ?>
