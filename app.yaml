@@ -1,5 +1,6 @@
 # [START runtime]
-runtime: python27
+runtime: php55
+api_version: 1
 threadsafe: yes
 # [END runtime]
 
@@ -84,17 +85,13 @@ handlers:
 #    Strict-Transport-Security: max-age=31536000; includeSubDomains
 #    X-Frame-Options: DENY
 
-- url: /(.*\.php)
-  mime_type: text/html
-  static_files: HTML/\1
-  upload: HTML/(.*\.php)
+- url: /(.+\.php)$
+  script: HTML/\1
   expiration: "0m"
   secure: always
 
-- url: /(.*\.html)
-  mime_type: text/html
+- url: /(.+\.html)$
   static_files: HTML/\1
-  upload: HTML/(.*\.html)
   expiration: "0m"
   secure: always
 
