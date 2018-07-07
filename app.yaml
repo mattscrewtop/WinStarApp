@@ -87,7 +87,6 @@ handlers:
 
 - url: /(.+\.php)$
   script: HTML/\1
-  expiration: "0m"
   secure: always
 
 - url: /(.+\.html)$
