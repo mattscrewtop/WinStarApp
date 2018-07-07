@@ -117,7 +117,7 @@ function MobilePatron()
 
 
     //DATA
-    this.url = "://dev.mobile-patron.solutiaconsulting.com/api/";
+    this.url = "http://dev.mobile-patron.solutiaconsulting.com/api/";
     this.urlVip = "https://sweltering-inferno-2198.firebaseio.com/sections/mywinstar/vipevents/pages/events";
     this.urlHosts = "https://sweltering-inferno-2198.firebaseio.com/sections/mywinstar/mobilePatronsHostInformation/pages/hosts";
     this.urlHomePageDisclaimer = "https://sweltering-inferno-2198.firebaseio.com/sections/mywinstar/homePage/offers_disclaimer";

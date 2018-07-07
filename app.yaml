@@ -19,9 +19,9 @@ handlers:
   secure: always
   application_readable: true
 
-- url: /(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))$
+- url: /(.*\.(ico|jpg|jpeg|png|gif|GIF|woff|ttf|otf|eot|svg))$
   static_files: HTML/\1
-  upload: HTML/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
+  upload: HTML/.*\.(ico|jpg|jpeg|png|gif|GIF|woff|ttf|otf|eot|svg)$
   application_readable: true
 
 - url: /(.+).php
