@@ -788,12 +788,11 @@ function loadPage() {
             );
         }
 }
-/*
+
 function onUpdateReady() {
-    alertify('Found New Version!');
+    console.log('Found New Version!');
 }
 window.applicationCache.addEventListener('updateready', onUpdateReady);
 if (window.applicationCache.status === window.applicationCache.UPDATEREADY) {
     onUpdateReady();
 }
-*/

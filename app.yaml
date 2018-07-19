@@ -2,26 +2,53 @@ runtime: php55
 api_version: 1
 threadsafe: yes
 
-default_expiration: "0m"
+default_expiration: "0d 0h 0m"
 
 handlers:
 - url: /(.*manifest\.json)
   mime_type: application/manifest+json
   static_files: HTML/\1
   upload: HTML/(.*manifest\.json)
-  expiration: "0m"
+  expiration: "0d 0h 0m"
+  secure: always
+
+- url: /service-worker\.js
+  mime_type: application/javascript
+  static_files: HTML/service-worker.js
+  upload: HTML/service-worker\.js
+  expiration: "0d 0h 0m"
+  secure: always
+
+- url: /sw-toolbox\.js
+  mime_type: application/javascript
+  static_files: HTML/sw-toolbox.js
+  upload: HTML/sw-toolbox\.js
+  expiration: "0d 0h 0m"
+  secure: always
+
+- url: /runtime-caching\.js
+  mime_type: application/javascript
+  static_files: HTML/runtime-caching.js
+  upload: HTML/runtime-caching\.js
+  expiration: "0d 0h 0m"
+  secure: always
+
+- url: /(.*\.json)
+  mime_type: application/json
+  static_files: dist/\1
+  upload: dist/(.*\.json)
   secure: always
 
 - url: /(.*\.(htm|html|css|js))$
   static_files: HTML/\1
   upload: HTML/.*\.(htm|html|css|js)$
-  expiration: "0m"
+  expiration: "0d 0h 0m"
   secure: always
 
 - url: /(.*\.(ico|jpg|jpeg|png|gif|GIF|woff|ttf|otf|eot|svg))$
   static_files: HTML/\1
   upload: HTML/.*\.(ico|jpg|jpeg|png|gif|GIF|woff|ttf|otf|eot|svg)$
-  expiration: "0m"
+  expiration: "0d 0h 0m"
   secure: always
 
 - url: /(.+).php
@@ -32,14 +59,14 @@ handlers:
 - url: /(.*)/
   static_files: HTML/\1/index.html
   upload: HTML/(.*)/index.html
-  expiration: "0m"
+  expiration: "0d 0h 0m"
   secure: always
 
 # site root
 - url: /
   static_files: HTML/index.html
   upload: HTML/index\.html
-  expiration: "0m"
+  expiration: "0d 0h 0m"
   secure: always
 
 

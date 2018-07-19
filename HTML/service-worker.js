@@ -1,11 +1,11 @@
 // Load the sw-tookbox library.
-//importScripts('./sw-toolbox.js');
-//importScripts('./runtime-caching.js');
+importScripts('./sw-toolbox.js');
+importScripts('./runtime-caching.js');
 
 
 
 // tick this to make the cache invalidate and update
-const CACHE_VERSION = 2448;
+const CACHE_VERSION = 2450;
 const CURRENT_CACHES =
 	{
 		'app-shell': 'app-shell-cache-v' + CACHE_VERSION,
@@ -15,7 +15,17 @@ const CURRENT_CACHES =
 //APP SHELL FILES...
 var filesToCache = 
 [
-	'/'
+	'/splash.gif',
+	'/screen.png',
+	'/splash.png',
+	'/scripts/firebase.min.js',
+	'/styles/bootstrap.min.css',
+	'/styles/icons.css',
+	'/images/splash.png',
+	'/images/466.gif',
+	'/images/backgrounds/front-1536x2048.jpg',
+	'/images/background.png',
+	'/scripts/jquery-2.1.3.min.js'
 ];
 
 var cacehableRequestsList = ['screwtopmedia', 'winstarworldcasino', 'googleapis', 'gstatic'];
