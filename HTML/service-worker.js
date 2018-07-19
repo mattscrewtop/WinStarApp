@@ -5,7 +5,7 @@
 
 
 // tick this to make the cache invalidate and update
-const CACHE_VERSION = 2446;
+const CACHE_VERSION = 2448;
 const CURRENT_CACHES =
 	{
 		'app-shell': 'app-shell-cache-v' + CACHE_VERSION,

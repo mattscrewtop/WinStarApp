@@ -17,14 +17,12 @@ handlers:
   upload: HTML/.*\.(htm|html|css|js)$
   expiration: "0m"
   secure: always
-  application_readable: true
 
 - url: /(.*\.(ico|jpg|jpeg|png|gif|GIF|woff|ttf|otf|eot|svg))$
   static_files: HTML/\1
   upload: HTML/.*\.(ico|jpg|jpeg|png|gif|GIF|woff|ttf|otf|eot|svg)$
   expiration: "0m"
   secure: always
-  application_readable: true
 
 - url: /(.+).php
   script: HTML/\1.php
@@ -36,7 +34,6 @@ handlers:
   upload: HTML/(.*)/index.html
   expiration: "0m"
   secure: always
-  application_readable: true
 
 # site root
 - url: /
@@ -44,7 +41,6 @@ handlers:
   upload: HTML/index\.html
   expiration: "0m"
   secure: always
-  application_readable: true
 
 
 # Temporary setting to keep gcloud from uploading not required files for deployment
