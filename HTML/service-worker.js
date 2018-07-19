@@ -28,7 +28,7 @@ var filesToCache =
 	'/scripts/jquery-2.1.3.min.js'
 ];
 
-var cacehableRequestsList = ['screwtopmedia', 'winstarworldcasino', 'googleapis', 'gstatic'];
+var cacehableRequestsList = ['screwtopmedia', 'winstarworldcasino', 'googleapis', 'gstatic','twitter','twimg','ytimg','youtube'];
 
 
 //WHILE INSTALLING SERVICE WORKER, CACHE APP SHELL...

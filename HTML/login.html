@@ -235,15 +235,18 @@
                     {
                         //REDIRECT USER
                         window.location.href = "mobilePatronsHome.html";
+	                    return false;
                     },
                     function (errorFromServer)
                     {
                         mobilePatron.HideActivity();
 
                         //console.log('registration error:', errorFromServer);
-                        alertify.alert('', errorFromServer.responseJSON.ErrorDetail);
+                        console.info(errorFromServer);
+                        alertify.alert('', errorFromServer.responseJSON.statusText);
                     }
                 );
+				return false;
             });
         });
     </script>
