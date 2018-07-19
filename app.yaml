@@ -34,24 +34,23 @@ handlers:
 - url: /(.*)/
   static_files: HTML/\1/index.html
   upload: HTML/(.*)/index.html
+  expiration: "0m"
   secure: always
-
-- url: /(.*)
-  static_files: HTML/\1/index.html
-  upload: HTML/(.*)/index.html
-  secure: always
+  application_readable: true
 
 # site root
 - url: /
   static_files: HTML/index.html
-  upload: HTML/index.html
+  upload: HTML/index\.html
+  expiration: "0m"
   secure: always
+  application_readable: true
 
 
 # Temporary setting to keep gcloud from uploading not required files for deployment
 skip_files:
 - ^node_modules$
-- ^app\.yaml
+#- ^app\.yaml
 - ^README\..*
 - \.gitignore
 - ^\.git$
