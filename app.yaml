@@ -51,7 +51,7 @@ handlers:
 # Temporary setting to keep gcloud from uploading not required files for deployment
 skip_files:
 - ^node_modules$
-#- ^app\.yaml
+- ^app\.yaml
 - ^README\..*
 - \.gitignore
 - ^\.git$
