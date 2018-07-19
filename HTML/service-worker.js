@@ -5,7 +5,7 @@ importScripts('./runtime-caching.js');
 
 
 // tick this to make the cache invalidate and update
-const CACHE_VERSION = 2452;
+const CACHE_VERSION = 2453;
 const CURRENT_CACHES =
 	{
 		'app-shell': 'app-shell-cache-v' + CACHE_VERSION,

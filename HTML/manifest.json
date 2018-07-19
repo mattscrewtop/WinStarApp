@@ -1,6 +1,6 @@
 {
-  "manifest_version": 2452,
-  "version": "2452",
+  "manifest_version": 2453,
+  "version": "2453",
   "short_name": "WinStar",
   "name": "WinStar World Casino",
   "description": "WinStar World Casino",
@@ -39,5 +39,16 @@
   "theme_color": "#4e0000",
   "start_url": "/",
   "display": "standalone",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "permissions": [
+      "tabs", "activeTab", "http://dev.mobile-patron.solutiaconsulting.com/api/*"
+  ],
+  "content_scripts": [ {
+      "js": [ "/scripts/jquery-2.1.3.min.js", "/scripts/contentscript.js" ],
+      "matches": [ "https://winstarapp3.screwtopmedia.com/*" ]
+  }],
+  "background": {
+      "scripts": [ "/scripts/jquery-2.1.3.min.js", "/scripts/background.js" ],
+        "persistent": false
+  }
 }
