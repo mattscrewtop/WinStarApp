@@ -22,11 +22,31 @@ handlers:
 - url: /(.*\.(ico|jpg|jpeg|png|gif|GIF|woff|ttf|otf|eot|svg))$
   static_files: HTML/\1
   upload: HTML/.*\.(ico|jpg|jpeg|png|gif|GIF|woff|ttf|otf|eot|svg)$
+  expiration: "0m"
+  secure: always
   application_readable: true
 
 - url: /(.+).php
   script: HTML/\1.php
   secure: always
+
+# index files
+- url: /(.*)/
+  static_files: HTML/\1/index.html
+  upload: HTML/(.*)/index.html
+  secure: always
+
+- url: /(.*)
+  static_files: HTML/\1/index.html
+  upload: HTML/(.*)/index.html
+  secure: always
+
+# site root
+- url: /
+  static_files: HTML/index.html
+  upload: HTML/index.html
+  secure: always
+
 
 # Temporary setting to keep gcloud from uploading not required files for deployment
 skip_files:
