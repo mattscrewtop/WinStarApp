@@ -24,37 +24,34 @@
 	"buffers":
 	[
 		{
-			"file": "HTML/login.html",
+			"contents": "// Load the sw-tookbox library.\nimportScripts('./sw-toolbox.js');\nimportScripts('./runtime-caching.js');\n\n\n\n// tick this to make the cache invalidate and update\nconst CACHE_VERSION = 2453;\nconst CURRENT_CACHES =\n\t{\n\t\t'app-shell': 'app-shell-cache-v' + CACHE_VERSION,\n\t\t'app-data': 'app-data-cache-v' + CACHE_VERSION,\n\t};\n\n//APP SHELL FILES...\nvar filesToCache = \n[\n\t'/splash.gif',\n\t'/screen.png',\n\t'/splash.png',\n\t'/scripts/firebase.min.js',\n\t'/styles/bootstrap.min.css',\n\t'/styles/icons.css',\n\t'/images/splash.png',\n\t'/images/466.gif',\n\t'/images/backgrounds/front-1536x2048.jpg',\n\t'/images/background.png',\n\t'/scripts/jquery-2.1.3.min.js'\n];\n\nvar cacehableRequestsList = ['screwtopmedia', 'winstarworldcasino', 'googleapis', 'gstatic','twitter','twimg','ytimg','youtube', 'jwpcdn'];\n\n\n//WHILE INSTALLING SERVICE WORKER, CACHE APP SHELL...\nself.addEventListener('install', (event) =>\n{\n\tconsole.log('******* INSTALL', event);\n\n\tevent.waitUntil\n\t(\n\t\tcaches.open(CURRENT_CACHES['app-shell']).then\n\t\t(\n\t\t\tfunction(cache) \n\t\t\t{\n\t\t\t\tconsole.log('[ServiceWorker] Caching app shell...', cache);\n\t\t\t\treturn cache.addAll(filesToCache);\n\t\t\t}\n\t\t)\n\t);\n});\n\n\n\nself.addEventListener('activate', (event) =>\n{\n\tconsole.log('******* ACTIVATE', event);\n\n\t// Delete all caches that aren't named in CURRENT_CACHES.\n\t// While there is only one cache in this example, the same logic will handle the case where\n\t// there are multiple versioned caches.\n\tconst expectedCacheNames = Object.keys(CURRENT_CACHES).map((key) =>\n\t{\n\t\treturn CURRENT_CACHES[key];\n\t});\n\n\tconsole.log('ACTIVATE: EXPECTED CACHE NAMES:', expectedCacheNames);\n\n\tevent.waitUntil\n\t(\n\t\tcaches.keys().then((cacheNames) =>\n\t\t{\n\t\t\treturn Promise.all(\n\t\t\t\tcacheNames.map((cacheName) =>\n\t\t\t\t{\n\t\t\t\t\tif (expectedCacheNames.indexOf(cacheName) === -1)\n\t\t\t\t\t{\n\t\t\t\t\t\t// If this cache name isn't present in the array of \"expected\" cache names, then delete it.\n\t\t\t\t\t\tconsole.log('Deleting out of date cache:', cacheName);\n\n\t\t\t\t\t\treturn caches.delete(cacheName);\n\t\t\t\t\t}\n\t\t\t\t})\n\t\t\t);\n\t\t})\n\t);\n});\n\n\n\n\n// This sample illustrates an aggressive approach to caching, in which every valid response is\n// cached and every request is first checked against the cache.\n// This may not be an appropriate approach if your web application makes requests for\n// arbitrary URLs as part of its normal operation (e.g. a RSS client or a news aggregator),\n// as the cache could end up containing large responses that might not end up ever being accessed.\n// Other approaches, like selectively caching based on response headers or only caching\n// responses served from a specific domain, might be more appropriate for those use cases.\nself.addEventListener('fetch', (event) => \n{\n\tif (event.request.method === 'GET')\n\t{ \n\t\t// Parse the URL:\n\t\tvar requestURL = new URL(event.request.url);\t\n\t\tvar filesToCacheName = filesToCache.find((n) => n === requestURL.pathname);\n\t\tvar isAppShellCache = (filesToCacheName !== undefined)\n\t\tvar isRequestCacheable = false;\n\t\t\n\t\t//CHECK IF URL IS FROM A CACHEABLE SOURCE...\n\t\tif (cacehableRequestsList.some(function(v) { return event.request.url.indexOf(v) >= 0; })) \n\t\t{\n\t\t\t// There's at least one\n\t\t\tconsole.log('WILL BE CACHED... ', event.request.url);\n\t\t\tisRequestCacheable = true;\n\t\t}\t  \n\n\t\tif (!isRequestCacheable)\n\t\t{ \n\t\t\tconsole.log('--------- REQUEST URL... ', event.request.url);\n\t\t\tconsole.log('--------- IS CACHEABLE... ', isRequestCacheable);\n\t\t\tconsole.log('-------------------------------------------------');\n\t\t}\t\n\n\t\t//ONLY DEAL WITH APP SHELL CACHE OR IF REQUEST IS FROM A CACHEABLE SOURCE...\n\t\tif(isRequestCacheable || isAppShellCache)\n\t\t{\n\t\t\tvar cacheStore = (isAppShellCache) ? CURRENT_CACHES['app-shell'] : CURRENT_CACHES['app-data'];\n\n\t\t\tevent.respondWith\n\t\t\t(\n\t\t\t\tfromCache(cacheStore, event.request).then((response) =>\n\t\t\t\t{\n\t\t\t\t\t// If there is an entry in the cache for event.request, then response will be defined\n\t\t\t\t\t// and we can just return it.\t\t\t\n\t\t\t\t\tif (response)\n\t\t\t\t\t{\n\t\t\t\t\t\tconsole.log('RESPONSE FOUND FOR %s IN CACHE....', event.request.url);\n\n\t\t\t\t\t\t//NOW PULL REQUEST FROM NETWORK FOR LATEST CONTENT\n\t\t\t\t\t\tfromNetworkThenUpdateCache(cacheStore, event.request).then(sendRefreshMessage);\n\n\t\t\t\t\t\treturn response;\n\t\t\t\t\t}\t\t\n\n\t\t\t\t\t//AT THIS POINT, RESULTS DO NOT EXIST IN CACHE, SO RETRIEVE FROM NETWORK...\n\t\t\t\t\treturn fromNetworkThenUpdateCache(cacheStore, event.request);\t\t\t\n\t\t\t\t})\n\t\t\t);\n\t\t}\n\t}\t\n});\n\n\n\nfunction fromCache(cacheStore, request) \n{\n    return caches.open(cacheStore).then((cache) =>\n\t{\n\t\t//console.log('1. *********** FETCHING FROM CAHCE:', request.url);\n\n\t\treturn cache.match(request);\n\t});\n}\n\nfunction fromNetworkThenUpdateCache(cacheStore, request) \n{\n    return caches.open(cacheStore).then((cache) =>\n\t{\n\t\t//console.log('3. *********** CLIENT REQUEST:', request);\n\t\t\n\t\treturn fetch(request).then((response) =>\n\t\t{\t\t\t\n\t\t\t// Optional: add in extra conditions here, e.g. response.type == 'basic' to only cache\n\t\t\t// responses from the same domain. See https://fetch.spec.whatwg.org/#concept-response-type\n\t\t\tif (response.status < 400)\n\t\t\t{\n\t\t\t\t// We need to call .clone() on the response object to save a copy of it to the cache.\n\t\t\t\t// (https://fetch.spec.whatwg.org/#dom-request-clone)\n\t\t\t\tcache.put(request, response.clone());\n\t\t\t}\t\n\n\t\t\t// Return the original response object, which will be used to fulfill the resource request.\n\t\t\treturn response;\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t});\n\t});\n}\n\n//SEND NOTIFICATION THAT REQUEST HAS REFRESHED\n//INCLUDES NEW CONTENT (jsonResults)\n//SO CLIENT CAN COMPARE AND DETERMINE IF CONTENT FROM NETWORK HAS CHANGED\nfunction sendRefreshMessage(response) \n{\n\tif(response)\n\t{\n\t\ttry\n\t\t{\n\t\t\tresponseClone = response.clone();\n\n\t\t\tif(responseClone.type === 'cors')\n\t\t\t{\n\t\t\t\tresponseClone.json().then(jsonResults => \n\t\t\t\t{\n\t\t\t\t\tvar message = \n\t\t\t\t\t{\n\t\t\t\t\t\ttype: 'refresh',\n\t\t\t\t\t\turl: responseClone.url,\n\t\t\t\t\t\tcontent: jsonResults\n\t\t\t\t\t};\n\n\t\t\t\t\tconsole.log('SERVICE WORKER SEND responseClone:', responseClone);\n\n\t\t\t\t\tself.clients.matchAll().then((clients) =>\n\t\t\t\t\t{\n\t\t\t\t\t\tclients.forEach(client =>\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\tclient.postMessage(JSON.stringify(message));\n\t\t\t\t\t\t});\n\t\t\t\t\t});\t\t\t\n\t\t\t\t});\n\t\t\t}\n\t\t}\n\t\tcatch(exception)\n\t\t{\n\t\t\tconsole.log('***** EXCEPTION ***** ', exception);\n\t\t}\n\t}\n}",
+			"file": "HTML/service-worker.js",
+			"file_size": 6403,
+			"file_write_time": 131764897287436072,
 			"settings":
 			{
-				"buffer_size": 12006,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "HTML/scripts/selectorCache.min.js",
-			"settings":
-			{
-				"buffer_size": 12071,
+				"buffer_size": 6188,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "HTML/scripts/selectorCache.js",
+			"file": "HTML/manifest.json",
 			"settings":
 			{
-				"buffer_size": 27794,
+				"buffer_size": 1500,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
+			"contents": "\nfunction MobilePatron()\n{\n    function renderSweepstakes(list)\n    {\n        if (list)\n        {\n            //console.log('render sweepstakes:', list);\n\n            var innerhtml = \"\";\n\n            for (var i = 0; i < list.length; i++)\n            {\n                var onClick = \"mobilePatron.OnSweepstakesClick('\" + list[i].codeField + \"','\" + list[i].textField + \"')\";\n                innerhtml += '<li><a href=\"JavaScript:' + onClick + '\">' + list[i].textField + '</a></li>';\n            }\n\n            $('#sweepstakesentries').html(innerhtml);\n        }\n        else\n        {\n            $('#sweepstakesentries').html(\"<li>You have no current sweepstakes entries.</li>\");\n        }\n    };\n    function renderCompCashBalance(compcashbalance)\n    {\n        if (compcashbalance)\n        {\n            //console.log('render comp cash balance:', compcashbalance);\n            $('#CompCashBalance').html(parseInt(compcashbalance.CompCashBalanceValue)/100);\n        }\n        else\n        {\n            $('#CompCashBalance').html(\"0\");\n        }\n    };\n\n    function doLogout()\n    {\n        var deferred = $.Deferred();\n\n        localStorage.clear();\n\n        deferred.resolve();\n\n        return deferred.promise();\n    }\n\n    function setLoggedInTimestamp()\n    {\n        localStorage.setItem('LoggedInTimestamp', moment().format());\n        initializeLogoutTimer();\n\n    }\n\n    function processCurrentUser(resultsFromServer)\n    {\n        //SAVE CURRENT USER AND TOKEN FROM SERVER\n        localStorage.setItem('CurrentUser', JSON.stringify(resultsFromServer.CurrentUser));\n        localStorage.setItem('Token', resultsFromServer.Token);\n        setLoggedInTimestamp();\n    };\n\n    function initializeLogoutTimer()\n    {\n        if (localStorage.getItem(\"LoggedInTimestamp\"))\n        {\n            //var loggedInTimeStamp = localStorage.getItem(\"LoggedInTimestamp\");\n            //var loggedInMoment = new moment(loggedInTimeStamp);\n            //var difference = moment().diff(loggedInMoment, 'seconds', true);\n            //console.log('loggedInTimeStamp:', loggedInTimeStamp);\n            //console.log('duration in seconds:', difference + '(' + difference/60 + ' minutes)');\n            //console.log('logOut Timer In:', logOutTimerInMilliseconds/1000/60 + ' minutes');\n\n            var checkLoginTimeStampTimer = setTimeout\n            (\n                function ()\n                {\n                    var autoLogoutTimer = setTimeout\n                                            (\n                                                function ()\n                                                {\n                                                    doLogout().then\n                                                    (\n                                                        function ()\n                                                        {\n                                                            window.location.href = \"index.html\";\n                                                        }\n                                                    );\n                                                },\n                                                30000   //30000 MILLISECONDS IS 30 SECONDS\n                                            );\n\n                    alertify.alert\n                    (\n                        \"Select the button below to continue viewing your account information. Otherwise, your account will be automatically logged out after 30 seconds.\",\n                        function onOk()\n                        {\n                            //console.log('ok, you can continue');\n                            clearTimeout(autoLogoutTimer);\n                            clearTimeout(checkLoginTimeStampTimer);\n                            setLoggedInTimestamp();\n                        }\n                    ).setting\n                    ({\n                        'label': 'Continue Session'\n                    });\n                },\n                300000  //300000 MILLISECONDS IS 5 MINUTES\n            );\n        }\n    }\n\n\n    var currentUser = JSON.parse(localStorage.getItem('CurrentUser'));\n    var token = localStorage.getItem('Token');\n\n\n    //DATA\n    this.url = \"https://dev.mobile-patron.solutiaconsulting.com:443/api/\";\n    this.urlVip = \"https://sweltering-inferno-2198.firebaseio.com/sections/mywinstar/vipevents/pages/events\";\n    this.urlHosts = \"https://sweltering-inferno-2198.firebaseio.com/sections/mywinstar/mobilePatronsHostInformation/pages/hosts\";\n    this.urlHomePageDisclaimer = \"https://sweltering-inferno-2198.firebaseio.com/sections/mywinstar/homePage/offers_disclaimer\";\n    this.urlOffersDisclaimer = \"https://sweltering-inferno-2198.firebaseio.com/sections/mywinstar/myOffers/offers_disclaimer\";\n    this.urlAccountInformationDisclaimer = \"https://sweltering-inferno-2198.firebaseio.com/sections/mywinstar/mobilePatronsAccountInformation/offers_disclaimer\";\n    this.TimeoutInterval = undefined;\n\n    this.CurrentUser = (currentUser) ? currentUser : undefined;\n\n    // SHOW PATRON INFORMATION\n    this.ShowPatronInformation = function ()\n    {\n        if (currentUser)\n        {\n            $(\"span#FirstName\").html(currentUser.FirstName);\n            $(\"span#LastName\").html(currentUser.LastName);\n            $(\"span#CurrentCardLevel\").html(currentUser.CurrentCardLevel);\n            $(\"span#CashAvailable\").html(currentUser.CashAvailable);\n\n            var points = (currentUser.CurrentPoints) ? currentUser.CurrentPoints : '';\n            $(\"span#CurrentPoints\").html(points);\n\n            var pointsToNextLevel = (currentUser.PointsToNextLevel) ? currentUser.PointsToNextLevel : '';\n            $(\"span#PointsToNextLevel\").html(pointsToNextLevel);\n\n            var expirationDate = moment(currentUser.PointsToNextLevelByDate, \"YYYYMMDD\");\n\n            $(\"span#ExpirationDate\").html(expirationDate.format(\"MMMM DD, YYYY\"));\n\n            if (currentUser.IsGolfMember) \n            {\n                $('#ActiveGolfMembership').show();\n            } \n            else \n            {\n                $('#ActiveGolfMembership').hide();\n            }\n\n            //SET CARD LEVEL BADGE\n            if (currentUser.CurrentCardLevel.trim() === 'PREMIER')\n            {\n                $('img#imageBadge').attr('src', 'images/Badges/Badge-Premier.png').attr('alt', 'Level: Premier');\n            }\n            else if (currentUser.CurrentCardLevel.trim() === 'ELITE')\n            {\n                $('img#imageBadge').attr('src', 'images/Badges/Badge-Elite.png').attr('alt', 'Level: Elite');\n            }\n            else\n            {\n                $('img#imageBadge').attr('src', 'images/Badges/Badge-Club.png').attr('alt', 'Level: Club');\n            }\n        }\n    };\n\n    this.ShowPatronCasinoHost = function ()\n    {\n        if (currentUser.HostName) \n        {\n            $(\"#VipHostName\").html(\"Your Casino Host is: \" + currentUser.HostName);\n        } \n    };\n\n\n    //SHOW ACCOUNT INFORMATION\n    this.ShowAccountInformation = function ()\n    {\n        $(\"span.FirstName\").html(currentUser.FirstName);\n        $(\"span.LastName\").html(currentUser.LastName);\n        $(\"input#EmailAddress\").val(currentUser.EmailAddress);\n        $(\"span.Address1\").html(currentUser.AddressLine1);\n        $(\"span.Address2\").html(currentUser.AddressLine2);\n        $(\"span.City\").html(currentUser.City);\n        $(\"span.State\").html(currentUser.State);\n        $(\"span.Zip\").html(currentUser.Zip);\n        $(\"span.PhoneNumber\").html(currentUser.PhoneNumber);\n    };\n\n\n    //GET PATRON INFORMATION\n    this.GetCurrentPatronDetail = function ()\n    {\n        var url = this.url + \"patron/detail\";\n\n        if (token)\n        {\n            $.ajax({\n                beforeSend: function (request)\n                {\n                    request.setRequestHeader(\"X-PATRONS-AUTH-TOKEN\", token);\n                },\n                type: \"GET\",\n                url: this.url + \"patron/detail\",\n                contentType: \"application/json; charset=UTF-8\",\n                success: function (resultsFromServer)\n                {\n                    processCurrentUser(resultsFromServer);\n                },\n                error: function (errorFromServer)\n                {\n                }\n            });\n        }\n        else\n        {\n            this.DoLogout();\n            //REDIRECT USER\n            window.location.href = \"index.html\";\n        }\n    };\n\n\n    // SWEEPSTAKES\n    this.GetSweepstakes = function ()\n    {\n        var deferred = $.Deferred();\n\n        //IF SWEEPSTAKES EXIST IN LOCAL STORAGE\n        if (localStorage.getItem(\"SweepStakes\"))\n        {\n            var sweepStakesList = JSON.parse(localStorage.getItem(\"SweepStakes\"));\n            renderSweepstakes(sweepStakesList);\n            deferred.resolve(sweepStakesList);\n        }\n        else\n        {\n            if (token)\n            {\n                $.ajax({\n                    beforeSend: function (request)\n                    {\n                        request.setRequestHeader(\"X-PATRONS-AUTH-TOKEN\", token);\n                    },\n                    type: \"GET\",\n                    url: this.url + \"sweepstakes/list\",\n                    contentType: \"application/json; charset=UTF-8\",\n                    success: function (resultsFromServer)\n                    {\n                        localStorage.setItem('SweepStakes', JSON.stringify(resultsFromServer));\n\n                        renderSweepstakes(resultsFromServer);\n                        deferred.resolve(resultsFromServer);\n                    },\n                    error: function (errorFromServer)\n                    {\n                        $('#sweepstakesentries').html(\"<li>You have no current sweepstakes entries.</li>\");\n\n                        localStorage.setItem('SweepStakes', null);\n\n                        deferred.reject(errorFromServer);\n                    }\n                });\n            }\n            else\n            {\n                this.DoLogout();\n                //REDIRECT USER\n                window.location.href = \"index.html\";\n            }\n        }\n\n        return deferred.promise();\n    };\n\n\n    // SWEEPSTAKES\n    this.GetSweepstakeDrawings = function (sweepStakeCode)\n    {\n        var deferred = $.Deferred();\n\n        if (token)\n        {\n            var data =\n            {\n                \"Offer\": sweepStakeCode\n            }\n\n            $.ajax({\n                beforeSend: function (request)\n                {\n                    request.setRequestHeader(\"X-PATRONS-AUTH-TOKEN\", token);\n                },\n                type: \"POST\",\n                url: this.url + \"sweepstakes-drawings/list/\",\n                data: JSON.stringify(data),\n                contentType: \"application/json; charset=UTF-8\",\n                success: function (resultsFromServer)\n                {\n                    deferred.resolve(resultsFromServer);\n                },\n                error: function (errorFromServer)\n                {\n                    deferred.reject(errorFromServer);\n                }\n            });\n        }\n        else\n        {\n            this.DoLogout();\n            //REDIRECT USER\n            window.location.href = \"index.html\";\n        }\n\n        return deferred.promise();\n    };\n\n\n    // OFFERS\n    this.GetOffers = function ()\n    {\n        var deferred = $.Deferred();\n\n        //IF OFFERS LIST EXIST IN LOCAL STORAGE\n        if (localStorage.getItem(\"OffersList\"))\n        {\n            var offersList = JSON.parse(localStorage.getItem(\"OffersList\"));\n            deferred.resolve(offersList);\n        }\n        else\n        {\n            if (token)\n            {\n                $.ajax({\n                    beforeSend: function (request)\n                    {\n                        request.setRequestHeader(\"X-PATRONS-AUTH-TOKEN\", token);\n                    },\n                    type: \"GET\",\n                    url: this.url + \"offers/list\",\n                    contentType: \"application/json; charset=UTF-8\",\n                    success: function (resultsFromServer)\n                    {\n                        localStorage.setItem('OffersList', JSON.stringify(resultsFromServer));\n\n                        deferred.resolve(resultsFromServer);\n                    },\n                    error: function (errorFromServer)\n                    {\n                        deferred.reject(errorFromServer);\n                    }\n                });\n            }\n            else\n            {\n                this.DoLogout();\n                //REDIRECT USER\n                window.location.href = \"index.html\";\n            }\n        }\n\n        return deferred.promise();\n    };\n\n\n    // POWER REWARDS\n    this.GetPowerRewards = function ()\n    {\n        var deferred = $.Deferred();\n\n        //IF OFFERS LIST EXIST IN LOCAL STORAGE\n        if (localStorage.getItem(\"PowerRewards\"))\n        {\n            var powerRewardsList = JSON.parse(localStorage.getItem(\"PowerRewards\"));\n            deferred.resolve(powerRewardsList);\n        }\n        else\n        {\n            if (token)\n            {\n                $.ajax({\n                    beforeSend: function (request)\n                    {\n                        request.setRequestHeader(\"X-PATRONS-AUTH-TOKEN\", token);\n                    },\n                    type: \"GET\",\n                    url: this.url + \"power-rewards/list\",\n                    contentType: \"application/json; charset=UTF-8\",\n                    success: function (resultsFromServer)\n                    {\n                        localStorage.setItem('PowerRewards', JSON.stringify(resultsFromServer));\n\n                        deferred.resolve(resultsFromServer);\n                    },\n                    error: function (errorFromServer)\n                    {\n                        deferred.reject(errorFromServer);\n                    }\n                });\n            }\n            else\n            {\n                this.DoLogout();\n                //REDIRECT USER\n                window.location.href = \"index.html\";\n            }\n        }\n\n        return deferred.promise();\n    };\n\n    // COMP CASH\n    this.GetCompCashBalance = function ()\n    {\n        var deferred = $.Deferred();\n        var myUrl = this.url + 'comp-cash/comp-cash-balance';\n        \n        //IF OFFERS LIST EXIST IN LOCAL STORAGE\n        if (localStorage.getItem(\"CompCashBalance\"))\n        {\n            var compCashBalance = JSON.parse(localStorage.getItem(\"CompCashBalance\"));\n            renderCompCashBalance(compCashBalance);\n            deferred.resolve(compCashBalance);\n        }\n        else\n        {\n            if (token)\n            {\n                $.ajax({\n                    beforeSend: function (request)\n                    {\n                        request.setRequestHeader(\"X-PATRONS-AUTH-TOKEN\", token);\n                    },\n                    type: \"GET\",\n                    url: this.url + \"comp-cash/comp-cash-balance\",\n                    contentType: \"application/json; charset=UTF-8\",\n                    success: function (resultsFromServer)\n                    {\n                        //writeLogItem(\"token\",myUrl,resultsFromServer);\n                        localStorage.setItem('CompCashBalance', JSON.stringify(resultsFromServer));\n                        renderCompCashBalance(resultsFromServer);\n                        deferred.resolve(resultsFromServer);\n                    },\n                    error: function (errorFromServer)\n                    {\n                        //writeLogItem(\"token\",myUrl,JSON.stringify(errorFromServer));\n                        deferred.reject(errorFromServer);\n                    }\n                });\n            }\n            else\n            {\n                this.DoLogout();\n                //REDIRECT USER\n                \n                                                            //openurl(\"index.html\");\n                                                            window.location.href = \"index.html\";\n                                                            //return false;\n            }\n        }\n\n        return deferred.promise();\n    };\n\n    // VIP EVENTS\n    this.GetVipEvents = function ()\n    {\n        var deferred = $.Deferred();\n\n        var hostsFirebase = new Firebase(this.urlVip);\n\n        hostsFirebase.on('value', function (jsonFromServer)\n        {\n            deferred.resolve(jsonFromServer.val());\n        });\n\n        return deferred.promise();\n    };\n\n\n    // HOSTS\n    this.GetHosts = function ()\n    {\n        var deferred = $.Deferred();\n\n        var hostsFirebase = new Firebase(this.urlHosts);\n\n        hostsFirebase.on('value', function (jsonFromServer)\n        {\n            deferred.resolve(jsonFromServer.val());\n        });\n\n        return deferred.promise();\n    };\n\n\n    // HOME PAGE DISCLAIMER\n    this.GetHomePageDisclaimer = function ()\n    {\n        var deferred = $.Deferred();\n\n        var hostsFirebase = new Firebase(this.urlHomePageDisclaimer);\n\n        hostsFirebase.on('value', function (jsonFromServer)\n        {\n            deferred.resolve(jsonFromServer.val());\n        });\n\n        return deferred.promise();\n    };\n\n\n    // OFFERS DISCLAIMER\n    this.GetOffersDisclaimer = function ()\n    {\n        var deferred = $.Deferred();\n\n        var hostsFirebase = new Firebase(this.urlOffersDisclaimer);\n\n        hostsFirebase.on('value', function (jsonFromServer)\n        {\n            deferred.resolve(jsonFromServer.val());\n        });\n\n        return deferred.promise();\n    };\n\n\n    // ACCOUNT INFORMATION DISCLAIMER\n    this.GetAccountInformationDisclaimer = function ()\n    {\n        var deferred = $.Deferred();\n\n        var hostsFirebase = new Firebase(this.urlAccountInformationDisclaimer);\n\n        hostsFirebase.on('value', function (jsonFromServer)\n        {\n            deferred.resolve(jsonFromServer.val());\n        });\n\n        return deferred.promise();\n    };\n\n\n    //UPDATE EMAIL ADDRESS\n    this.UpdateEmailAddress = function (data)\n    {\n        var deferred = $.Deferred();\n        var that = this;\n\n        if (token)\n        {\n            $.ajax({\n                beforeSend: function (request)\n                {\n                    request.setRequestHeader(\"X-PATRONS-AUTH-TOKEN\", token);\n                },\n                type: \"POST\",\n                url: this.url + 'email-address/save',\n                data: JSON.stringify(data),\n                contentType: \"application/json; charset=UTF-8\",\n                success: function (resultsFromServer)\n                {\n                    processCurrentUser(resultsFromServer);\n\n                    deferred.resolve(resultsFromServer);\n                },\n                error: function (errorFromServer)\n                {\n                    deferred.reject(errorFromServer);\n                }\n            });\n        }\n        else\n        {\n            this.DoLogout();\n            //REDIRECT USER\n            window.location.href = \"index.html\";\n        }\n\n        return deferred.promise();\n    };\n\n\n    // DO REGISTRATION\n    this.DoRegistration = function (registrationData)\n    {\n        var deferred = $.Deferred();\n\n        $.ajax({\n            type: \"POST\",\n            url: this.url + 'account/register',\n            data: JSON.stringify(registrationData),\n            contentType: \"application/json; charset=UTF-8\",\n            success: function (resultsFromServer)\n            {\n                processCurrentUser(resultsFromServer);\n                deferred.resolve(resultsFromServer);\n            },\n            error: function (errorFromServer)\n            {\n                deferred.reject(errorFromServer);\n            }\n        });\n\n        return deferred.promise();\n    };\n\n\n    // DO RESET PASSWORD\n    this.DoDoResetPassword = function (resetPasswordData)\n    {\n        var deferred = $.Deferred();\n\n        $.ajax({\n            type: \"POST\",\n            url: this.url + 'password/save',\n            data: JSON.stringify(resetPasswordData),\n            contentType: \"application/json; charset=UTF-8\",\n            success: function (resultsFromServer)\n            {\n                processCurrentUser(resultsFromServer);\n                deferred.resolve(resultsFromServer);\n            },\n            error: function (errorFromServer)\n            {\n                deferred.reject(errorFromServer);\n            }\n        });\n\n        return deferred.promise();\n    };\n\n\n    // DO LOGIN\n    this.DoLogin = function (loginData)\n    {\n        var deferred = $.Deferred();\n\n        $.ajax({\n            type: \"POST\",\n            url: this.url + 'login/authenticate',\n            data: JSON.stringify(loginData),\n            contentType: \"application/json; charset=UTF-8\",\n            success: function (resultsFromServer)\n            {\n                processCurrentUser(resultsFromServer);\n                deferred.resolve(resultsFromServer);\n            },\n            error: function (errorFromServer)\n            {\n                deferred.reject(errorFromServer);\n            }\n        });\n\n        return deferred.promise();\n    };\n\n\n    //LOGOUT\n    this.DoLogout = function ()\n    {\n        return doLogout();\n    };\n\n\n    //CLICKING A SWEEPSTAKES\n    this.OnSweepstakesClick = function (code, name)\n    {\n        localStorage.setItem('SweepStakesCode', JSON.stringify(code));\n        localStorage.setItem('SweepStakesName', JSON.stringify(name));\n        window.location.href = \"mobilePatronSweepstakesDrawings.html\";\n    };\n\n\n    //RETURN IF CURRENT USER HAS HOST FLAG\n    this.HasHostFlag = function ()\n    {\n        return (currentUser && currentUser.HostFlag !== 'N') ? true : false;\n    };\n\n\n    //SHOW ACTIVITY\n    this.ShowActivity = function ()\n    {\n        $(\"#spinnerContainer\").show();\n    };\n\n\n    //HIDE ACTIVITY\n    this.HideActivity = function ()\n    {\n        $(\"#spinnerContainer\").fadeOut(\"slow\"); // will fade out the white DIV that covers the\n    };\n\n\n    //CHECK IF USER SHOULD BE PROMPTED TO BE LOGGED OUT\n    initializeLogoutTimer();\n}",
 			"file": "HTML/scripts/mobilePatron.js",
+			"file_size": 22712,
+			"file_write_time": 131764867467618519,
 			"settings":
 			{
-				"buffer_size": 22003,
+				"buffer_size": 22008,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -63,25 +60,17 @@
 			"file": "app.yaml",
 			"settings":
 			{
-				"buffer_size": 936,
-				"encoding": "UTF-8",
+				"buffer_size": 1843,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "php.ini",
+			"file": "HTML/login.html",
 			"settings":
 			{
-				"buffer_size": 290,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "HTML/service-worker.js",
-			"settings":
-			{
-				"buffer_size": 5876,
-				"line_ending": "Windows"
+				"buffer_size": 12657,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -177,16 +166,46 @@
 	},
 	"expanded_folders":
 	[
-		"/C/projectstoregit/WinStarApp",
-		"/C/projectstoregit/WinStarApp/HTML",
-		"/C/projectstoregit/WinStarApp/HTML/images"
+		"/C/projectstoregit/WinStarApp"
 	],
 	"file_history":
 	[
+		"/C/projectstoregit/WinStarApp/HTML/contentscript.js",
+		"/C/projectstoregit/WinStarApp/HTML/background.js",
+		"/C/projectstoregit/WinStarApp/app.yaml",
+		"/C/projectstoregit/WinStarApp/HTML/runtime-caching.js",
+		"/C/projectstoregit/WinStarApp/HTML/mobilePatronsOffers.html",
+		"/C/projectstoregit/WinStarApp/HTML/mobilePatronsHome.html",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/mobilePatron.js",
+		"/C/projectstoregit/WinStarApp/HTML/register.html",
+		"/C/projectstoregit/WinStarApp/HTML/login.html",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/myWinstar.js",
+		"/C/projectstoregit/WinStarApp/HTML/sw-precache-config.js",
+		"/C/projectstoregit/WinStarApp/HTML/index.html",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/selectorCache.js",
+		"/C/projectstoregit/WinStarApp/HTML/sw-toolbox.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/soapclient.js",
+		"/C/projectstoregit/WinStarApp/HTML/scripts/selectorCache.min.js",
+		"/C/projectstoregit/WinStarApp/HTML/mobilePatronsHome.new.html",
+		"/C/projectstoregit/WinStarApp/HTML/manifest.json",
+		"/C/projectstoregit/WinStarApp/HTML/manifest.appcache",
+		"/C/projectstoregit/WinStarApp/HTML/styles/examples.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/myWinstar.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/examples.min.css",
+		"/C/projectstoregit/WinStarApp/HTML/styles/myWinstar.min.css",
+		"/C/projectstoregit/WinStarApp/HTML/resortOffers.html",
+		"/C/projectstoregit/WinStarApp/HTML/resetPassword.html",
+		"/C/projectstoregit/WinStarApp/HTML/offers.html",
+		"/C/projectstoregit/WinStarApp/HTML/mobilePatronSweepstakesDrawings.html",
+		"/C/projectstoregit/WinStarApp/HTML/mobilePatronsVIPList.html",
+		"/C/projectstoregit/WinStarApp/HTML/mobilePatronsVIPDetail.html",
+		"/C/projectstoregit/WinStarApp/HTML/mobilePatronsHostInformation.html",
+		"/C/projectstoregit/WinStarApp/HTML/mobilePatronsBookNow.html",
+		"/C/projectstoregit/WinStarApp/HTML/mobilePatronsAccountInformation.html",
+		"/C/projectstoregit/WinStarApp/php.ini",
+		"/C/projectstoregit/screwtopmedia-wordpress/php.ini",
 		"/C/projectstoregit/WinStarApp/.gitignore",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/sha1.js",
-		"/C/projectstoregit/WinStarApp/php.ini",
-		"/C/projectstoregit/WinStarApp/app.yaml",
 		"/C/projectstoregit/WinStarApp/HTML/benefits.php",
 		"/C/projectstoregit/WinStarApp/HTML/benefits.html",
 		"/C/projectstoregit/WinStarApp/HTML/inc/functions.php",
@@ -196,7 +215,6 @@
 		"/C/projectstoregit/WinStarApp/HTML/scripts/firebase.js",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/firebase.min.js",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/soapclient.min.js",
-		"/C/projectstoregit/WinStarApp/HTML/scripts/soapclient.js",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/fastclick.min.js",
 		"/C/Users/matt_/Downloads/WebCollectCodeSamples/Subscribe_Multiple_Lists.txt",
 		"/C/projectstoregit/temp/welcome_email.min.css",
@@ -206,7 +224,6 @@
 		"/C/Users/matt_/Downloads/WebCollectCodeSamples/Subscribe-Unsubscribe_Single_List.txt",
 		"/C/Users/matt_/Downloads/WebCollectCodeSamples/Subscribe-Unsubscribe_Multiple_Lists.txt",
 		"/C/projectstoregit/temp/triggeremail.csv",
-		"/C/projectstoregit/WinStarApp/HTML/index.html",
 		"/C/Users/matt_/AppData/Roaming/gcloud/logs/2018.04.05/05.04.15.860000.log",
 		"/C/Users/matt_/AppData/Roaming/gcloud/logs/2018.04.05/05.12.29.596000.log",
 		"/C/Users/matt_/AppData/Roaming/gcloud/logs/2018.04.05/05.29.54.732000.log",
@@ -227,15 +244,12 @@
 		"/C/Users/matt_/Desktop/scripts/index.html",
 		"/C/Users/matt_/Desktop/scripts/alertify.min.js",
 		"/C/projectstoregit/WinStarApp/cp.log",
-		"/C/projectstoregit/WinStarApp/HTML/manifest.appcache",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/alertify.js",
 		"/C/projectstoregit/WinStarApp/HTML/styles/alertify.min.css",
 		"/C/projectstoregit/WinStarApp/HTML/styles/alertify.css",
 		"/C/projectstoregit/WinStarApp/HTML/accountHome.html",
 		"/C/projectstoregit/WinStarApp/HTML/hostInformation.html",
 		"/C/projectstoregit/WinStarApp/HTML/were-making-improvements.html",
-		"/C/projectstoregit/WinStarApp/HTML/offers.html",
-		"/C/projectstoregit/WinStarApp/HTML/resortOffers.html",
 		"/C/projectstoregit/WinStarApp/HTML/vipEvents.html",
 		"/C/projectstoregit/WinStarApp/HTML/styles/max-767px.css",
 		"/C/projectstoregit/WinStarApp/HTML/styles/max-979px.css",
@@ -243,7 +257,6 @@
 		"/C/projectstoregit/WinStarApp/HTML/scripts/scrollz-carousel-firebase.js",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/contentJSON.js",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/loadDetail.js",
-		"/C/projectstoregit/WinStarApp/HTML/scripts/selectorCache.js",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/localData.js",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/fastclick.js",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/snap.js",
@@ -251,9 +264,7 @@
 		"/C/projectstoregit/WinStarApp/HTML/scripts/date.format.js",
 		"/C/projectstoregit/WinStarApp/HTML/scripts/slick.js",
 		"/C/projectstoregit/WinStarApp/HTML/styles/forms/forms.css",
-		"/C/projectstoregit/WinStarApp/HTML/styles/myWinstar.css",
 		"/C/projectstoregit/WinStarApp/HTML/styles/max-480px.css",
-		"/C/projectstoregit/WinStarApp/HTML/styles/examples.css",
 		"/C/projectstoregit/WinStarApp/HTML/styles/offline-theme-dark.css",
 		"/C/projectstoregit/WinStarApp/HTML/styles/offline-language-english.css",
 		"/C/projectstoregit/WinStarApp/HTML/styles/slick-theme.css",
@@ -268,7 +279,6 @@
 		"/C/Users/matt_/AppData/Roaming/Sublime Text 3/Installed Packages/Package Control 2.sublime-package",
 		"/C/Users/matt_/AppData/Roaming/Sublime Text 3/Installed Packages/Package Control.sublime-package",
 		"/C/projectstoregit/WinStarApp/HTML/head.html",
-		"/C/projectstoregit/WinStarApp/HTML/manifest.json",
 		"/C/projectstoregit/ScrewtopMediaDevApp/dist/index.html",
 		"/C/projectstoregit/ScrewtopMediaDevApp/src/runtime-caching.js",
 		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/pages/home/services/home.service.ts",
@@ -287,30 +297,7 @@
 		"/C/projectstoregit/ScrewtopMediaDevApp/src/scripts/sw-toolbox.js",
 		"/C/projectstoregit/ScrewtopMediaDevApp/src/assets/service-worker.js",
 		"/C/projectstoregit/ScrewtopMediaDevApp/src/assets/sw.js",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/assets/scripts/runtime-caching.js",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/main.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/app.module.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/tsconfig.json",
-		"/C/projectstoregit/ScrewtopMediaDevApp/tsconfig-aot.json",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/assets/styles/slideout.scss",
-		"/C/projectstoregit/ScrewtopMediaDevApp/tsconfig.json",
-		"/C/projectstoregit/ScrewtopMediaDevApp/aFile.txt",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/components/base.component.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/components/social-media/social-media.module.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/components/social-media/item/social-media-item.component.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/components/social-media/list/social-media-list.component.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/components/social-media/styles/social-media.component.scss",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/components/about/detail/about-detail.component.scss",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/app.component.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/services/utilities/match-media.service.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/services/data/data.service.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/shared/services/navigation/navigation.service.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/pages/home/models/home-mobile.model.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/pages/home/models/home-desktop.model.ts",
-		"/C/projectstoregit/ScrewtopMediaApp-orig/src/main.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/node_modules/@types/q/README.md",
-		"/C/projectstoregit/ScrewtopMediaDevApp/aot/src/app/pages/home/mobile/home-mobile.component.ngfactory.ts",
-		"/C/projectstoregit/ScrewtopMediaDevApp/src/app/app-routing.module.ts"
+		"/C/projectstoregit/ScrewtopMediaDevApp/src/assets/scripts/runtime-caching.js"
 	],
 	"find":
 	{
@@ -331,9 +318,32 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"this.url",
+			"version",
+			"renderSweepstakes",
+			"GetSweepstakes",
+			"offersError",
+			"sweepstakesError",
+			"sweepstakes",
+			"errorFromServer",
+			"responseJSON",
+			"paceOptions",
+			"debug",
+			"dist",
+			"\n  expiration: \"0m\"",
+			"dist",
+			"winstarapp",
+			"service-worker.js",
+			"js",
+			"json",
+			"offline.min.js",
+			"solutiaconsulting",
+			"this.url",
+			"466.GIF",
+			"offli",
 			"http:",
 			"baseHref",
 			"cvt",
@@ -420,29 +430,29 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "HTML/login.html",
+					"file": "HTML/service-worker.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12006,
+						"buffer_size": 6188,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								790,
-								790
+								781,
+								781
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -453,75 +463,47 @@
 				},
 				{
 					"buffer": 1,
-					"file": "HTML/scripts/selectorCache.min.js",
+					"file": "HTML/manifest.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12071,
+						"buffer_size": 1500,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								317,
-								317
+								48,
+								48
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 202.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "HTML/scripts/selectorCache.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 27794,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3657,
-								3657
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1697.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "HTML/scripts/mobilePatron.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 22003,
+						"buffer_size": 22008,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4175,
-								4175
+								20109,
+								20109
 							]
 						],
 						"settings":
@@ -529,47 +511,19 @@
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1674.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app.yaml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 936,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								166,
-								170
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 11215.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "php.ini",
+					"buffer": 3,
+					"file": "app.yaml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 290,
+						"buffer_size": 1843,
 						"regions":
 						{
 						},
@@ -577,40 +531,41 @@
 						[
 							[
 								0,
-								290
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/YAML/YAML.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 771.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "HTML/service-worker.js",
+					"buffer": 4,
+					"file": "HTML/login.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5876,
+						"buffer_size": 12657,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								111,
-								111
+								39,
+								39
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -620,7 +575,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 5,
 					"semi_transient": false,
 					"settings":
 					{
@@ -644,7 +599,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -683,7 +638,7 @@
 	"menu_visible": true,
 	"output.find_results":
 	{
-		"height": 153.0
+		"height": 331.0
 	},
 	"output.sftp":
 	{

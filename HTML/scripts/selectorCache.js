@@ -335,8 +335,8 @@ function initPage() {
                 "shareapp": 17
             },
             mymaintenancePage: {
-                "title": "We're Making Improvements",
-                "html_content": "<p>Thank you for considering us! Online booking is not available at this moment. We're making updates to our system and should be up and running very soon. To book a room please call 1-800-622-6317 or <a href=\"https://www.winstarworldcasino.com/contact-us/\">click here to contact us through our website.</a></p>",
+                "title": "Internet Connection Not Detected",
+                "html_content": "<p>An Internet connection is needed to use this app, to get the most up to date information!</p>",
                 "onOk": "OK"
             },
             myalertify: {
@@ -405,7 +405,7 @@ function initPage() {
                     "prompt": {
                         "message": "This is a prompt dialog",
                         "oncancel": " ",
-                        "onok": "function(evt, value){ alertify.message('You entered: ' + value);",
+                        "onok": "function(evt, value){ alertify.message('You entered: ' + value); }",
                         "value": "some value"
                     }
                 }
@@ -421,7 +421,7 @@ function initPage() {
         request.sectionsJSON = window.$winstar.sectionsjson;
         request.slideList = window.$winstar.slideList;
         request.alertify = window.$winstar.myalertify;
-        request.maintenancePage = window.$winstar.mymaintenancePage
+        request.maintenancePage = window.$winstar.mymaintenancePage;
 
         dataRequests.push(request);
         var sizeOfCompressed = controller.saveCompressed("compressed", dataRequests);
@@ -486,6 +486,7 @@ function initPage() {
         $my.iSweepstake = {};
         $my.ISweepstakeDrawing = {};
         $my.iWinLosStatemnt = {};
+        $my.iCompCashBalance = {};
 
         $my.output = selectors.get( "#output" );
 
@@ -506,9 +507,19 @@ function initPage() {
                 }
                 if ($my.alertify.type.alert.message.trim().length) {
 
-                    alertify.alert($my.alertify.type.alert.title.trim(), $my.alertify.type.alert.message.trim(), $my.alertify.type.alert.onok.trim());
+					if (typeof $my.alertify.type.alert.onok.trim() !== "undefined" && $my.alertify.type.alert.onok.trim() !== null && $my.alertify.type.alert.onok.trim() !== "") {
+						alertify.confirm().setting({
+							'labels': {'ok': $my.alertify.type.alert.title.trim(), 'cancel': ""},
+							'message': $my.alertify.type.alert.message.trim(),
+							'title': "",
+							'onok': function(){ openurl($my.alertify.type.alert.onok.trim()); },
+							'frameless': false
+						}).show();
+					}
+					else alertify.alert($my.alertify.type.alert.message.trim());
+                    //alertify.alert($my.alertify.type.alert.title.trim(), $my.alertify.type.alert.message.trim(),$my.alertify.type.alert.onok.trim());
                 } else if ($my.alertify.type.prompt.message.trim().length) {
-                    //alertify.set('labels', {"ok": $my.alertify.glossary.ok, "cancel": $my.alertify.glossary.cancel} );
+                    //alertify.set('labels': {"ok": $my.alertify.glossary.ok, "cancel": $my.alertify.glossary.cancel} );
                     alertify.prompt($my.alertify.type.prompt.title.trim(), $my.alertify.type.prompt.message.trim(), $my.alertify.type.prompt.value.trim(), $my.alertify.type.prompt.onok.trim());
                 } else if ($my.alertify.type.confirm.message.trim().length) {
 

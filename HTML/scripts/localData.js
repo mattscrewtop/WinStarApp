@@ -175,8 +175,26 @@ function openurl(urltoopen)
 		});
 	} else
 	{
-		openNewTabOrNewWindow(urltoopen);
+			if (urltoopen.indexOf("ttp:") > 0 || urltoopen.indexOf("ttps:") > 0 || urltoopen.indexOf("tel:") > 0)
+				openNewTabOrNewWindow(urltoopen);
+			else
+				openNewURLInTheSameWindow(urltoopen);
 	}
+}
+function loadhostpage()
+{
+	var urltoopen = 'mobilePatronsHostInformation.html';
+	if (mobilePatron.HasHostFlag())
+		openNewTabOrNewWindow(urltoopen);
+	else
+		alertify.alert('', 'You are not currently assigned a Casino Host. Be sure that you always play with your WinStar Club Passport card and play up to become eligible for exclusive offers and invitations.');
+	
+	}
+function urlopened(passback)
+{
+	console.trace("urlopened: " + passback);
+	//moveToPage(4);
+	//window.location.reload(true);
 }
 // this function can fire onclick handler for any DOM-Element
 function fireClickEvent(element)
@@ -204,6 +222,7 @@ function openNewTabOrNewWindow(targetURL)
 	var a = document.createElement('a');
 	a.href = targetURL;
 
+	//a.target = '_system'; // now it will open new tab/window and bypass any popup blocker!
 	a.target = '_blank'; // now it will open new tab/window and bypass any popup blocker!
 
 	fireClickEvent(a);
@@ -211,12 +230,14 @@ function openNewTabOrNewWindow(targetURL)
 
 function moveToPage(grouppage)
 {
+	
 	//SLICK PAGES DO NOT EXIST IN DOM
 	//LOAD INDEX PAGE THEN LOAD SLICK
 	if ($('div.slick-list').length === 0)
 	{
 		localStorage.setItem('loadSlickIndex', grouppage);
-		window.location.href = "index.html";
+		openurl("index.html");
+		//window.location.href = "index.html";
 	} 
 	else
 	{
